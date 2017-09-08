@@ -6,6 +6,15 @@ remedy
 
 All the functions are meant to be mapped to keyboard shortcuts. A list of suggested shortcut is provided below.
 
+Install
+-------
+
+``` r
+devtools::install_github("ThinkR-open/remedy")
+```
+
+Once you've installed the package, you don't need to launch it with `library()`: the addins are installed on your machine.
+
 Using `{remedy}`
 ----------------
 
@@ -71,6 +80,8 @@ Recommanded shortcut
 --------------------
 
 Here's a list of recommanded shortcuts :
+
+### On mac
 
 -   backtick : "Ctrl+Cmd+\`"
 -   bold : "Ctrl+Cmd+B"
