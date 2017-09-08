@@ -13,6 +13,11 @@ Description: Turn a selected text into a chunck
 Binding: chunckizer
 Interactive: false
 
+Name: Down
+Description: Clone downward a line or a selected text
+Binding: downr
+Interactive: false
+
 Name: H1
 Description: Turn a selected text into a h1
 Binding: h1r
@@ -71,6 +76,11 @@ Interactive: false
 Name: Table
 Description: Insert a table in your markdown
 Binding: tabler
+Interactive: false
+
+Name: Up
+Description: Clone downward a line or a selected text
+Binding: upr
 Interactive: false
 
 Name: Url
