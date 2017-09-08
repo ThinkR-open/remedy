@@ -1,0 +1,80 @@
+Name: Backtick
+Description: Backtick selected word(s)
+Binding: backticker
+Interactive: false
+
+Name: Bold
+Description: Emphasize a selected text with bold
+Binding: boldr
+Interactive: false
+
+Name: Chunck
+Description: Turn a selected text into a chunck
+Binding: chunckizer
+Interactive: false
+
+Name: H1
+Description: Turn a selected text into a h1
+Binding: h1r
+Interactive: false
+
+Name: H2
+Description: Turn a selected text into a h2
+Binding: h2r
+Interactive: false
+
+Name: H3
+Description: Turn a selected text into a h3
+Binding: h3r
+Interactive: false
+
+Name: H4
+Description: Turn a selected text into a h4
+Binding: h4r
+Interactive: false
+
+Name: H5
+Description: Turn a selected text into a h5
+Binding: h5r
+Interactive: false
+
+Name: H6
+Description: Turn a selected text into a h6
+Binding: h6r
+Interactive: false
+
+Name: Image
+Description: Turn a selected path into an image
+Binding: imager
+Interactive: false
+
+Name: Italics
+Description: Emphasize a selected text with italics
+Binding: italicsr
+Interactive: false
+
+Name: Strike
+Description: Strike a selected text
+Binding: strikr
+Interactive: false
+
+Name: List
+Description: Turn a selected text into an unordered list
+Binding: listr
+Interactive: false
+
+Name: Right
+Description: Copy a selected text or the current line to the right
+Binding: rightr
+Interactive: false
+
+Name: Table
+Description: Insert a table in your markdown
+Binding: tabler
+Interactive: false
+
+Name: Url
+Description: Turn a selected text into an url
+Binding: urlr
+Interactive: false
+
