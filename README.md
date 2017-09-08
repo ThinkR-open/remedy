@@ -4,7 +4,7 @@ remedy
 
 `{remedy}` provides addins to facilitate writing in markdown with RStudio.
 
-![](remedy_example.gif)
+![](readme_gif/remedy_example.gif)
 
 All the functions are meant to be mapped to keyboard shortcuts. A list of suggested shortcut is provided below.
 
@@ -25,8 +25,6 @@ Using `{remedy}`
 Write quicker in markdown with `{remedy}`!
 
 Here's a list of all available helpers:
-
-![](readme_gif/remedy_example.gif)
 
 ### backtick
 
