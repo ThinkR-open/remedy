@@ -64,7 +64,15 @@ Turn a selected text into an unordered list.
 
 ![](readme_gif/list.gif)
 
-### Right copy
+### Moving
+
+#### Down
+
+Current RStudio behavior is moving down the whole line down. With this addin, you can select a part of text and move that part downward.
+
+![](readme_gif/down.gif)
+
+#### On the right
 
 Copy a selected text or the current line to the right.
 
@@ -92,12 +100,10 @@ Here's a list of recommanded shortcuts :
 -   backtick : "Ctrl+Cmd+\`"
 -   bold : "Ctrl+Cmd+B"
 -   chunck : "Ctrl+Alt+Cmd+C"
+-   down : "Cmd+Alt+Down" (overrides the default)
 -   h1 : "Ctrl+Cmd+1"
 -   h2 : "Ctrl+Cmd+2"
--   h3 : "Ctrl+Cmd3'"
--   h4 : "Ctrl+Cmd4'"
--   h5 : "Ctrl+Cmd+5"
--   h6 : "Ctrl+Cmd+6"
+-   etc...
 -   image : "Ctrl+Cmd+P"
 -   italics : "Ctrl+Cmd+I"
 -   list : "Ctrl+Shift+Cmd+="
