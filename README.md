@@ -15,15 +15,6 @@ Install
 
 ``` r
 devtools::install_github("ThinkR-open/remedy")
-#> Downloading GitHub repo ThinkR-open/remedy@master
-#> from URL https://api.github.com/repos/ThinkR-open/remedy/zipball/master
-#> Installing remedy
-#> '/Library/Frameworks/R.framework/Resources/bin/R' --no-site-file  \
-#>   --no-environ --no-save --no-restore --quiet CMD INSTALL  \
-#>   '/private/var/folders/lz/thnnmbpd1rz0h1tmyzgg0mh00000gn/T/Rtmp9Puf1w/devtoolsd7466443f131/ThinkR-open-remedy-a5b9508'  \
-#>   --library='/Library/Frameworks/R.framework/Versions/3.4/Resources/library'  \
-#>   --install-tests
-#> 
 ```
 
 Once you've installed the package, you don't need to launch it with `library()`: the addins are installed on your machine.
@@ -33,7 +24,9 @@ Using `{remedy}`
 
 Write quicker in markdown with `{remedy}`!
 
-Here's a list of all availbale helpers:
+Here's a list of all available helpers:
+
+![](readme_gif/remedy_example.gif)
 
 ### backtick
 

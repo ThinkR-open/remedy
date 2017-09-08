@@ -26,7 +26,7 @@ All the functions are meant to be mapped to keyboard shortcuts. A list of sugges
 
 ## Install 
 
-```{r}
+```{r, eval = FALSE}
 devtools::install_github("ThinkR-open/remedy")
 ```
 
@@ -36,7 +36,9 @@ Once you've installed the package, you don't need to launch it with `library()`:
 
 Write quicker in markdown with `{remedy}`!
 
-Here's a list of all availbale helpers:
+Here's a list of all available helpers:
+
+![](readme_gif/remedy_example.gif)
 
 ### backtick
 
