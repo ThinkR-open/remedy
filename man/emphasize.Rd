@@ -2,9 +2,15 @@
 % Please edit documentation in R/emphasize.R
 \name{italicsr}
 \alias{italicsr}
+\alias{boldr}
+\alias{strikr}
 \title{Emphasize}
 \usage{
 italicsr()
+
+boldr()
+
+strikr()
 }
 \value{
 a backticked word
