@@ -16,9 +16,13 @@ knitr::opts_chunk$set(
 
 # remedy
 
-`{remedy}` provides addins to facilitate writing in markdown with RStudio. 
+`{remedy}` provides addins to facilitate writing in markdown with RStudio.
+
+![](remedy_example.gif)
 
 All the functions are meant to be mapped to keyboard shortcuts. A list of suggested shortcut is provided below. 
+
+> Note that all the shortcuts below work without selecting any text. 
 
 ## Install 
 
