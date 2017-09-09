@@ -91,7 +91,7 @@ Turn a selected text into an url.
 Recommanded shortcut
 --------------------
 
-Here's a list of recommanded shortcuts :
+Here's a list of recommended shortcuts :
 
 ### On mac
 
