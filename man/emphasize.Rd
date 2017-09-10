@@ -13,8 +13,8 @@ boldr()
 strikr()
 }
 \value{
-a backticked word
+emboldened, italicized or strikethrough text (in markdown)
 }
 \description{
-Emphasize a selected text.
+Emphasize the selected text.
 }

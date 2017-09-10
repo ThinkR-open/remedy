@@ -1,12 +1,12 @@
-#' Chunckize
+#' Chunkize
 #'
-#'Turn a selected text into a chunck
+#' Turn the selected text into an R chunk
 #'
-#' @return a chunck
+#' @return an R code chunk
 #' @export
 #'
 
-chunckizer <- function(){
+chunkizer <- function(){
   a <- rstudioapi::getSourceEditorContext()
   rstudioapi::insertText(location = a$selection[[1]]$range, text = paste0("```{r}\n", a$selection[[1]]$text, "\n```"))
 }

@@ -1,8 +1,8 @@
 #' Emphasize
 #'
-#' Emphasize a selected text.
+#' Emphasize the selected text.
 #'
-#' @return a backticked word
+#' @return emboldened, italicized or strikethrough text (in markdown)
 #' 
 #' @rdname emphasize
 #' @export

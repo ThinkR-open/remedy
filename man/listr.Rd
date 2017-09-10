@@ -7,8 +7,8 @@
 listr()
 }
 \value{
-a list
+a markdown list
 }
 \description{
-Turn a selected text into an unordered list.
+Turn the selected text into an unordered list.
 }

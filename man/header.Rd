@@ -7,7 +7,7 @@
 \alias{h4r}
 \alias{h5r}
 \alias{h6r}
-\title{Chunckize}
+\title{Convert to header}
 \usage{
 h1r()
 
@@ -22,8 +22,8 @@ h5r()
 h6r()
 }
 \value{
-a header
+a markdown header
 }
 \description{
-Turn a selected text into a header.
+Convert selected text into a header.
 }

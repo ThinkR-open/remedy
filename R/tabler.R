@@ -2,7 +2,7 @@
 #'
 #' Insert a table in your file.
 #'
-#' @return a table
+#' @return a markdown table
 #' @export
 #'
 

@@ -1,8 +1,8 @@
 #' Listr
 #'
-#' Turn a selected text into an unordered list.
+#' Turn the selected text into an unordered list.
 #'
-#' @return a list
+#' @return a markdown list
 #' @export
 #'
 

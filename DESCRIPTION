@@ -9,3 +9,4 @@ LazyData: true
 Imports: rstudioapi,
     stringr
 RoxygenNote: 6.0.1.9000
+Suggests: testthat

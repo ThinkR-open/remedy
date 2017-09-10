@@ -20,17 +20,17 @@ knitr::opts_chunk$set(
 
 ![](remedy_example.gif)
 
-All the functions are meant to be mapped to keyboard shortcuts. A list of suggested shortcut is provided below. 
+All the functions are meant to be mapped to keyboard shortcuts. A list of suggested shortcuts is provided towards the end of this README. 
 
-> Note that all the shortcuts below work without selecting any text. 
+> Note that all the addins/shortcuts below will also work without selecting any text.
 
-## Install 
+## Install
 
 ```{r, eval = FALSE}
 devtools::install_github("ThinkR-open/remedy")
 ```
 
-Once you've installed the package, you don't need to launch it with `library()`: the addins are installed on your machine. 
+Once you've installed the package, you don't need to load it with `library()`, the addins are installed on your machine as part of the package install process. 
 
 ## Using `{remedy}`
 
@@ -40,39 +40,39 @@ Here's a list of all available helpers:
 
 ![](readme_gif/remedy_example.gif)
 
-### backtick
+### Backtick
 
-Backtick selected word(s) : 
+Enclose the selected word(s) in backticks. 
 
 ![](readme_gif/backtick.gif)
 
-### Chunck
+### Chunk
 
-Turn a selected text into a chunck.
+Turn the selected text into a chunk.
 
 ![](readme_gif/chunck.gif)
 
 ### Emphasise
 
-Emphasize a selected text with bold, italics or strike.
+Embolden, italicize or strikethrough the selected text.
 
 ![](readme_gif/emphasise.gif)
 
 ### Headers
 
-Turn a selected text into a header
+Turn the selected text into a header.
 
 ![](readme_gif/header.gif)
 
 ### Image
 
-Turn a selected path into an image. 
+Turn the selected path into an image. 
 
 ![](readme_gif/image.gif)
 
 ### List
 
-Turn a selected text into an unordered list. 
+Turn the selected text into an unordered list. 
 
 ![](readme_gif/list.gif)
 
@@ -80,14 +80,14 @@ Turn a selected text into an unordered list.
 
 #### Down 
 
-Current RStudio behavior is moving down the whole line down. With this addin, you can select a part of text and move that part downward. 
+The current RStudio behavior is to clone the whole line down. With this addin, you can select a part of text and clone only that part downward.
 
 ![](readme_gif/down.gif)
 
 
 #### On the right 
 
-Copy a selected text or the current line to the right.
+Copy the selected text or the current line to the right.
 
 ![](readme_gif/right.gif)
 
@@ -98,21 +98,21 @@ Insert a table inside your doc.
 
 ![](readme_gif/table.gif)
 
-### url
+### URL
 
-Turn a selected text into an url. 
+Turn the selected text into an url. 
 
 ![](readme_gif/url.gif)
 
-## Recommanded shortcut 
+## Recommended shortcuts
 
-Here's a list of recommanded shortcuts : 
+Here's a list of recommended shortcuts: 
 
 ### On mac 
 
 + backtick : "Ctrl+Cmd+`"
 + bold : "Ctrl+Cmd+B"
-+ chunck : "Ctrl+Alt+Cmd+C"
++ chunk : "Ctrl+Alt+Cmd+C"
 + down : "Cmd+Alt+Down" (overrides the default)
 + h1 : "Ctrl+Cmd+1"
 + h2 : "Ctrl+Cmd+2"

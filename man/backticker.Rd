@@ -2,12 +2,12 @@
 % Please edit documentation in R/backticker.R
 \name{backticker}
 \alias{backticker}
-\title{Backticker}
+\title{Backtick}
 \usage{
 backticker()
 }
 \value{
-a backticked selection
+a backticked text selection
 }
 \description{
 Backtick selected word(s)
