@@ -1,8 +1,8 @@
 #' Imager
 #'
-#' Turn a selected path into an image
+#' Convert the selected path into an embedded image
 #'
-#' @return an image
+#' @return a markdown image link
 #' @export
 #'
 

@@ -1,10 +1,10 @@
-#' Chunckize
+#' Convert to header
 #'
-#' Turn a selected text into a header.
+#' Convert selected text into a header.
 #' 
 #' @rdname header
 #'
-#' @return a header
+#' @return a markdown header
 #' @export
 #'
 

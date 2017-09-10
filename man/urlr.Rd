@@ -7,8 +7,8 @@
 urlr()
 }
 \value{
-an url
+a markdown link
 }
 \description{
-Turn a selected text into an url
+Convert selected text into a url
 }

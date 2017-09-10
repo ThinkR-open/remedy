@@ -2,7 +2,7 @@
 
 export(backticker)
 export(boldr)
-export(chunckizer)
+export(chunkizer)
 export(downr)
 export(h1r)
 export(h2r)

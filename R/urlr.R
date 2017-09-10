@@ -1,8 +1,8 @@
 #' urlr
 #'
-#' Turn a selected text into an url
+#' Convert selected text into a url
 #'
-#' @return an url
+#' @return a markdown link
 #' @export
 #'
 

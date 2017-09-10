@@ -1,8 +1,8 @@
-#' Backticker
+#' Backtick
 #'
 #' Backtick selected word(s)
 #'
-#' @return a backticked selection
+#' @return a backticked text selection
 #' @export
 #'
 

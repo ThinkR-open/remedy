@@ -7,7 +7,7 @@
 tabler()
 }
 \value{
-a table
+a markdown table
 }
 \description{
 Insert a table in your file.

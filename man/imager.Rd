@@ -7,8 +7,8 @@
 imager()
 }
 \value{
-an image
+a markdown image link
 }
 \description{
-Turn a selected path into an image
+Convert the selected path into an embedded image
 }

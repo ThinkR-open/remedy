@@ -4,87 +4,86 @@ Binding: backticker
 Interactive: false
 
 Name: Bold
-Description: Emphasize a selected text with bold
+Description: Embolden selected text
 Binding: boldr
 Interactive: false
 
-Name: Chunck
-Description: Turn a selected text into a chunck
-Binding: chunckizer
+Name: Chunk
+Description: Chunk selected text
+Binding: chunkizer
 Interactive: false
 
 Name: Down
-Description: Clone downward a line or a selected text
+Description: Clone selected text (or line) downward
 Binding: downr
 Interactive: false
 
 Name: H1
-Description: Turn a selected text into a h1
+Description: Convert selected text into an h1 header
 Binding: h1r
 Interactive: false
 
 Name: H2
-Description: Turn a selected text into a h2
+Description: Convert selected text into an h2 header
 Binding: h2r
 Interactive: false
 
 Name: H3
-Description: Turn a selected text into a h3
+Description: Convert selected text into an h3 header
 Binding: h3r
 Interactive: false
 
 Name: H4
-Description: Turn a selected text into a h4
+Description: Convert selected text into an h4 header
 Binding: h4r
 Interactive: false
 
 Name: H5
-Description: Turn a selected text into a h5
+Description: Convert selected text into an h5 header
 Binding: h5r
 Interactive: false
 
 Name: H6
-Description: Turn a selected text into a h6
+Description: Convert selected text into an h6 header
 Binding: h6r
 Interactive: false
 
 Name: Image
-Description: Turn a selected path into an image
+Description: Convert selected path into an embedded image
 Binding: imager
 Interactive: false
 
 Name: Italics
-Description: Emphasize a selected text with italics
+Description: Italicize selected text
 Binding: italicsr
 Interactive: false
 
 Name: Strike
-Description: Strike a selected text
+Description: Strikethrough selected text
 Binding: strikr
 Interactive: false
 
 Name: List
-Description: Turn a selected text into an unordered list
+Description: Convert selected text into an unordered list
 Binding: listr
 Interactive: false
 
 Name: Right
-Description: Copy a selected text or the current line to the right
+Description: Copy selected text (or line) to the right
 Binding: rightr
 Interactive: false
 
 Name: Table
-Description: Insert a table in your markdown
+Description: Insert a markdown table
 Binding: tabler
 Interactive: false
 
 Name: Up
-Description: Clone downward a line or a selected text
+Description: Clone selected text (or line) upwards
 Binding: upr
 Interactive: false
 
 Name: Url
-Description: Turn a selected text into an url
+Description: Convert selected text into a url
 Binding: urlr
 Interactive: false
-
