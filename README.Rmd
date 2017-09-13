@@ -78,13 +78,6 @@ Turn the selected text into an unordered list.
 
 ### Moving 
 
-#### Down 
-
-The current RStudio behavior is to clone the whole line down. With this addin, you can select a part of text and clone only that part downward.
-
-![](readme_gif/down.gif)
-
-
 #### On the right 
 
 Copy the selected text or the current line to the right.

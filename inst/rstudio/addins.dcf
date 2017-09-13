@@ -13,11 +13,6 @@ Description: Chunk selected text
 Binding: chunkizer
 Interactive: false
 
-Name: Down
-Description: Clone selected text (or line) downward
-Binding: downr
-Interactive: false
-
 Name: H1
 Description: Convert selected text into an h1 header
 Binding: h1r
