@@ -3,7 +3,6 @@
 export(backticker)
 export(boldr)
 export(chunkizer)
-export(downr)
 export(h1r)
 export(h2r)
 export(h3r)
