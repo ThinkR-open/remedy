@@ -117,3 +117,7 @@ Here's a list of recommended shortcuts:
 + strike : "Ctrl+Cmd+S
 + table : "Ctrl+Cmd+T"
 + url : "Ctrl+Cmd+U"
+
+## Feedbacks and enhancement
+
+You've found a bug, or have an enhancment idea? Feel free to open an issue : [https://github.com/ThinkR-open/remedy/issues](https://github.com/ThinkR-open/remedy/issues). 
