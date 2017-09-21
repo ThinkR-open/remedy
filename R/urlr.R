@@ -14,7 +14,7 @@ urlr <- function(){
     rstudioapi::insertText(location = a$selection[[1]]$range, text = "# Error : last element of the selection is not an url")
   } else {
     if (length(selection_split) == 1) {
-      content <- paste0("[](", a$selection[[1]]$text, ")")
+      content <- paste0("[",a$selection[[1]]$text,"](", a$selection[[1]]$text, ")")
       new_cursor_position <- rstudioapi::document_position(
         row = a$selection[[1]]$range$start[1],
         column = a$selection[[1]]$range$start[2] + 1
