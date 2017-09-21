@@ -2,12 +2,9 @@
 % Please edit documentation in R/mover.R
 \name{rightr}
 \alias{rightr}
-\alias{downr}
 \title{Mover}
 \usage{
 rightr()
-
-downr()
 }
 \value{
 a clone of the line
