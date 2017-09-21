@@ -56,6 +56,10 @@ Turn the selected text into a header.
 
 Turn the selected path into an image.
 
+This element is context aware: if you select a text and a link, it turns the text into title between `![]`, and puts the link between `()`.
+
+If the last element of the selection is not a link, you get an error message straight into you markdown document.
+
 ![](readme_gif/image.gif)
 
 ### List
@@ -81,6 +85,10 @@ Insert a table inside your doc.
 ### URL
 
 Turn the selected text into an url.
+
+This element is context aware: if you select a text and a link, it turns the text into title between `[]`, and puts the link between `()`.
+
+If the last element of the selection is not a link, you get an error message straight into you markdown document.
 
 ![](readme_gif/url.gif)
 
