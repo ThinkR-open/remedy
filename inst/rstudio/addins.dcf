@@ -97,3 +97,8 @@ Name: Url
 Description: Convert selected text into a url
 Binding: urlr
 Interactive: false
+
+Name: xaringan
+Description: xaringan pull left and pull right
+Binding: xaringanr
+Interactive: false
