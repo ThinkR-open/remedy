@@ -4,8 +4,8 @@
 #'
 #' @return a markdown image link
 #' @export
-#'
-
+#' @importFrom rstudioapi getSourceEditorContext insertText document_position setCursorPosition
+#' 
 imager <- function(){
   a <- rstudioapi::getSourceEditorContext()
   selection_split <- unlist(strsplit(a$selection[[1]]$text, split = " "))

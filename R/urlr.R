@@ -4,7 +4,8 @@
 #'
 #' @return a markdown link
 #' @export
-#'
+#' @importFrom rstudioapi getSourceEditorContext insertText document_position setCursorPosition
+#' 
 urlr <- function(){
   a <- rstudioapi::getSourceEditorContext()
   selection_split <- unlist(strsplit(a$selection[[1]]$text, split = " "))

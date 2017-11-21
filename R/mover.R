@@ -6,7 +6,8 @@
 #'
 #' @return a clone of the line
 #' @export
-
+#' @importFrom rstudioapi getSourceEditorContext insertText setCursorPosition
+#' 
 rightr <- function(){
   a <- rstudioapi::getSourceEditorContext()
   rg <- a$selection[[1]]$range

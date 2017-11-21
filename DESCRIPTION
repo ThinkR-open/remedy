@@ -1,12 +1,12 @@
 Package: remedy
 Title: RStudio Addins to Simplify Markdown Writing
-Version: 0.0.0.9000
-Authors@R: person("Colin", "Fay", email = "colin@thinkr.fr", role = c("aut", "cre"))
+Version: 0.0.0.9100
+Authors@R: c(person("Colin", "Fay", email = "colin@thinkr.fr", role = c("aut", "cre")),
+             person("Jonathan", "Sidi", email = "yonicd@gmail.com", role = c("aut")))
 Description: An RStudio addin providing shortcut for writing in Markdown. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: rstudioapi,
-    stringr
+Imports: rstudioapi
 RoxygenNote: 6.0.1.9000
 Suggests: testthat

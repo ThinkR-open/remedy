@@ -6,8 +6,8 @@
 #'
 #' @return a markdown header
 #' @export
-#'
-
+#' @importFrom rstudioapi getSourceEditorContext insertText
+#' 
 h1r <- function(){
   a <- rstudioapi::getSourceEditorContext()
   # If text is selected
