@@ -48,8 +48,14 @@ chunkify_doc <- function() {
     cat(new_text, file = adc$path, sep = "\n")  
   }else{
     
-    add_rng <- Map(c, Map(c, length(adc$contents), 1), Map(c, length(adc$contents), 1))
-    rstudioapi::insertText(location = add_rng,text = '\n ',id = adc$id)
+    tail_pos <- nchar(tail(adc$contents,1))+1
+    
+    add_rng <- Map(c, Map(c, length(adc$contents), tail_pos), Map(c, length(adc$contents), tail_pos))
+    rstudioapi::setCursorPosition(position = add_rng,id = adc$id)
+    
+    add_num <- length(new_text) - length(adc$contents)
+    
+    rstudioapi::insertText(location = add_rng,text = strrep('\n',add_num),id = adc$id)
     
     rng <- Map(c, Map(c, 1:length(new_text), 1), Map(c, 1:length(new_text), max(nchar(adc$contents))+1))
     rstudioapi::modifyRange(location = rng, text = new_text,id = adc$id)
