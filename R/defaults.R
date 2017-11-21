@@ -86,7 +86,11 @@ remedy_opts <- new_defaults(list(
   counter=TRUE,
   chunk_opts=NULL,
   full_doc=FALSE,
-  token='^#{2} -{4}(.*?)-{4+}$'
+  tokens=list(
+    purl='^#{2} -{4}(.*?)-{4+}$',
+    url = "^(?:(?:https?|ftp|file)://|www\\.|ftp\\.)[A-z0-9+&@#/%=~_|$?!:,.-]*[A-z0-9+&@#/%=~_|$]$", # URL regex
+    rel_link = "^.*[/|\\.][^\\.]+$", # Relative link regex
+    img_link = c('jpeg','jpg','png','gif')) # Image link
 ))
 
 #' @rdname remedyOpts

@@ -5,7 +5,7 @@
 #' @details
 #'
 #' Setting \code{\link{remedy_opts}}$set(list(full_doc=TRUE)) chunky will convert entire document by
-#' \code{\link{remedy_opts}}$get('token'). The default token is the output from a \code{\link[knitr]{purl}}
+#' \code{\link{remedy_opts}}$get('tokens'). The default token is the output from a \code{\link[knitr]{purl}}
 #' conversion (## ----chunk name,chunk options----).
 #'
 #' Setting \code{\link{remedy_opts}}$set(list(full_doc=FALSE)), user highlights text and chunky will
@@ -25,7 +25,7 @@ chunkify <- function() {
 chunkify_doc <- function() {
   adc <- rstudioapi::getActiveDocumentContext()
 
-  find_chunks <- grep(remedy_opts$get("token"), adc$contents)
+  find_chunks <- grep(remedy_opts$get('tokens')$purl, adc$contents)
 
   if (length(find_chunks) == 0) return(NULL)
 

@@ -7,7 +7,6 @@ Description: An RStudio addin providing shortcut for writing in Markdown.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: rstudioapi,
-    stringr
+Imports: rstudioapi
 RoxygenNote: 6.0.1.9000
 Suggests: testthat
