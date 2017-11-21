@@ -1,5 +1,4 @@
 # forked from https://github.com/yihui/knitr/blob/master/R/defaults.R
-#' @importFrom stats setNames
 new_defaults <- function(value = list()) {
   defaults <- value
 
@@ -11,12 +10,12 @@ new_defaults <- function(value = list()) {
       if (drop && length(name) == 1) {
         if (regex) {
           name_grep <- grep(name, names(defaults), value = TRUE, ...)
-          stats::setNames(defaults[name_grep], name_grep)
+          remedy_setNames(defaults[name_grep], name_grep)
         } else {
           defaults[[name]]
         }
       } else {
-        stats::setNames(defaults[name], name)
+        remedy_setNames(defaults[name], name)
       }
     }
   }
@@ -98,4 +97,11 @@ remedy_opts_current <- new_defaults()
 merge_list <- function(x, y) {
   x[names(y)] <- y
   x
+}
+
+#from stats
+remedy_setNames <- function (object = nm, nm) 
+{
+  names(object) <- nm
+  object
 }
