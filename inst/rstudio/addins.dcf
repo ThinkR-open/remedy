@@ -13,6 +13,11 @@ Description: Chunk selected text
 Binding: chunkizer
 Interactive: false
 
+Name: Chunky
+Description: Chunkify script or file
+Binding: chunkify
+Interactive: false
+
 Name: Down
 Description: Clone selected text (or line) downward
 Binding: downr
