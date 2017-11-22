@@ -87,6 +87,7 @@ remedy_opts <- new_defaults(list(
   name='remedy',
   counter=TRUE,
   chunk_opts=NULL,
+  kable_opts=NULL,
   full_doc=FALSE,
   token_purl='^#{2} -{4}(.*?)-{4+}$',
   token_url = "^(?:(?:https?|ftp|file)://|www\\.|ftp\\.)[A-z0-9+&@#/%=~_|$?!:,.-]*[A-z0-9+&@#/%=~_|$]$", # URL regex
