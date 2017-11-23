@@ -18,11 +18,6 @@ Description: Chunkify script or file
 Binding: chunkify
 Interactive: false
 
-Name: Down
-Description: Clone selected text (or line) downward
-Binding: downr
-Interactive: false
-
 Name: H1
 Description: Convert selected text into an h1 header
 Binding: h1r
@@ -63,11 +58,6 @@ Description: Italicize selected text
 Binding: italicsr
 Interactive: false
 
-Name: Strike
-Description: Strikethrough selected text
-Binding: strikr
-Interactive: false
-
 Name: LaTeX
 Description: Convert the selected text in inline LaTeX.
 Binding: latexr
@@ -83,14 +73,14 @@ Description: Copy selected text (or line) to the right
 Binding: rightr
 Interactive: false
 
+Name: Strike
+Description: Strikethrough selected text
+Binding: strikr
+Interactive: false
+
 Name: Table
 Description: Insert a markdown table
 Binding: tabler
-Interactive: false
-
-Name: Up
-Description: Clone selected text (or line) upwards
-Binding: upr
 Interactive: false
 
 Name: Url
