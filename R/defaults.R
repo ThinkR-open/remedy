@@ -28,7 +28,9 @@ new_defaults <- function(value = list()) {
         return()
       }
     }
+
     defaults <<- merge(dots)
+    
     invisible(NULL)
   }
 
@@ -85,12 +87,12 @@ remedy_opts <- new_defaults(list(
   name='remedy',
   counter=TRUE,
   chunk_opts=NULL,
+  kable_opts=NULL,
   full_doc=FALSE,
-  tokens=list(
-    purl='^#{2} -{4}(.*?)-{4+}$',
-    url = "^(?:(?:https?|ftp|file)://|www\\.|ftp\\.)[A-z0-9+&@#/%=~_|$?!:,.-]*[A-z0-9+&@#/%=~_|$]$", # URL regex
-    rel_link = "^.*[/|\\.][^\\.]+$", # Relative link regex
-    img_link = c('jpeg','jpg','png','gif')) # Image link
+  token_purl='^#{2} -{4}(.*?)-{4+}$',
+  token_url = "^(?:(?:https?|ftp|file)://|www\\.|ftp\\.)[A-z0-9+&@#/%=~_|$?!:,.-]*[A-z0-9+&@#/%=~_|$]$", # URL regex
+  token_rel_link = "^.*[/|\\.][^\\.]+$", # Relative link regex
+  token_img_link = c('jpeg','jpg','png','gif') # Image link
 ))
 
 #' @rdname remedyOpts

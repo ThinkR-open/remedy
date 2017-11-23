@@ -12,7 +12,7 @@ wraps highlighted text in an active RStudio document editor in a Rmarkdown chunk
 }
 \details{
 Setting \code{\link{remedy_opts}}$set(list(full_doc=TRUE)) chunky will convert entire document by
-\code{\link{remedy_opts}}$get('tokens'). The default token is the output from a \code{\link[knitr]{purl}}
+\code{\link{remedy_opts}}$get('token_purl'). The default token is the output from a \code{\link[knitr]{purl}}
 conversion (## ----chunk name,chunk options----).
 
 Setting \code{\link{remedy_opts}}$set(list(full_doc=FALSE)), user highlights text and chunky will

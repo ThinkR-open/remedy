@@ -9,9 +9,8 @@
 #' is_link("www.google.com")
 #' is_link("figs/plot.png")
 is_link <- function(text) {
-  tokens <- remedy_opts$get('tokens')
+
+  img_link <- sprintf('^(%s)$',paste0('.',remedy_opts$get('token_img_link'),collapse='|'))
   
-  img_link <- sprintf('^(%s)$',paste0('.',tokens$img_link,collapse='|'))
-  
-  grepl(sprintf('(%s)|(%s)|(%s)',tokens$url,tokens$rel_link,img_link),text)
+  grepl(sprintf('(%s)|(%s)|(%s)',remedy_opts$get('token_url'),remedy_opts$get('token_rel_link'),img_link),text)
 }

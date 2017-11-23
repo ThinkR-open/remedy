@@ -5,7 +5,7 @@
 #' @details
 #'
 #' Setting \code{\link{remedy_opts}}$set(list(full_doc=TRUE)) chunky will convert entire document by
-#' \code{\link{remedy_opts}}$get('tokens'). The default token is the output from a \code{\link[knitr]{purl}}
+#' \code{\link{remedy_opts}}$get('token_purl'). The default token is the output from a \code{\link[knitr]{purl}}
 #' conversion (## ----chunk name,chunk options----).
 #'
 #' Setting \code{\link{remedy_opts}}$set(list(full_doc=FALSE)), user highlights text and chunky will
@@ -21,16 +21,20 @@ chunkify <- function() {
   }
 }
 
-#' @importFrom rstudioapi getActiveDocumentContext
+#' @importFrom rstudioapi getSourceEditorContext
 chunkify_doc <- function() {
-  adc <- rstudioapi::getActiveDocumentContext()
+  adc <- rstudioapi::getSourceEditorContext()
 
-  find_chunks <- grep(remedy_opts$get('tokens')$purl, adc$contents)
+  find_chunks <- grep(remedy_opts$get('token_purl'), adc$contents)
 
   if (length(find_chunks) == 0) return(NULL)
 
-  chunk_idx <- mapply(seq, find_chunks, to = c(find_chunks[-1] - 1, length(adc$contents)))
-
+  if (length(find_chunks) == 1){
+    chunk_idx <- list(find_chunks:length(adc$contents)) 
+  }else{
+    chunk_idx <- mapply(seq, find_chunks, to = c(find_chunks[-1] - 1, length(adc$contents)))  
+  }
+  
   new_chunks <- lapply(chunk_idx, function(x) {
     this <- adc$contents[x]
     this[1] <- sprintf("```{r%s}", gsub("[#-]", "", this[1]))
@@ -40,7 +44,23 @@ chunkify_doc <- function() {
 
   new_text <- c(adc$contents[1:chunk_idx[[1]][1] - 1], unlist(new_chunks))
 
-  cat(new_text, file = adc$path, sep = "\n")
+  if(nzchar(adc$path)){
+    cat(new_text, file = adc$path, sep = "\n")  
+  }else{
+    
+    tail_pos <- nchar(tail(adc$contents,1))+1
+    
+    add_rng <- Map(c, Map(c, length(adc$contents), tail_pos), Map(c, length(adc$contents), tail_pos))
+    rstudioapi::setCursorPosition(position = add_rng,id = adc$id)
+    
+    add_num <- length(new_text) - length(adc$contents)
+    
+    rstudioapi::insertText(location = add_rng,text = strrep('\n',add_num),id = adc$id)
+    
+    rng <- Map(c, Map(c, 1:length(new_text), 1), Map(c, 1:length(new_text), max(nchar(adc$contents))+1))
+    rstudioapi::modifyRange(location = rng, text = new_text,id = adc$id)
+  }
+  
 }
 
 #' @importFrom rstudioapi insertText getActiveDocumentContext setCursorPosition
