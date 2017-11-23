@@ -62,6 +62,12 @@ If the last element of the selection is not a link, you get an error message str
 
 ![](readme_gif/image.gif)
 
+### LaTeX
+
+LaTeX syntax :
+
+![](readme_gif/latex.gif)
+
 ### List
 
 Turn the selected text into an unordered list.
