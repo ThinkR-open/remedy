@@ -8,7 +8,7 @@ remedy
 
 All the functions are meant to be mapped to keyboard shortcuts. A list of suggested shortcuts is provided towards the end of this README.
 
-> Note that all the addins/shortcuts below will also work without selecting any text.
+> Note that most of the addins/shortcuts below will also work without selecting any text.
 
 Install
 -------
@@ -80,7 +80,17 @@ Copy the selected text or the current line to the right.
 
 Insert a table inside your doc.
 
+There are basically two way to do that with remedy :
+
+#### Empty table
+
 ![](readme_gif/table.gif)
+
+#### Parse your data
+
+Turn your dataframe into a markdown table :
+
+![](readme_gif/table_remedy.gif)
 
 ### URL
 
@@ -91,6 +101,12 @@ This element is context aware: if you select a text and a link, it turns the tex
 If the last element of the selection is not a link, you get an error message straight into you markdown document.
 
 ![](readme_gif/url.gif)
+
+### xaringan
+
+Insert a xaringan pull-left and pull-right template.
+
+![](readme_gif/xaringan.gif)
 
 Recommended shortcuts
 ---------------------
