@@ -48,7 +48,7 @@ chunkr_doc <- function() {
     cat(new_text, file = adc$path, sep = "\n")  
   }else{
     
-    tail_pos <- nchar(tail(adc$contents,1))+1
+    tail_pos <- nchar(adc$contents[length(adc$contents)])+1
     
     add_rng <- Map(c, Map(c, length(adc$contents), tail_pos), Map(c, length(adc$contents), tail_pos))
     rstudioapi::setCursorPosition(position = add_rng,id = adc$id)
