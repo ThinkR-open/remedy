@@ -3,14 +3,14 @@
 \name{italicsr}
 \alias{italicsr}
 \alias{boldr}
-\alias{strikr}
+\alias{striker}
 \title{Emphasize}
 \usage{
 italicsr()
 
 boldr()
 
-strikr()
+striker()
 }
 \value{
 emboldened, italicized or strikethrough text (in markdown)

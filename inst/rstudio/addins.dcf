@@ -1,6 +1,6 @@
 Name: Backtick
 Description: Backtick selected word(s)
-Binding: backticker
+Binding: backtickr
 Interactive: false
 
 Name: Bold
@@ -9,13 +9,8 @@ Binding: boldr
 Interactive: false
 
 Name: Chunk
-Description: Chunk selected text
-Binding: chunkizer
-Interactive: false
-
-Name: Chunky
-Description: Chunkify script or file
-Binding: chunkify
+Description: Chunk script or file
+Binding: chunkr
 Interactive: false
 
 Name: H1
@@ -75,7 +70,7 @@ Interactive: false
 
 Name: Strike
 Description: Strikethrough selected text
-Binding: strikr
+Binding: striker
 Interactive: false
 
 Name: Table
@@ -88,7 +83,7 @@ Description: Convert selected text into a url
 Binding: urlr
 Interactive: false
 
-Name: xaringan
+Name: Xaringan
 Description: xaringan pull left and pull right
 Binding: xaringanr
 Interactive: false

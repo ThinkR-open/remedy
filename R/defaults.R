@@ -92,7 +92,27 @@ remedy_opts <- new_defaults(list(
   token_purl='^#{2} -{4}(.*?)-{4+}$',
   token_url = "^(?:(?:https?|ftp|file)://|www\\.|ftp\\.)[A-z0-9+&@#/%=~_|$?!:,.-]*[A-z0-9+&@#/%=~_|$]$", # URL regex
   token_rel_link = "^.*[/|\\.][^\\.]+$", # Relative link regex
-  token_img_link = c('jpeg','jpg','png','gif') # Image link
+  token_img_link = c('jpeg','jpg','png','gif'), # Image link
+  hotkeys = c(
+    backtick = "Ctrl+Cmd+`",
+    bold = "Ctrl+Cmd+B",
+    chunk = "Ctrl+Alt+Cmd+C",
+    h1 = "Ctrl+Cmd+1",
+    h2 = "Ctrl+Cmd+2",
+    h3 = "Ctrl+Cmd+3",
+    h4 = "Ctrl+Cmd+4",
+    h5 = "Ctrl+Cmd+5",
+    h6 = "Ctrl+Cmd+6",
+    image = "Ctrl+Cmd+P",
+    italics = "Ctrl+Cmd+I",
+    latex = "Ctrl+Cmd+L",
+    list = "Ctrl+Shift+Cmd+=",
+    right = "Alt+Cmd+Right",
+    strike = "Ctrl+Cmd+S",
+    table = "Ctrl+Cmd+T",
+    url = "Ctrl+Cmd+U",
+    xaringan = "Ctrl+Cmd+X"
+  )
 ))
 
 #' @rdname remedyOpts

@@ -11,18 +11,18 @@
 #' Setting \code{\link{remedy_opts}}$set(list(full_doc=FALSE)), user highlights text and chunky will
 #'  wrap a new Rmarkdown chunk around it, utilizing the other options in \code{\link{remedy_opts}}.
 #'
-#' @rdname chunkify
+#' @rdname chunkr
 #' @export
-chunkify <- function() {
+chunkr <- function() {
   if (remedy_opts$get("full_doc")) {
-    chunkify_doc()
+    chunkr_doc()
   } else {
-    chunkify_section()
+    chunkr_section()
   }
 }
 
 #' @importFrom rstudioapi getSourceEditorContext
-chunkify_doc <- function() {
+chunkr_doc <- function() {
   adc <- rstudioapi::getSourceEditorContext()
 
   find_chunks <- grep(remedy_opts$get('token_purl'), adc$contents)
@@ -64,7 +64,7 @@ chunkify_doc <- function() {
 }
 
 #' @importFrom rstudioapi insertText getActiveDocumentContext setCursorPosition
-chunkify_section <- function() {
+chunkr_section <- function() {
   adc <- rstudioapi::getActiveDocumentContext()
 
   newend <- adc$selection[[1]]$range$start[[1]] + (adc$selection[[1]]$range$end[[1]] - adc$selection[[1]]$range$start[[1]]) + 3
