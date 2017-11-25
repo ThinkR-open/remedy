@@ -121,26 +121,27 @@ Here's a list of recommended shortcuts:
 
 ### On mac
 
-You can run `remedy::set_hotkeys` to have the package update for you the hotkey settings for your RStudio IDE.
+You can run `remedy::set_hotkeys` to have the package update for you the hotkey settings for your RStudio IDE. If you want to edit the default settings you can view the defaults `remedy_opts$get('hotkeys')` and change them through `remedy_opts$set(hotkeys=<NEW_SETTINGS>)`.
+
+``` r
+remedy::remedy_opts$get('hotkeys')
+#>           backtick               bold              chunk 
+#>       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" 
+#>                 h1                 h2                 h3 
+#>       "Ctrl+Cmd+1"       "Ctrl+Cmd+2"       "Ctrl+Cmd+3" 
+#>                 h4                 h5                 h6 
+#>       "Ctrl+Cmd+4"       "Ctrl+Cmd+5"       "Ctrl+Cmd+6" 
+#>              image            italics              latex 
+#>       "Ctrl+Cmd+P"       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" 
+#>               list              right             strike 
+#> "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right"       "Ctrl+Cmd+S" 
+#>              table                url           xaringan 
+#>       "Ctrl+Cmd+T"       "Ctrl+Cmd+U"       "Ctrl+Cmd+X"
+```
 
 <!-- 
 Due to a [limitation](https://community.rstudio.com/t/keyboard-shortcut-for-addin-in-dcf-file/2753) currently of the IDE you will need to restart the IDE once for the hotkeys to be initialized. 
 -->
--   backtick : "Ctrl+Cmd+\`"
--   bold : "Ctrl+Cmd+B"
--   chunk : "Ctrl+Alt+Cmd+C"
--   down : "Cmd+Alt+Down" (overrides the default)
--   h1 : "Ctrl+Cmd+1"
--   h2 : "Ctrl+Cmd+2"
--   etc...
--   image : "Ctrl+Cmd+P"
--   italics : "Ctrl+Cmd+I"
--   list : "Ctrl+Shift+Cmd+="
--   right : "Alt+Cmd+Right"
--   strike : "Ctrl+Cmd+S
--   table : "Ctrl+Cmd+T"
--   url : "Ctrl+Cmd+U"
-
 Feedbacks and enhancement
 -------------------------
 
