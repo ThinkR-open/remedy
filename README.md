@@ -121,9 +121,11 @@ Here's a list of recommended shortcuts:
 
 ### On mac
 
-You can run `remedy::set_hotkeys` to have the package update for you the hotkey settings for your RStudio IDE. <!---- Due to a [limitation](https://community.rstudio.com/t/keyboard-shortcut-for-addin-in-dcf-file/2753) currently of the IDE you will need to restart the IDE once for the hotkeys to be initialized. 
----->
+You can run `remedy::set_hotkeys` to have the package update for you the hotkey settings for your RStudio IDE.
 
+<!-- 
+Due to a [limitation](https://community.rstudio.com/t/keyboard-shortcut-for-addin-in-dcf-file/2753) currently of the IDE you will need to restart the IDE once for the hotkeys to be initialized. 
+-->
 -   backtick : "Ctrl+Cmd+\`"
 -   bold : "Ctrl+Cmd+B"
 -   chunk : "Ctrl+Alt+Cmd+C"
