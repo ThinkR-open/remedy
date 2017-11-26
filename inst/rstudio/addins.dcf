@@ -92,3 +92,8 @@ Name: Xaringan
 Description: xaringan pull left and pull right
 Binding: xaringanr
 Interactive: false
+
+Name: Youtube
+Description: Convert selected text into a markdown youtube frame
+Binding: youtuber
+Interactive: false

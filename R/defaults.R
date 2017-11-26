@@ -112,7 +112,8 @@ remedy_opts <- new_defaults(list(
     strike = "Ctrl+Cmd+S",
     table = "Ctrl+Cmd+T",
     url = "Ctrl+Cmd+U",
-    xaringan = "Ctrl+Cmd+X"
+    xaringan = "Ctrl+Cmd+X",
+    youtube = "Ctrl+Cmd+Y"
   )
 ))
 

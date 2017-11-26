@@ -137,8 +137,8 @@ remedy::remedy_opts$get('hotkeys')
 #>       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right" 
 #>             strike              table                url 
 #>       "Ctrl+Cmd+S"       "Ctrl+Cmd+T"       "Ctrl+Cmd+U" 
-#>           xaringan 
-#>       "Ctrl+Cmd+X"
+#>           xaringan            youtube 
+#>       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"
 ```
 
 <!-- 
