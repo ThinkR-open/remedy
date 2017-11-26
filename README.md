@@ -127,16 +127,18 @@ You can run `remedy::set_hotkeys` to have the package update for you the hotkey 
 remedy::remedy_opts$get('hotkeys')
 #>           backtick               bold              chunk 
 #>       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" 
-#>                 h1                 h2                 h3 
-#>       "Ctrl+Cmd+1"       "Ctrl+Cmd+2"       "Ctrl+Cmd+3" 
-#>                 h4                 h5                 h6 
-#>       "Ctrl+Cmd+4"       "Ctrl+Cmd+5"       "Ctrl+Cmd+6" 
-#>              image            italics              latex 
-#>       "Ctrl+Cmd+P"       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" 
-#>               list              right             strike 
-#> "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right"       "Ctrl+Cmd+S" 
-#>              table                url           xaringan 
-#>       "Ctrl+Cmd+T"       "Ctrl+Cmd+U"       "Ctrl+Cmd+X"
+#>         chunksplit                 h1                 h2 
+#> "Ctrl+Shift+Alt+C"       "Ctrl+Cmd+1"       "Ctrl+Cmd+2" 
+#>                 h3                 h4                 h5 
+#>       "Ctrl+Cmd+3"       "Ctrl+Cmd+4"       "Ctrl+Cmd+5" 
+#>                 h6              image            italics 
+#>       "Ctrl+Cmd+6"       "Ctrl+Cmd+P"       "Ctrl+Cmd+I" 
+#>              latex               list              right 
+#>       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right" 
+#>             strike              table                url 
+#>       "Ctrl+Cmd+S"       "Ctrl+Cmd+T"       "Ctrl+Cmd+U" 
+#>           xaringan 
+#>       "Ctrl+Cmd+X"
 ```
 
 <!-- 

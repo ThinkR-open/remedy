@@ -97,6 +97,7 @@ remedy_opts <- new_defaults(list(
     backtick = "Ctrl+Cmd+`",
     bold = "Ctrl+Cmd+B",
     chunk = "Ctrl+Alt+Cmd+C",
+    chunksplit = "Ctrl+Shift+Alt+C",
     h1 = "Ctrl+Cmd+1",
     h2 = "Ctrl+Cmd+2",
     h3 = "Ctrl+Cmd+3",

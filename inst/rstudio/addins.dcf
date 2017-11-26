@@ -13,6 +13,11 @@ Description: Chunk script or file
 Binding: chunkr
 Interactive: false
 
+Name: Chunksplit
+Description: Split chunk into two chunks
+Binding: chunksplitr
+Interactive: false
+
 Name: H1
 Description: Convert selected text into an h1 header
 Binding: h1r

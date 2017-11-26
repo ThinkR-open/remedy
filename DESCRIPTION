@@ -1,6 +1,6 @@
 Package: remedy
 Title: RStudio Addins to Simplify Markdown Writing
-Version: 0.0.0.9300
+Version: 0.0.0.9400
 Authors@R: c(person("Colin", "Fay", email = "colin@thinkr.fr", role = c("aut", "cre")),
              person("Jonathan", "Sidi", email = "yonicd@gmail.com", role = c("aut")))
 Description: An RStudio addin providing shortcut for writing in Markdown. 
