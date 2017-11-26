@@ -10,5 +10,5 @@ chunksplitr()
 Split a chunk into two chunks
 }
 \details{
-Will split below row of the current cursor position.
+Will split below row of the current cursor position or under the hightled text.
 }
