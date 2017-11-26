@@ -11,5 +11,20 @@ Highlight youtube link in source editor and it will be converted
 to a markdown link with an image saved in youtube.
 }
 \details{
-the frame output is in the form of ![[Alternative text](Youtube Image)](Link to Video)
+if remedy_opts$get('youtube_output')=='md' then the output will be of the form
+
+ ![[Alternative text](Youtube Image)](Link to Video). (useful for github readme)
+ 
+if remedy_opts$get('youtube_output')=='html' then the output will be of the form
+
+<iframe width="remedy_opts$get('youtube_width')" height="remedy_opts$get('youtube_height')" src="link to video" 
+frameborder="0" allowfullscreen></iframe>
+
+Default Settings:
+ 
+remedy_opts$get('youtube_output'): \Sexpr[results=verbatim]{str(remedy::remedy_opts$get('youtube_output'))}
+
+remedy_opts$get('youtube_height'): \Sexpr[results=verbatim]{str(remedy::remedy_opts$get('youtube_height'))}
+
+remedy_opts$get('youtube_width'): \Sexpr[results=verbatim]{str(remedy::remedy_opts$get('youtube_width'))}
 }

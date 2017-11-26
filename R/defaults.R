@@ -93,6 +93,9 @@ remedy_opts <- new_defaults(list(
   token_url = "^(?:(?:https?|ftp|file)://|www\\.|ftp\\.)[A-z0-9+&@#/%=~_|$?!:,.-]*[A-z0-9+&@#/%=~_|$]$", # URL regex
   token_rel_link = "^.*[/|\\.][^\\.]+$", # Relative link regex
   token_img_link = c('jpeg','jpg','png','gif'), # Image link
+  youtube_output = 'html',
+  youtube_width = '100%',
+  youtube_height = '400',
   hotkeys = c(
     backtick = "Ctrl+Cmd+`",
     bold = "Ctrl+Cmd+B",
