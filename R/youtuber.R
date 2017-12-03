@@ -35,7 +35,7 @@ youtuber <- function(){
   
   new_txt <- switch(remedy_opts$get('youtube_output'),
          md = {
-           sprintf('![[ALT TEXT](http://img.youtube.com/vi/%s/0.jpg)](https://www.youtube.com/watch?v=%s)',
+           sprintf('[![ALT TEXT](http://img.youtube.com/vi/%s/0.jpg)](https://www.youtube.com/watch?v=%s)',
                    root,token)         
          },
          html = {
