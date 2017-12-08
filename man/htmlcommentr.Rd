@@ -7,5 +7,38 @@
 htmlcommentr()
 }
 \description{
-FUNCTION_DESCRIPTION
+RStudio addin to add/remove html comments to highlighted text
+}
+\details{
+Highlighting text will add html comment tags around it
+
+Highlighting commented text will remove tags.
+
+\strong{Highlighting}
+
+Something COMMENT Something
+
+Something <!-- COMMENT --> Something
+
+\strong{New Comment}
+
+Something COMMENT [cursor here] Something
+ 
+Something COMMENT  <!--  -->  Something 
+
+\strong{Start of Row}
+
+[cursor here] Something COMMENT Something
+
+ <!-- Something COMMENT Something --> 
+ 
+\strong{Highlighting Multiple rows}
+
+Something COMMENT Something
+ 
+Something COMMENT Something
+
+ <!-- Something COMMENT Something 
+ 
+Something COMMENT Something -->
 }
