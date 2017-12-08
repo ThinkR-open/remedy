@@ -5,7 +5,7 @@
 #' 
 #' if remedy_opts$get('youtube_output')=='md' then the output will be of the form
 #' 
-#'  ![[Alternative text](Youtube Image)](Link to Video). (useful for github readme)
+#'  [![Alternative text](Youtube Image)](Link to Video). (useful for github readme)
 #'  
 #' if remedy_opts$get('youtube_output')=='html' then the output will be of the form
 #' 
@@ -46,9 +46,7 @@ youtuber <- function(){
          }
          )
   
-  
-  
-  
+
   rg <- adc$selection[[1]]$range
   rstudioapi::modifyRange(location = rg, text = new_txt,id = adc$id)
   

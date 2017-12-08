@@ -48,6 +48,11 @@ Description: Convert selected text into an h6 header
 Binding: h6r
 Interactive: false
 
+Name: Htmlcomment
+Description: Convert selected text into an HTML comment or insert new comment
+Binding: htmlcommentr
+Interactive: false
+
 Name: Image
 Description: Convert selected path into an embedded image
 Binding: imager

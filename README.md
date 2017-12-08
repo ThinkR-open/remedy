@@ -131,14 +131,14 @@ remedy::remedy_opts$get('hotkeys')
 #> "Ctrl+Shift+Alt+C"       "Ctrl+Cmd+1"       "Ctrl+Cmd+2" 
 #>                 h3                 h4                 h5 
 #>       "Ctrl+Cmd+3"       "Ctrl+Cmd+4"       "Ctrl+Cmd+5" 
-#>                 h6              image            italics 
-#>       "Ctrl+Cmd+6"       "Ctrl+Cmd+P"       "Ctrl+Cmd+I" 
-#>              latex               list              right 
-#>       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right" 
-#>             strike              table                url 
-#>       "Ctrl+Cmd+S"       "Ctrl+Cmd+T"       "Ctrl+Cmd+U" 
-#>           xaringan            youtube 
-#>       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"
+#>                 h6        htmlcomment              image 
+#>       "Ctrl+Cmd+6"       "Ctrl+Alt+C"       "Ctrl+Cmd+P" 
+#>            italics              latex               list 
+#>       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+=" 
+#>              right             strike              table 
+#>    "Alt+Cmd+Right"       "Ctrl+Cmd+S"       "Ctrl+Cmd+T" 
+#>                url           xaringan            youtube 
+#>       "Ctrl+Cmd+U"       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"
 ```
 
 <!-- 

@@ -107,6 +107,7 @@ remedy_opts <- new_defaults(list(
     h4 = "Ctrl+Cmd+4",
     h5 = "Ctrl+Cmd+5",
     h6 = "Ctrl+Cmd+6",
+    htmlcomment = "Ctrl+Alt+C",
     image = "Ctrl+Cmd+P",
     italics = "Ctrl+Cmd+I",
     latex = "Ctrl+Cmd+L",

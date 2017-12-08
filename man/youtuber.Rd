@@ -13,7 +13,7 @@ to a markdown link with an image saved in youtube.
 \details{
 if remedy_opts$get('youtube_output')=='md' then the output will be of the form
 
- ![[Alternative text](Youtube Image)](Link to Video). (useful for github readme)
+ [![Alternative text](Youtube Image)](Link to Video). (useful for github readme)
  
 if remedy_opts$get('youtube_output')=='html' then the output will be of the form
 
