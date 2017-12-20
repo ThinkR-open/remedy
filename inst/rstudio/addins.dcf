@@ -1,3 +1,13 @@
+Name: Align
+Description: Align <- in selection
+Binding: alignAssign
+Interactive: false
+
+Name: AlignEqual
+Description: Align = in selection
+Binding: alignAssign2
+Interactive: false
+
 Name: Backtick
 Description: Backtick selected word(s)
 Binding: backtickr
