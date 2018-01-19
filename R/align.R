@@ -9,7 +9,7 @@ capture <- function() {
   rstudioapi::getActiveDocumentContext()
 }
 
-captureArea <- function(capture) {
+capture_area <- function(capture) {
   # Find range
   range_start <- capture$selection[[1L]]$range$start[[1L]]
   range_end   <- capture$selection[[1L]]$range$end[[1L]]
@@ -20,7 +20,7 @@ captureArea <- function(capture) {
   return(contents)
 }
 
-findRegEx <- function(find, where) {
+find_regex <- function(find, where) {
   
   # Find matches, extract positions, find furthest <-, get rows/cols to align.
   matched.rows <- grep(find, where)
@@ -41,7 +41,7 @@ findRegEx <- function(find, where) {
               furthest_column   = furthest_column))
 }
 
-assembleInsert <-function(info) {
+assemble_insert <-function(info) {
   # Unload variables
   matched.rows      <- info$matched.rows
   matched.cols      <- info$matched.cols
@@ -73,11 +73,11 @@ insertr <- function(list) {
 #'
 #' @return Aligns the single assignment operators (\code{<-}) within a highlighted region.
 #' @export
-alignAssign <- function() {
+align_arrow <- function() {
   capture <- capture()
-  area    <- captureArea(capture)
-  loc     <- findRegEx("<-", area)
-  insertList <- assembleInsert(loc)
+  area    <- capture_area(capture)
+  loc     <- find_regex("<-", area)
+  insertList <- assemble_insert(loc)
   insertr(insertList)
 }
 
@@ -86,10 +86,10 @@ alignAssign <- function() {
 #' @return Aligns the equal sign assignment operators (\code{=}) within a
 #' highlighted region.
 #' @export
-alignAssign2 <- function() {
+align_equal <- function() {
   capture <- capture()
-  area    <- captureArea(capture)
-  loc     <- findRegEx("=", area)
-  insertList <- assembleInsert(loc)
+  area    <- capture_area(capture)
+  loc     <- find_regex("=", area)
+  insertList <- assemble_insert(loc)
   insertr(insertList)
 }

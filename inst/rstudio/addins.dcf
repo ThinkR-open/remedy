@@ -1,11 +1,11 @@
 Name: Align
 Description: Align <- in selection
-Binding: alignAssign
+Binding: align_arrow
 Interactive: false
 
 Name: AlignEqual
 Description: Align = in selection
-Binding: alignAssign2
+Binding: align_equal
 Interactive: false
 
 Name: Backtick
