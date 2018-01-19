@@ -28,6 +28,16 @@ Here's a list of all available helpers:
 
 ![](readme_gif/remedy_example.gif)
 
+### Align
+
+Align selected blocks to their assignment operator, either `<-`
+
+![](readme_gif/align.gif)
+
+or `=`
+
+![](readme_gif/alignequal.gif)
+
 ### Backtick
 
 Enclose the selected word(s) in backticks.
