@@ -7,6 +7,8 @@ Authors@R: c(person("Colin", "Fay", email = "colin@thinkr.fr", role = c("aut", "
              person("Luke", "Smith", email = "luke@protocolvital.info", role = c("aut"), comment = "author of seasmith/AlignAssign"))
 Description: An RStudio addin providing shortcut for writing in Markdown. 
 License: MIT + file LICENSE
+URL: https://github.com/ThinkR-open/remedy
+BugReports: https://github.com/ThinkR-open/remedy/issues
 Encoding: UTF-8
 LazyData: true
 Imports: rstudioapi, knitr, jsonlite
