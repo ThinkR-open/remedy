@@ -88,6 +88,11 @@ Description: Copy selected text (or line) to the right
 Binding: rightr
 Interactive: false
 
+Name: Session Info
+Description: Insert a session info command
+Binding: session_infor
+Interactive: false
+
 Name: Strike
 Description: Strikethrough selected text
 Binding: striker
