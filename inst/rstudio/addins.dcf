@@ -13,6 +13,11 @@ Description: Backtick selected word(s)
 Binding: backtickr
 Interactive: false
 
+Name: Blockquote
+Description: Convert selected text into a blockquote
+Binding: blockquoter
+Interactive: false
+
 Name: Bold
 Description: Embolden selected text
 Binding: boldr
