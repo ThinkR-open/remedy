@@ -1,5 +1,6 @@
 Tests and Coverage
 ================
+25 April, 2018 21:29:40
 
 -   [Coverage](#coverage)
 -   [Unit Tests](#unit-tests)
@@ -217,7 +218,7 @@ test-url.R
 16
 </td>
 <td style="text-align:right;">
-0.023
+0.028
 </td>
 <td style="text-align:right;">
 0
@@ -274,7 +275,7 @@ PASS
 3
 </td>
 <td style="text-align:right;">
-0.005
+0.008
 </td>
 </tr>
 <tr>
@@ -291,7 +292,7 @@ PASS
 4
 </td>
 <td style="text-align:right;">
-0.005
+0.006
 </td>
 </tr>
 <tr>
@@ -325,7 +326,7 @@ PASS
 5
 </td>
 <td style="text-align:right;">
-0.008
+0.009
 </td>
 </tr>
 </tbody>
