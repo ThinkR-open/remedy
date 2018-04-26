@@ -1,7 +1,7 @@
 ---
 title: "Tests and Coverage"
-date: "`r format(Sys.time(), '%d %B, %Y %H:%M:%S')`"
 knit: (function(inputFile, encoding) { rmarkdown::render(inputFile, encoding = encoding, output_file = file.path(dirname(inputFile), 'README.md')) })
+date: "`r format(Sys.time(), '%d %B, %Y %H:%M:%S')`"
 output: 
   github_document:
     toc: true
@@ -39,7 +39,20 @@ covr_print_to_df <- function(x, group = c("filename", "functions"), by = "line")
     
     names(overall_percentage) <- attr(x, "package")$package
     
+    # message(
+    #   crayon::bold(paste(collapse = " ", c(attr(x, "package")$package, 
+    #     to_title(type), "Coverage: "))),
+    #   format_percentage(overall_percentage)
+    #   )
+    
     by_coverage <- percents[order(percents, names(percents))]
+    
+    # for (i in seq_along(by_coverage)) {
+    #   
+    #     message(
+    #       crayon::bold(paste0(names(by_coverage)[i], ": ")),
+    #         format_percentage(by_coverage[i]))
+    # }
     
     return(tibble::enframe(c(overall_percentage,by_coverage)))
 }
@@ -51,10 +64,13 @@ covr_print_to_df <- function(x, group = c("filename", "functions"), by = "line")
 Coverage summary is created using the [covr](https://github.com/r-lib/covr) package.
 
 ```{r,echo=FALSE}
-knitr::kable(covr_print_to_df(x),digits = 2,
-             col.names = c('Object','Coverage (%)'),align = c('l','c'),format = 'html')%>%
-  kableExtra::kable_styling("striped", full_width = TRUE)
-
+covr_print_to_df(x)%>%
+  dplyr::mutate(name=ifelse(grepl('^R/',name),
+                            sprintf('[%s](../%s)',name,name),
+                            name))%>%
+  knitr::kable(digits = 2,
+             col.names = c('Object','Coverage (%)'),align = c('l','c'))
+  
 ```
 
 ```{r,include=FALSE}
@@ -67,12 +83,10 @@ x <- devtools::test()
 
 Unit Test summary is created using the [testthat](https://github.com/r-lib/testthat) package.
 
+
+
 ```{r,echo=FALSE,warning=FALSE,message=FALSE}
 x <- dplyr::as_data_frame(x)
-
-x_full <- x%>%
-  dplyr::mutate(status=ifelse(failed,'FAIL','PASS'))%>%
-  dplyr::select(file,test,context,status,n=nb,time=real,failed)
 
 x_short <- x%>%
   dplyr::group_by(file)%>%
@@ -81,24 +95,27 @@ x_short <- x%>%
   tidyr::gather(key = 'status_type',value='status',-c(file,n,time))%>%
   dplyr::group_by(file,status_type)%>%
   dplyr::summarise_at(dplyr::vars(n,time,status),dplyr::funs(sum))%>%
-  tidyr::spread(key = status_type,value=status)
+  tidyr::spread(key = status_type,value=status)%>%
+  dplyr::ungroup()%>%
+  dplyr::mutate(file=sprintf('[%s](testthat/%s)',file,file))
   
-knitr::kable(x_short,format = 'html')%>%
-  kableExtra::kable_styling("striped", full_width = FALSE)
+x_short%>%
+  knitr::kable()
 
-split_list <- x_full%>%
-  dplyr::select(file)%>%
-  dplyr::mutate(n=1:n())%>%
-  split(x = .,f=.$file)%>%
-  purrr::map(.f=function(x) length(x$n))%>%
-  unlist()
+# split_list <- x_full%>%
+#   dplyr::select(file)%>%
+#   dplyr::mutate(n=1:n())%>%
+#   split(x = .,f=.$file)%>%
+#   purrr::map(.f=function(x) length(x$n))%>%
+#   unlist()
+
+x_full <- x%>%
+  dplyr::mutate(status=ifelse(failed,'FAIL','PASS'))%>%
+  dplyr::select(file,test,context,status,n=nb,time=real,failed)%>%
+  dplyr::mutate(file=sprintf('[%s](testthat/%s)',file,file))
 
 x_full%>%
-  dplyr::select(-c(file,failed))%>%
-  knitr::kable(format = 'html',escape = FALSE)%>%
-  kableExtra::kable_styling("striped", full_width = FALSE) %>%
-  kableExtra::group_rows(index = split_list)
-
-
+  dplyr::select(-c(failed))%>%
+  knitr::kable()
 
 ```
