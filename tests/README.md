@@ -1,9 +1,11 @@
 Tests and Coverage
 ================
-26 April, 2018 16:09:41
+28 April, 2018 15:19:25
 
 -   [Coverage](#coverage)
 -   [Unit Tests](#unit-tests)
+
+This output is created by [covrpage](https://github.com/yonicd/covrpage).
 
 Coverage
 --------
@@ -41,11 +43,11 @@ Unit Test summary is created using the [testthat](https://github.com/r-lib/testt
 
 | file                              |    n|   time|  error|  failed|  skipped|  warning|
 |:----------------------------------|----:|------:|------:|-------:|--------:|--------:|
-| [test-url.R](testthat/test-url.R) |   16|  0.028|      0|       0|        0|        0|
+| [test-url.R](testthat/test-url.R) |    0|  0.008|      4|       0|        0|        0|
 
 | file                              | test                                    | context                         | status |    n|   time|
 |:----------------------------------|:----------------------------------------|:--------------------------------|:-------|----:|------:|
-| [test-url.R](testthat/test-url.R) | urls are detected                       | url and relative link detection | PASS   |    3|  0.006|
-| [test-url.R](testthat/test-url.R) | (potential) relative links are detected | url and relative link detection | PASS   |    4|  0.006|
-| [test-url.R](testthat/test-url.R) | image links are detected                | url and relative link detection | PASS   |    4|  0.007|
-| [test-url.R](testthat/test-url.R) | invalid urls/links are not detected     | url and relative link detection | PASS   |    5|  0.009|
+| [test-url.R](testthat/test-url.R) | urls are detected                       | url and relative link detection | PASS   |    0|  0.001|
+| [test-url.R](testthat/test-url.R) | (potential) relative links are detected | url and relative link detection | PASS   |    0|  0.003|
+| [test-url.R](testthat/test-url.R) | image links are detected                | url and relative link detection | PASS   |    0|  0.002|
+| [test-url.R](testthat/test-url.R) | invalid urls/links are not detected     | url and relative link detection | PASS   |    0|  0.002|
