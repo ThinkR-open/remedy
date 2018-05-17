@@ -1,11 +1,6 @@
 Name: Align
-Description: Align <- in selection
-Binding: align_arrow
-Interactive: false
-
-Name: AlignEqual
-Description: Align = in selection
-Binding: align_equal
+Description: Align <- and = in selection
+Binding: alignr
 Interactive: false
 
 Name: Backtick
@@ -26,6 +21,11 @@ Interactive: false
 Name: Chunksplit
 Description: Split chunk into two chunks
 Binding: chunksplitr
+Interactive: false
+
+Name: Describe
+Description: Wrap selected text in a testthat describe chunk
+Binding: describer
 Interactive: false
 
 Name: H1
@@ -68,6 +68,11 @@ Description: Convert selected path into an embedded image
 Binding: imager
 Interactive: false
 
+Name: It
+Description: Wrap selected text in a testthat it chunk
+Binding: itr
+Interactive: false
+
 Name: Italics
 Description: Italicize selected text
 Binding: italicsr
@@ -96,6 +101,11 @@ Interactive: false
 Name: Table
 Description: Insert a markdown table
 Binding: tabler
+Interactive: false
+
+Name: Test_that
+Description: Wrap selected text in a testthat test_that chunk
+Binding: testthatr
 Interactive: false
 
 Name: Url

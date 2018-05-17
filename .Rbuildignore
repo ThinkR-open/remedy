@@ -5,3 +5,5 @@
 ^README\.Rmd$
 ^README-.*\.png$
 readme_gif
+^\.travis\.yml$
+^codecov\.yml$
