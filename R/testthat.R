@@ -16,14 +16,14 @@ describer <- function(){
   
   if(nzchar(thistxt)){
     ret <- sprintf("testthat::describe('DESCRIPTION', {
-    %s
-  })",thistxt)    
+      %s
+    })",thistxt)    
   }else{
     ret <- sprintf("testthat::describe('DESCRIPTION', {
-    it('DESCRIPTION',{
-      %s
-    })          
-  })",adc$selection[[1]]$text)
+      it('DESCRIPTION',{
+        %s
+      })          
+    })",adc$selection[[1]]$text)
   }
 
   rstudioapi::modifyRange(adc$selection[[1]]$range,ret,id = adc$id)
@@ -38,8 +38,8 @@ itr <- function(){
   adc <- rstudioapi::getSourceEditorContext()
   
   ret <- sprintf("it('DESCRIPTION', {
-    %s
-  })",
+      %s
+    })",
                  adc$selection[[1]]$text)
   
   rstudioapi::modifyRange(adc$selection[[1]]$range,ret,id = adc$id)
@@ -54,8 +54,8 @@ testthatr <- function(){
   adc <- rstudioapi::getSourceEditorContext()
   
   ret <- sprintf("testthat::test_that('DESCRIPTION', {
-    %s
-  })",adc$selection[[1]]$text)
+      %s
+    })",adc$selection[[1]]$text)
   
   rstudioapi::modifyRange(adc$selection[[1]]$range,ret,id = adc$id)
   
