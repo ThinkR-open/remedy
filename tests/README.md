@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-18 May, 2018 16:04:58
+18 May, 2018 16:11:07
 
 This output is created by
 [covrpage](https://github.com/yonicd/covrpage).
@@ -41,13 +41,25 @@ Unit Test summary is created using the
 [testthat](https://github.com/r-lib/testthat)
 package.
 
-|            | file                              | n | time | error | failed | skipped | warning |
-| ---------- | :-------------------------------- | -: | ---: | ----: | -----: | ------: | ------: |
-| test-url.R | [test-url.R](testthat/test-url.R) | 0 | 0.01 |     4 |      0 |       0 |       0 |
+|            | file                              |  n |  time | error | failed | skipped | warning |
+| ---------- | :-------------------------------- | -: | ----: | ----: | -----: | ------: | ------: |
+| test-url.R | [test-url.R](testthat/test-url.R) | 16 | 0.061 |     0 |      0 |       0 |       0 |
 
-| file                                  | context                         | test                                    | status | n |  time |
-| :------------------------------------ | :------------------------------ | :-------------------------------------- | :----- | -: | ----: |
-| [test-url.R](testthat/test-url.R#L4)  | url and relative link detection | urls are detected                       | ERROR  | 0 | 0.003 |
-| [test-url.R](testthat/test-url.R#L10) | url and relative link detection | (potential) relative links are detected | ERROR  | 0 | 0.002 |
-| [test-url.R](testthat/test-url.R#L17) | url and relative link detection | image links are detected                | ERROR  | 0 | 0.002 |
-| [test-url.R](testthat/test-url.R#L24) | url and relative link detection | invalid urls/links are not detected     | ERROR  | 0 | 0.003 |
+| file                                  | context                         | test                                              | status | n |  time |
+| :------------------------------------ | :------------------------------ | :------------------------------------------------ | :----- | -: | ----: |
+| [test-url.R](testthat/test-url.R#L6)  | url and relative link detection | urls are detected: no http                        | PASS   | 1 | 0.003 |
+| [test-url.R](testthat/test-url.R#L9)  | url and relative link detection | urls are detected: http                           | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L12) | url and relative link detection | urls are detected: https                          | PASS   | 1 | 0.003 |
+| [test-url.R](testthat/test-url.R#L18) | url and relative link detection | (potential) relative links are detected: md       | PASS   | 1 | 0.003 |
+| [test-url.R](testthat/test-url.R#L21) | url and relative link detection | (potential) relative links are detected: Rmd      | PASS   | 1 | 0.003 |
+| [test-url.R](testthat/test-url.R#L24) | url and relative link detection | (potential) relative links are detected: fig file | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L27) | url and relative link detection | (potential) relative links are detected: fig dir  | PASS   | 1 | 0.014 |
+| [test-url.R](testthat/test-url.R#L33) | url and relative link detection | image links are detected: png                     | PASS   | 1 | 0.005 |
+| [test-url.R](testthat/test-url.R#L36) | url and relative link detection | image links are detected: jpg                     | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L39) | url and relative link detection | image links are detected: jpeg                    | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L42) | url and relative link detection | image links are detected: gif                     | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L48) | url and relative link detection | invalid urls/links are not detected: http         | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L51) | url and relative link detection | invalid urls/links are not detected: https        | PASS   | 1 | 0.001 |
+| [test-url.R](testthat/test-url.R#L54) | url and relative link detection | invalid urls/links are not detected: www          | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L57) | url and relative link detection | invalid urls/links are not detected: no com       | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L60) | url and relative link detection | invalid urls/links are not detected: only www     | PASS   | 1 | 0.013 |
