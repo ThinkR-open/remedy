@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-18 May, 2018 16:11:07
+18 May, 2018 16:14:36
 
 This output is created by
 [covrpage](https://github.com/yonicd/covrpage).
@@ -43,23 +43,23 @@ package.
 
 |            | file                              |  n |  time | error | failed | skipped | warning |
 | ---------- | :-------------------------------- | -: | ----: | ----: | -----: | ------: | ------: |
-| test-url.R | [test-url.R](testthat/test-url.R) | 16 | 0.061 |     0 |      0 |       0 |       0 |
+| test-url.R | [test-url.R](testthat/test-url.R) | 16 | 0.051 |     0 |      0 |       0 |       0 |
 
-| file                                  | context                         | test                                              | status | n |  time |
-| :------------------------------------ | :------------------------------ | :------------------------------------------------ | :----- | -: | ----: |
-| [test-url.R](testthat/test-url.R#L6)  | url and relative link detection | urls are detected: no http                        | PASS   | 1 | 0.003 |
-| [test-url.R](testthat/test-url.R#L9)  | url and relative link detection | urls are detected: http                           | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L12) | url and relative link detection | urls are detected: https                          | PASS   | 1 | 0.003 |
-| [test-url.R](testthat/test-url.R#L18) | url and relative link detection | (potential) relative links are detected: md       | PASS   | 1 | 0.003 |
-| [test-url.R](testthat/test-url.R#L21) | url and relative link detection | (potential) relative links are detected: Rmd      | PASS   | 1 | 0.003 |
-| [test-url.R](testthat/test-url.R#L24) | url and relative link detection | (potential) relative links are detected: fig file | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L27) | url and relative link detection | (potential) relative links are detected: fig dir  | PASS   | 1 | 0.014 |
-| [test-url.R](testthat/test-url.R#L33) | url and relative link detection | image links are detected: png                     | PASS   | 1 | 0.005 |
-| [test-url.R](testthat/test-url.R#L36) | url and relative link detection | image links are detected: jpg                     | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L39) | url and relative link detection | image links are detected: jpeg                    | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L42) | url and relative link detection | image links are detected: gif                     | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L48) | url and relative link detection | invalid urls/links are not detected: http         | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L51) | url and relative link detection | invalid urls/links are not detected: https        | PASS   | 1 | 0.001 |
-| [test-url.R](testthat/test-url.R#L54) | url and relative link detection | invalid urls/links are not detected: www          | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L57) | url and relative link detection | invalid urls/links are not detected: no com       | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L60) | url and relative link detection | invalid urls/links are not detected: only www     | PASS   | 1 | 0.013 |
+| file                                      | context                         | test                                              | status | n |  time |
+| :---------------------------------------- | :------------------------------ | :------------------------------------------------ | :----- | -: | ----: |
+| [test-url.R](testthat/test-url.R#L6)      | url and relative link detection | urls are detected: no http                        | PASS   | 1 | 0.003 |
+| [test-url.R](testthat/test-url.R#L9)      | url and relative link detection | urls are detected: http                           | PASS   | 1 | 0.004 |
+| [test-url.R](testthat/test-url.R#L12)     | url and relative link detection | urls are detected: https                          | PASS   | 1 | 0.005 |
+| [test-url.R](testthat/test-url.R#L20)     | relative                        | (potential) relative links are detected: md       | PASS   | 1 | 0.011 |
+| [test-url.R](testthat/test-url.R#L23)     | relative                        | (potential) relative links are detected: Rmd      | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L26)     | relative                        | (potential) relative links are detected: fig file | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L29)     | relative                        | (potential) relative links are detected: fig dir  | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L37)     | images                          | image links are detected: png                     | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L40)     | images                          | image links are detected: jpg                     | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L43)     | images                          | image links are detected: jpeg                    | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L46)     | images                          | image links are detected: gif                     | PASS   | 1 | 0.005 |
+| [test-url.R](testthat/test-url.R#L54)     | errors                          | invalid urls/links are not detected: http         | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L57)     | errors                          | invalid urls/links are not detected: https        | PASS   | 1 | 0.003 |
+| [test-url.R](testthat/test-url.R#L60_L62) | errors                          | invalid urls/links are not detected: www          | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L65)     | errors                          | invalid urls/links are not detected: no com       | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L68)     | errors                          | invalid urls/links are not detected: only www     | PASS   | 1 | 0.002 |

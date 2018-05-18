@@ -13,6 +13,8 @@ testthat::describe("urls are detected", {
     })
 })
 
+testthat::context('relative')
+
 testthat::describe("(potential) relative links are detected", {
   it('md', {
       testthat::expect_true(is_link("contributing.md"))
@@ -27,6 +29,8 @@ testthat::describe("(potential) relative links are detected", {
       testthat::expect_true(is_link("docs/figs"))
     })
 })
+
+testthat::context('images')
 
 testthat::describe("image links are detected", {
   it('png', {
@@ -43,6 +47,8 @@ testthat::describe("image links are detected", {
     })
 })
 
+testthat::context('errors')
+
 testthat::describe("invalid urls/links are not detected", {
   it('http', {
       testthat::expect_false(is_link("http"))
@@ -51,7 +57,9 @@ testthat::describe("invalid urls/links are not detected", {
       testthat::expect_false(is_link("https"))
     })
   it('www', {
-      testthat::expect_false(is_link("www"))
+      testthat::expect_false(
+        is_link("www")
+        )
     })
   it('no com', {
       testthat::expect_false(is_link("www.google."))
