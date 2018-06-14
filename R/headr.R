@@ -8,96 +8,40 @@
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext insertText
 #' 
-h1r <- function(){
-  a <- rstudioapi::getSourceEditorContext()
-  # If text is selected
-  if (nchar(a$selection[[1]]$text) != 0) {
-    rstudioapi::insertText(location = a$selection[[1]]$range, text = paste0("# ", a$selection[[1]]$text))
-  } else {
-    rg <- a$selection[[1]]$range
-    rg$start[[2]] <- 1
-    pos <- a$selection[[1]]$range[[1]][[1]]
-    rstudioapi::insertText(location = rg, text =  paste0("# ",a$contents[pos]))
-  }
-}
+h1r <- function() add_prefix("# ")
 
 #' @rdname header
 #' @export
-
-h2r <- function(){
-  a <- rstudioapi::getSourceEditorContext()
-  # If text is selected
-  if (nchar(a$selection[[1]]$text) != 0) {
-    rstudioapi::insertText(location = a$selection[[1]]$range, text = paste0("### ", a$selection[[1]]$text))
-  } else {
-    rg <- a$selection[[1]]$range
-    rg$start[[2]] <- 1
-    pos <- a$selection[[1]]$range[[1]][[1]]
-    rstudioapi::insertText(location = rg, text =  paste0("## ",a$contents[pos]))
-  }
-}
+h2r <- function() add_prefix("## ")
 
 #' @rdname header
 #' @export
-
-h3r <- function(){
-  a <- rstudioapi::getSourceEditorContext()
-  # If text is selected
-  if (nchar(a$selection[[1]]$text) != 0) {
-    rstudioapi::insertText(location = a$selection[[1]]$range, text = paste0("### ", a$selection[[1]]$text))
-  } else {
-    rg <- a$selection[[1]]$range
-    rg$start[[2]] <- 1
-    pos <- a$selection[[1]]$range[[1]][[1]]
-    rstudioapi::insertText(location = rg, text =  paste0("### ",a$contents[pos]))
-  }
-}
+h3r <- function() add_prefix("### ")
 
 #' @rdname header
 #' @export
-
-h4r <- function(){
-  a <- rstudioapi::getSourceEditorContext()
-  # If text is selected
-  if (nchar(a$selection[[1]]$text) != 0) {
-    rstudioapi::insertText(location = a$selection[[1]]$range, text = paste0("#### ", a$selection[[1]]$text))
-  } else {
-    rg <- a$selection[[1]]$range
-    rg$start[[2]] <- 1
-    pos <- a$selection[[1]]$range[[1]][[1]]
-    rstudioapi::insertText(location = rg, text =  paste0("#### ",a$contents[pos]))
-  }
-}
+h4r <- function() add_prefix("#### ")
 
 #' @rdname header
 #' @export
-
-h5r <- function(){
-  a <- rstudioapi::getSourceEditorContext()
-  # If text is selected
-  if (nchar(a$selection[[1]]$text) != 0) {
-    rstudioapi::insertText(location = a$selection[[1]]$range, text = paste0("##### ", a$selection[[1]]$text))
-  } else {
-    rg <- a$selection[[1]]$range
-    rg$start[[2]] <- 1
-    pos <- a$selection[[1]]$range[[1]][[1]]
-    rstudioapi::insertText(location = rg, text =  paste0("##### ",a$contents[pos]))
-  }
-}
+h5r <- function() add_prefix("##### ")
 
 #' @rdname header
 #' @export
+h6r <- function() add_prefix("###### ")
 
-h6r <- function(){
+
+add_prefix <- function(prefix) {
   a <- rstudioapi::getSourceEditorContext()
-  # If text is selected
-  if (nchar(a$selection[[1]]$text) != 0) {
-    rstudioapi::insertText(location = a$selection[[1]]$range, text = paste0("###### ", a$selection[[1]]$text))
+  s <- a$selection
+  n <- length(s)
+  # if no text is selected
+  if ( n==1L && nchar(s[[1L]]$text)==0L ) {
+    pos <- s[[1L]]$range$start
+    pos[2L] <- 1
+    rstudioapi::insertText(location = pos, text = prefix)
   } else {
-    rg <- a$selection[[1]]$range
-    rg$start[[2]] <- 1
-    pos <- a$selection[[1]]$range[[1]][[1]]
-    rstudioapi::insertText(location = rg, text =  paste0("###### ",a$contents[pos]))
+    for (i in s) 
+      rstudioapi::insertText(location = i$range$start, text = prefix)
   }
 }
-
