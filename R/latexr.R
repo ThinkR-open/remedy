@@ -6,11 +6,5 @@
 #'
 #' @rdname latex
 #' @export
-#' @importFrom rstudioapi getSourceEditorContext insertText
 #' 
-latexr <- function(){
-  a <- rstudioapi::getSourceEditorContext()
-  rstudioapi::insertText(location = a$selection[[1]]$range, text = paste0("$", a$selection[[1]]$text, "$"))
-}
-
-
+latexr <- function() enclose("$")
