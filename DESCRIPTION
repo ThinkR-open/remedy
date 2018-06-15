@@ -1,10 +1,11 @@
 Package: remedy
 Title: RStudio Addins to Simplify Markdown Writing
-Version: 0.0.0.9600
+Version: 0.0.0.9700
 Authors@R: c(person("Colin", "Fay", email = "colin@thinkr.fr", role = c("aut", "cre")),
              person("Jonathan", "Sidi", email = "yonicd@gmail.com", role = c("aut")),
              person("Jonathan", "Carroll", email = "rpkg@jcarroll.com.au", role = c("ctb"), comment = c(ORCID = "0000-0002-1404-5264")),
-             person("Luke", "Smith", email = "luke@protocolvital.info", role = c("aut"), comment = "author of seasmith/AlignAssign"))
+             person("Luke", "Smith", email = "luke@protocolvital.info", role = c("aut"), comment = "author of seasmith/AlignAssign"),
+             person("Andrzej", "Oleś", email = "andrzej.oles@gmail.com", role = c("ctb"), comment = c(ORCID = "0000-0003-0285-2787")))
 Description: An RStudio addin providing shortcut for writing in Markdown. 
 License: MIT + file LICENSE
 URL: https://github.com/ThinkR-open/remedy
