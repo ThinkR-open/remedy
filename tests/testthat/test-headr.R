@@ -1,15 +1,16 @@
 testthat::context("headr")
 
-this_strrep <- function(n) sprintf('%s ',strrep('#',times = n))
-
-path <- tempfile(pattern = 'test',fileext = '.R')
-file.create(path)
-rstudioapi::navigateToFile(path)
-Sys.sleep(1)
-sec <- rstudioapi::getSourceEditorContext()
+if(rstudioapi::isAvailable()){
+  path <- tempfile(pattern = 'test',fileext = '.R')
+  file.create(path)
+  rstudioapi::navigateToFile(path)
+  Sys.sleep(1)
+  sec <- rstudioapi::getSourceEditorContext()
+  
+}
 
 testthat::describe('add headers to source editor',{
-  
+  skip_if_not_rstudio()
   it(strrep('#',1),{
     remedy::h1r()
     rstudioapi::documentSave(sec$id)

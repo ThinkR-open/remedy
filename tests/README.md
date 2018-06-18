@@ -1,6 +1,6 @@
 Tests and Coverage
 ================
-18 June, 2018 09:05:44
+18 June, 2018 10:01:33
 
 This output is created by
 [covrpage](https://github.com/yonicd/covrpage).
@@ -42,23 +42,31 @@ Unit Test summary is created using the
 [testthat](https://github.com/r-lib/testthat)
 package.
 
-|            | file                              |  n |  time | error | failed | skipped | warning |
-| ---------- | :-------------------------------- | -: | ----: | ----: | -----: | ------: | ------: |
-| test-url.R | [test-url.R](testthat/test-url.R) | 16 | 0.027 |     0 |      0 |       0 |       0 |
+|              | file                                  |  n |  time | error | failed | skipped | warning |
+| ------------ | :------------------------------------ | -: | ----: | ----: | -----: | ------: | ------: |
+| test-headr.R | [test-headr.R](testthat/test-headr.R) |  7 | 0.731 |     0 |      0 |       0 |       0 |
+| test-url.R   | [test-url.R](testthat/test-url.R)     | 16 | 0.044 |     0 |      0 |       0 |       0 |
 
-| file                                  | context                         | test                                                   | status | n |  time |
-| :------------------------------------ | :------------------------------ | :----------------------------------------------------- | :----- | -: | ----: |
-| [test-url.R](testthat/test-url.R#L5)  | url and relative link detection | urls are detected: www                                 | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L8)  | url and relative link detection | urls are detected: http                                | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L11) | url and relative link detection | urls are detected: https                               | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L17) | url and relative link detection | (potential) relative links are detected: md            | PASS   | 1 | 0.001 |
-| [test-url.R](testthat/test-url.R#L20) | url and relative link detection | (potential) relative links are detected: Rmd           | PASS   | 1 | 0.001 |
-| [test-url.R](testthat/test-url.R#L23) | url and relative link detection | (potential) relative links are detected: subdir file   | PASS   | 1 | 0.001 |
-| [test-url.R](testthat/test-url.R#L26) | url and relative link detection | (potential) relative links are detected: subdir folder | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L32) | url and relative link detection | image links are detected: png                          | PASS   | 1 | 0.002 |
-| [test-url.R](testthat/test-url.R#L35) | url and relative link detection | image links are detected: jpg                          | PASS   | 1 | 0.003 |
-| [test-url.R](testthat/test-url.R#L38) | url and relative link detection | image links are detected: jpeg                         | PASS   | 1 | 0.001 |
-| [test-url.R](testthat/test-url.R#L41) | url and relative link detection | image links are detected: gif                          | PASS   | 1 | 0.001 |
-| [test-url.R](testthat/test-url.R#L47) | url and relative link detection | invalid urls/links are not detected: http/s            | PASS   | 2 | 0.003 |
-| [test-url.R](testthat/test-url.R#L51) | url and relative link detection | invalid urls/links are not detected: www               | PASS   | 2 | 0.003 |
-| [test-url.R](testthat/test-url.R#L55) | url and relative link detection | invalid urls/links are not detected: no .com           | PASS   | 1 | 0.003 |
+| file                                      | context                         | test                                                   | status | n |  time |
+| :---------------------------------------- | :------------------------------ | :----------------------------------------------------- | :----- | -: | ----: |
+| [test-headr.R](testthat/test-headr.R#L17) | headr                           | add headers to source editor: \#                       | PASS   | 1 | 0.100 |
+| [test-headr.R](testthat/test-headr.R#L24) | headr                           | add headers to source editor: \#\#                     | PASS   | 1 | 0.104 |
+| [test-headr.R](testthat/test-headr.R#L31) | headr                           | add headers to source editor: \#\#\#                   | PASS   | 1 | 0.091 |
+| [test-headr.R](testthat/test-headr.R#L38) | headr                           | add headers to source editor: \#\#\#\#                 | PASS   | 1 | 0.088 |
+| [test-headr.R](testthat/test-headr.R#L45) | headr                           | add headers to source editor: \#\#\#\#\#               | PASS   | 1 | 0.119 |
+| [test-headr.R](testthat/test-headr.R#L52) | headr                           | add headers to source editor: \#\#\#\#\#\#             | PASS   | 1 | 0.084 |
+| [test-headr.R](testthat/test-headr.R#L60) | headr                           | add headers to source editor: append                   | PASS   | 1 | 0.145 |
+| [test-url.R](testthat/test-url.R#L5)      | url and relative link detection | urls are detected: www                                 | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L8)      | url and relative link detection | urls are detected: http                                | PASS   | 1 | 0.003 |
+| [test-url.R](testthat/test-url.R#L11)     | url and relative link detection | urls are detected: https                               | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L17)     | url and relative link detection | (potential) relative links are detected: md            | PASS   | 1 | 0.003 |
+| [test-url.R](testthat/test-url.R#L20)     | url and relative link detection | (potential) relative links are detected: Rmd           | PASS   | 1 | 0.015 |
+| [test-url.R](testthat/test-url.R#L23)     | url and relative link detection | (potential) relative links are detected: subdir file   | PASS   | 1 | 0.001 |
+| [test-url.R](testthat/test-url.R#L26)     | url and relative link detection | (potential) relative links are detected: subdir folder | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L32)     | url and relative link detection | image links are detected: png                          | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L35)     | url and relative link detection | image links are detected: jpg                          | PASS   | 1 | 0.002 |
+| [test-url.R](testthat/test-url.R#L38)     | url and relative link detection | image links are detected: jpeg                         | PASS   | 1 | 0.001 |
+| [test-url.R](testthat/test-url.R#L41)     | url and relative link detection | image links are detected: gif                          | PASS   | 1 | 0.001 |
+| [test-url.R](testthat/test-url.R#L47)     | url and relative link detection | invalid urls/links are not detected: http/s            | PASS   | 2 | 0.004 |
+| [test-url.R](testthat/test-url.R#L51)     | url and relative link detection | invalid urls/links are not detected: www               | PASS   | 2 | 0.004 |
+| [test-url.R](testthat/test-url.R#L55)     | url and relative link detection | invalid urls/links are not detected: no .com           | PASS   | 1 | 0.002 |

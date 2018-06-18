@@ -22,3 +22,5 @@ set_text <- function(txt = '',sec,mark = FALSE){
   if(mark)
     rstudioapi::setSelectionRanges(rng)
 }
+
+this_strrep <- function(n) sprintf('%s ',strrep('#',times = n))
