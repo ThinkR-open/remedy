@@ -1,6 +1,7 @@
 testthat::context("headr")
 
 if(rstudioapi::isAvailable()){
+  
   path <- tempfile(pattern = 'test',fileext = '.R')
   file.create(path)
   rstudioapi::navigateToFile(path)
