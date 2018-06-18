@@ -5,30 +5,26 @@
 #' @return a markdown image link
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext insertText document_position setCursorPosition
-#' 
-imager <- function(){
-  a <- rstudioapi::getSourceEditorContext()
-  selection_split <- unlist(strsplit(a$selection[[1]]$text, split = " "))
-  # Test if last element is link 
-  if (!is_link(selection_split[length(selection_split)])){
-    a$selection[[1]]$range$start[[2]] <- a$selection[[1]]$range$end[[2]] + 3
-    rstudioapi::insertText(location = a$selection[[1]]$range, text = "# Error : last element of the selection is not an image link")
-  } else {
-    if (length(selection_split) == 1) {
-      content <- paste0("![](", a$selection[[1]]$text, ")")
-      new_cursor_position <- rstudioapi::document_position(
-        row = a$selection[[1]]$range$start[1],
-        column = a$selection[[1]]$range$start[2] + 1
-      )
-    }
-    else {
-      content <- paste0("![", paste0(selection_split[1:length(selection_split)-1], collapse = " "), "](",selection_split[length(selection_split)],")")
-      new_cursor_position <- rstudioapi::document_position(
-        row = a$selection[[1]]$range$end[1],
-        column = a$selection[[1]]$range$end[2] + 3
-      )
-    }
-    rstudioapi::insertText(location = a$selection[[1]]$range, text = content)
-    rstudioapi::setCursorPosition(new_cursor_position) 
-  }
+#'
+imager <- function() {
+  
+  adc <- rstudioapi::getSourceEditorContext()
+  
+  before_last_space <- '(\\s)(?!.*\\s)(.*?)$'
+  after_last_space <- '^(.*?)(\\s)(?!.*\\s)'
+
+  txt <- adc$selection[[1]]$text
+  
+  txt_last <- gsub(after_last_space,'',txt, perl = TRUE)
+  txt_last <- ifelse(is_link(txt_last),txt_last,"# Error : selection is not an image link")
+  
+  content <- switch(as.character(strc(txt = txt)),
+         '0' = '![]()' ,
+         '-1' = sprintf('!()[%s]',txt_last),
+         sprintf('!(%s)[%s]',gsub(before_last_space,'',txt, perl = TRUE),txt_last)
+         )
+  
+  rstudioapi::modifyRange(location = adc$selection[[1]]$range, text = content, id = adc$id)
+  
+  
 }
