@@ -6,27 +6,15 @@
 #' 
 #' @rdname emphasize
 #' @export
-#' @importFrom rstudioapi getSourceEditorContext insertText
 #' 
-italicsr <- function(){
-  a <- rstudioapi::getSourceEditorContext()
-  rstudioapi::insertText(location = a$selection[[1]]$range, text = paste0("_", a$selection[[1]]$text, "_"))
-}
+italicsr <- function() enclose("_")
 
 #' @rdname emphasize
 #' @export
-#' @importFrom rstudioapi getSourceEditorContext insertText
 #' 
-boldr <- function(){
-  a <- rstudioapi::getSourceEditorContext()
-  rstudioapi::insertText(location = a$selection[[1]]$range, text = paste0("__", a$selection[[1]]$text, "__"))
-}
+boldr <- function() enclose("__")
 
 #' @rdname emphasize
 #' @export
-#' @importFrom rstudioapi getSourceEditorContext insertText
 #' 
-striker <- function(){
-  a <- rstudioapi::getSourceEditorContext()
-  rstudioapi::insertText(location = a$selection[[1]]$range, text = paste0("~~", a$selection[[1]]$text, "~~"))
-}
+striker <- function() enclose("~~")
