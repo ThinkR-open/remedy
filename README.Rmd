@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)
+
 # remedy
 
 `{remedy}` provides addins to facilitate writing in markdown with RStudio.
@@ -138,22 +140,22 @@ Insert a xaringan pull-left and pull-right template.
 
 ![](readme_gif/xaringan.gif)
 
-
-## Recommended shortcuts
+## Recommended shortcuts (macOS)
 
 Here's a list of recommended shortcuts: 
-
-### On mac 
-
-You can run `remedy::set_hotkeys` to have the package update for you the hotkey settings for your RStudio IDE. If you want to edit the default settings you can view the defaults `remedy_opts$get('hotkeys')` and change them through `remedy_opts$set(hotkeys=<NEW_SETTINGS>)`.
 
 ```{r}
 remedy::remedy_opts$get('hotkeys')
 ```
 
-<!-- 
-Due to a [limitation](https://community.rstudio.com/t/keyboard-shortcut-for-addin-in-dcf-file/2753) currently of the IDE you will need to restart the IDE once for the hotkeys to be initialized. 
--->
+### Managing Shortcuts
+
+You can use the [rsam](https://github.com/yonicd/rsam) pacakge to set and manage for you the hotkey settings of `remedy` for your RStudio IDE. If you want to edit the default settings you can view the defaults `remedy_opts$get('hotkeys')` and change them through `remedy_opts$set(hotkeys=<NEW_SETTINGS>)`.
+
+```{r, eval = FALSE}
+hotkeys <- remedy::remedy_opts$get("hotkeys")
+rsam::set_shortcut(sprintf('remedy::%sr',names(hotkeys)), hotkeys)
+```
 
 ## Feedbacks and enhancement
 
