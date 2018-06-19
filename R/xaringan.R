@@ -4,9 +4,6 @@
 #'
 #' @return a template for xaringan pull left and right
 #' @export
-#'
-
 xaringanr <- function(){
-  a <- rstudioapi::getSourceEditorContext()
-  rstudioapi::insertText(location = a$selection[[1]]$range, text = ".pull-left[\n\n]\n\n.pull-right[\n\n]\n")
+  enclose(".pull-left[\n\n]\n", "\n.pull-right[\n\n]\n")
 }

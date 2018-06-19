@@ -12,17 +12,21 @@ rightr <- function(){
   adc <- rstudioapi::getSourceEditorContext()
   rg <- adc$selection[[1]]$range
   
-  if(rg$start[[1]]!=rg$end[[1]]){
-    rstudioapi::showDialog(title = 'error',
-                           message = 'Right is used on only one line')
+  rows <- rg$end[[1]] - rg$start[[1]]
+  
+  if(rows>0){
+    message(sprintf('This addin assumes one line is selected, %s were selected',rows + 1 ))
     return(NULL)
-    }
+  }
   
   # If text is selected
   if (nzchar(adc$selection[[1]]$text)) {
+    
     rstudioapi::modifyRange(location = rg, text = strrep(adc$selection[[1]]$text,2))
     rg$end[[2]] <- rg$start[[2]] + nchar(strrep(adc$selection[[1]]$text,2))
+    
   } else {
+    
     rg$start[[2]] <- 1
     rg$end[[2]] <- Inf
     rstudioapi::modifyRange(location = rg, 

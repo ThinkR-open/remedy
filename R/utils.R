@@ -14,3 +14,17 @@ is_link <- function(text) {
   
   grepl(sprintf('(%s)|(%s)|(%s)',remedy_opts$get('token_url'),remedy_opts$get('token_rel_link'),img_link),text)
 }
+
+strc <- function(p = '\\s',txt){
+  
+  if(!nzchar(txt))
+    return(0)
+  
+  ret <- as.numeric(gregexpr(p,txt)[[1]])
+  
+  if(-1%in%ret)
+    return(-1)
+  
+  return(length(ret))
+  
+}
