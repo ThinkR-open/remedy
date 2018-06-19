@@ -4,7 +4,7 @@
 #'
 #' @return a markdown image link
 #' @export
-#' @importFrom rstudioapi getSourceEditorContext insertText document_position setCursorPosition
+#' @importFrom rstudioapi getSourceEditorContext modifyRange
 #'
 imager <- function() {
   
