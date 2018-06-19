@@ -1,4 +1,4 @@
-testthat::context("urls")
+testthat::context("images")
 if(rstudioapi::isAvailable()){
   
   path <- tempfile(pattern = 'test',fileext = '.R')
@@ -9,17 +9,17 @@ if(rstudioapi::isAvailable()){
   
 }
 
-testthat::describe('urls',{
+testthat::describe('images',{
   
   skip_if_not_rstudio()
   
   it('empty',{
     
-    urlr()
+    imager()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'[]()')
+    testthat::expect_equal(readLines(path,warn = FALSE),'![]()')
     
     set_text(sec = sec)
   })
@@ -28,11 +28,11 @@ testthat::describe('urls',{
     
     set_text('text',sec = sec, mark = TRUE)
     
-    urlr()
+    imager()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'()[# Error : selection is not an image link]')
+    testthat::expect_equal(readLines(path,warn = FALSE),'!()[# Error : selection is not an image link]')
     
     set_text(sec = sec)
   })
@@ -41,11 +41,11 @@ testthat::describe('urls',{
     
     set_text('aaa text',sec = sec, mark = TRUE)
     
-    urlr()
+    imager()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'(aaa)[# Error : selection is not an image link]')
+    testthat::expect_equal(readLines(path,warn = FALSE),'!(aaa)[# Error : selection is not an image link]')
     
     set_text(sec = sec)
   })  
@@ -54,11 +54,11 @@ testthat::describe('urls',{
     
     set_text('http://www.text.com',sec = sec, mark = TRUE)
     
-    urlr()
+    imager()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'(http://www.text.com)[http://www.text.com]')
+    testthat::expect_equal(readLines(path,warn = FALSE),'!()[http://www.text.com]')
     
     set_text(sec = sec)
   })  
@@ -67,11 +67,11 @@ testthat::describe('urls',{
     
     set_text('text http://www.text.com',sec = sec, mark = TRUE)
     
-    urlr()
+    imager()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'(text)[http://www.text.com]')
+    testthat::expect_equal(readLines(path,warn = FALSE),'!(text)[http://www.text.com]')
     
     set_text(sec = sec)
   })  
@@ -80,11 +80,11 @@ testthat::describe('urls',{
     
     set_text('more text http://www.text.com',sec = sec, mark = TRUE)
     
-    urlr()
+    imager()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'(more text)[http://www.text.com]')
+    testthat::expect_equal(readLines(path,warn = FALSE),'!(more text)[http://www.text.com]')
     
     set_text(sec = sec)
   })

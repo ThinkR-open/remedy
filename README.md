@@ -1,14 +1,20 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+[![Travis-CI Build
+Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)
+
 remedy
 ======
 
-`{remedy}` provides addins to facilitate writing in markdown with RStudio.
+`{remedy}` provides addins to facilitate writing in markdown with
+RStudio.
 
 ![](remedy_example.gif)
 
-All the functions are meant to be mapped to keyboard shortcuts. A list of suggested shortcuts is provided towards the end of this README.
+All the functions are meant to be mapped to keyboard shortcuts. A list
+of suggested shortcuts is provided towards the end of this README.
 
-> Note that most of the addins/shortcuts below will also work without selecting any text.
+> Note that most of the addins/shortcuts below will also work without
+> selecting any text.
 
 Install
 -------
@@ -17,14 +23,16 @@ Install
 devtools::install_github("ThinkR-open/remedy")
 ```
 
-Once you've installed the package, you don't need to load it with `library()`, the addins are installed on your machine as part of the package install process.
+Once you’ve installed the package, you don’t need to load it with
+`library()`, the addins are installed on your machine as part of the
+package install process.
 
 Using `{remedy}`
 ----------------
 
 Write quicker in markdown with `{remedy}`!
 
-Here's a list of all available helpers:
+Here’s a list of all available helpers:
 
 ![](readme_gif/remedy_example.gif)
 
@@ -66,9 +74,11 @@ Turn the selected text into a header.
 
 Turn the selected path into an image.
 
-This element is context aware: if you select a text and a link, it turns the text into title between `![]`, and puts the link between `()`.
+This element is context aware: if you select a text and a link, it turns
+the text into title between `![]`, and puts the link between `()`.
 
-If the last element of the selection is not a link, you get an error message straight into you markdown document.
+If the last element of the selection is not a link, you get an error
+message straight into you markdown document.
 
 ![](readme_gif/image.gif)
 
@@ -112,9 +122,11 @@ Turn your dataframe into a markdown table :
 
 Turn the selected text into an url.
 
-This element is context aware: if you select a text and a link, it turns the text into title between `[]`, and puts the link between `()`.
+This element is context aware: if you select a text and a link, it turns
+the text into title between `[]`, and puts the link between `()`.
 
-If the last element of the selection is not a link, you get an error message straight into you markdown document.
+If the last element of the selection is not a link, you get an error
+message straight into you markdown document.
 
 ![](readme_gif/url.gif)
 
@@ -124,37 +136,47 @@ Insert a xaringan pull-left and pull-right template.
 
 ![](readme_gif/xaringan.gif)
 
-Recommended shortcuts
----------------------
+Recommended shortcuts (macOS)
+-----------------------------
 
-Here's a list of recommended shortcuts:
-
-### On mac
-
-You can run `remedy::set_hotkeys` to have the package update for you the hotkey settings for your RStudio IDE. If you want to edit the default settings you can view the defaults `remedy_opts$get('hotkeys')` and change them through `remedy_opts$set(hotkeys=<NEW_SETTINGS>)`.
+Here’s a list of recommended shortcuts:
 
 ``` r
 remedy::remedy_opts$get('hotkeys')
 #>           backtick               bold              chunk 
 #>       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" 
-#>         chunksplit                 h1                 h2 
-#> "Ctrl+Shift+Alt+C"       "Ctrl+Cmd+1"       "Ctrl+Cmd+2" 
-#>                 h3                 h4                 h5 
-#>       "Ctrl+Cmd+3"       "Ctrl+Cmd+4"       "Ctrl+Cmd+5" 
-#>                 h6        htmlcomment              image 
-#>       "Ctrl+Cmd+6"       "Ctrl+Alt+C"       "Ctrl+Cmd+P" 
-#>            italics              latex               list 
-#>       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+=" 
-#>              right             strike              table 
-#>    "Alt+Cmd+Right"       "Ctrl+Cmd+S"       "Ctrl+Cmd+T" 
-#>                url           xaringan            youtube 
-#>       "Ctrl+Cmd+U"       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"
+#>         chunksplit           footnote                 h1 
+#> "Ctrl+Shift+Alt+C" "Ctrl+Cmd+Shift+6"       "Ctrl+Cmd+1" 
+#>                 h2                 h3                 h4 
+#>       "Ctrl+Cmd+2"       "Ctrl+Cmd+3"       "Ctrl+Cmd+4" 
+#>                 h5                 h6        htmlcomment 
+#>       "Ctrl+Cmd+5"       "Ctrl+Cmd+6"       "Ctrl+Alt+C" 
+#>              image            italics              latex 
+#>       "Ctrl+Cmd+P"       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" 
+#>               list              right             strike 
+#> "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right"       "Ctrl+Cmd+S" 
+#>              table                url           xaringan 
+#>       "Ctrl+Cmd+T"       "Ctrl+Cmd+U"       "Ctrl+Cmd+X" 
+#>            youtube 
+#>       "Ctrl+Cmd+Y"
 ```
 
-<!-- 
-Due to a [limitation](https://community.rstudio.com/t/keyboard-shortcut-for-addin-in-dcf-file/2753) currently of the IDE you will need to restart the IDE once for the hotkeys to be initialized. 
--->
+### Managing Shortcuts
+
+Use the [`{rsam}`](https://github.com/yonicd/rsam) pacakge to set and
+manage for you the hotkey settings of `{remedy}`.
+
+If you want to edit the default settings you can view the defaults
+`remedy_opts$get('hotkeys')` and change them through
+`remedy_opts$set(hotkeys=<NEW_SETTINGS>)`.
+
+``` r
+hotkeys <- remedy::remedy_opts$get("hotkeys")
+rsam::set_shortcut(sprintf('remedy::%sr',names(hotkeys)), hotkeys)
+```
+
 Feedbacks and enhancement
 -------------------------
 
-You've found a bug, or have an enhancment idea? Feel free to open an issue : <https://github.com/ThinkR-open/remedy/issues>.
+You’ve found a bug, or have an enhancment idea? Feel free to open an
+issue : <https://github.com/ThinkR-open/remedy/issues>.
