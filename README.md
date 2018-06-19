@@ -163,8 +163,9 @@ remedy::remedy_opts$get('hotkeys')
 
 ### Managing Shortcuts
 
-You can use the [rsam](https://github.com/yonicd/rsam) pacakge to set
-and manage for you the hotkey settings of `remedy` for your RStudio IDE.
+Use the [`{rsam}`](https://github.com/yonicd/rsam) pacakge to set and
+manage for you the hotkey settings of `{remedy}`.
+
 If you want to edit the default settings you can view the defaults
 `remedy_opts$get('hotkeys')` and change them through
 `remedy_opts$set(hotkeys=<NEW_SETTINGS>)`.
