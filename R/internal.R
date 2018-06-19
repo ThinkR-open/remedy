@@ -15,6 +15,22 @@ add_prefix <- function(prefix) {
   }
 }
 
+add_multiline_prefix <- function(prefix){
+  a <- rstudioapi::getSourceEditorContext()
+  
+  content <- strsplit(a$selection[[1]]$text,'\n')[[1]]
+  
+  content[nzchar(content)] <- paste0(prefix, content[nzchar(content)])
+  
+  content <- paste0(content, '\n', collapse = '')
+  
+  rstudioapi::modifyRange(
+    location = a$selection[[1]]$range,
+    text = content,
+    id = a$id
+  )
+}
+
 enclose <- function(prefix, postfix = prefix) {
   a <- rstudioapi::getSourceEditorContext()
   for (s in a$selection)
