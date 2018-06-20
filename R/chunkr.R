@@ -1,4 +1,4 @@
-#' @title Interactivley Create Rmarkdown Chunks
+#' @title Interactively Create Rmarkdown Chunks
 #' @description Addin that splits full documents into Rmarkdown chunks or
 #' wraps highlighted text in an active RStudio document editor in a Rmarkdown chunk.
 #' @return NULL

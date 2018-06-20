@@ -1,6 +1,6 @@
 #' @title Split Chunk
 #' @description Split a chunk into two chunks
-#' @details Will split below row of the current cursor position or under the hightled text.
+#' @details Will split below row of the current cursor position or under the highlighted text.
 #' @rdname chunksplitr
 #' @export 
 #' @importFrom rstudioapi getSourceEditorContext insertText
