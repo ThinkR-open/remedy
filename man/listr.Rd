@@ -2,7 +2,7 @@
 % Please edit documentation in R/listr.R
 \name{listr}
 \alias{listr}
-\title{Listr}
+\title{Convert to unordered list}
 \usage{
 listr()
 }

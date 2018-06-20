@@ -3,6 +3,7 @@
 export(align_arrow)
 export(align_equal)
 export(backtickr)
+export(blockquoter)
 export(boldr)
 export(chunkr)
 export(chunksplitr)
