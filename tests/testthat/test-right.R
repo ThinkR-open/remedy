@@ -1,14 +1,6 @@
 testthat::context("copy text to the right")
 
-if(rstudioapi::isAvailable()){
-  
-  path <- tempfile(pattern = 'test',fileext = '.R')
-  file.create(path)
-  rstudioapi::navigateToFile(path)
-  Sys.sleep(1)
-  sec <- rstudioapi::getSourceEditorContext()
-  
-}
+sec <- scratch_file()
 
 testthat::describe('rightr',{
   
@@ -16,7 +8,7 @@ testthat::describe('rightr',{
   
   it('one word',{
     
-    set_text('some \n ',sec = sec, mark = TRUE)
+    set_text('some \n ',sec = sec, mark = entire_document)
     
     rstudioapi::documentSave(sec$id)
     
@@ -27,33 +19,33 @@ testthat::describe('rightr',{
   
   it('one word',{
     
-    set_text('some ',sec = sec, mark = FALSE)
+    set_text('some ',sec = sec)
     
     rightr()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'some some ')
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),'some some ')
     
     set_text(sec = sec)
   })
   
   it('multiple words',{
     
-    set_text('some some ',sec = sec, mark = FALSE)
+    set_text('some some ',sec = sec, mark = individual_lines)
     
     rightr()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'some some some some ')
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),'some some some some ')
     
     set_text(sec = sec)
   })
   
   it('highlighting',{
     
-    set_text('some some ',sec = sec, mark = FALSE)
+    set_text('some some ',sec = sec)
     
     rng <- rstudioapi::document_range(start = rstudioapi::document_position(1,6),
                                       end = rstudioapi::document_position(1,Inf))
@@ -64,7 +56,7 @@ testthat::describe('rightr',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'some some some ')
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),'some some some ')
     
     set_text(sec = sec)
   })

@@ -1,17 +1,8 @@
 testthat::context("emphasizers")
 
-if(rstudioapi::isAvailable()){
-  
-  path <- tempfile(pattern = 'test',fileext = '.R')
-  file.create(path)
-  rstudioapi::navigateToFile(path)
-  Sys.sleep(1)
-  sec <- rstudioapi::getSourceEditorContext()
-  
-}
+sec <- scratch_file()
 
 testthat::describe('italics',{
-  
   skip_if_not_rstudio()
   
   it('empty',{
@@ -20,20 +11,20 @@ testthat::describe('italics',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'__')
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),'__')
     
     set_text(sec = sec)
   })
 
   it('highlighted',{
     
-    set_text('some text',sec = sec, mark = TRUE)
+    set_text('some text',sec = sec, mark = entire_document)
     
     italicsr()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'_some text_')
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),'_some text_')
     
     set_text(sec = sec)
   })
@@ -50,23 +41,25 @@ testthat::describe('bold',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'____')
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),'____')
     
     set_text(sec = sec)
   })
   
   it('highlighted',{
     
-    set_text('some text',sec = sec, mark = TRUE)
+    set_text('some text',sec = sec, mark = entire_document)
     
     boldr()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'__some text__')
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),'__some text__')
     
     set_text(sec = sec)
   })
+  
+  
   
 })
 
@@ -80,20 +73,20 @@ testthat::describe('strike',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'~~~~')
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),'~~~~')
     
     set_text(sec = sec)
   })
   
   it('highlighted',{
     
-    set_text('some text',sec = sec, mark = TRUE)
+    set_text('some text',sec = sec, mark = entire_document)
     
     striker()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'~~some text~~')
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),'~~some text~~')
     
     set_text(sec = sec)
   })
