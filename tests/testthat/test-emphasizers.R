@@ -3,6 +3,7 @@ testthat::context("emphasizers")
 sec <- scratch_file()
 
 testthat::describe('italics',{
+  
   skip_if_not_rstudio()
   
   it('empty',{
@@ -58,8 +59,6 @@ testthat::describe('bold',{
     
     set_text(sec = sec)
   })
-  
-  
   
 })
 

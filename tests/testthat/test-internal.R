@@ -2,12 +2,13 @@ testthat::context("internal")
 
 sec <- scratch_file()
 
-add_prefix <- remedy:::add_prefix
 
 testthat::describe('prefix', {
-  prefix <- 'prefix '
-  
   skip_if_not_rstudio()
+  
+  add_prefix <- remedy:::add_prefix
+  
+  prefix <- 'prefix '
   
   it('empty',{
     res <- prefix
@@ -21,7 +22,7 @@ testthat::describe('prefix', {
     set_text(sec = sec)
   })
   
-  txt = 'some text'
+  txt <- 'some text'
   
   it('line',{
     res <- paste0(prefix, txt)
@@ -38,7 +39,7 @@ testthat::describe('prefix', {
   })
   
   it('highlighted',{
-    res = paste0(prefix, txt)
+    res <- paste0(prefix, txt)
     
     set_text(txt, sec = sec, mark = entire_document)
     
@@ -84,12 +85,13 @@ testthat::describe('prefix', {
 })
 
 
-enclose <- remedy:::enclose
-
 testthat::describe('enclose', {
+  skip_if_not_rstudio()
+  
+  enclose <- remedy:::enclose
+  
   before <- 'a '
   after  <- ' z'
-  skip_if_not_rstudio()
   
   it('empty',{
     res <- paste0(before, after)
@@ -103,11 +105,11 @@ testthat::describe('enclose', {
     set_text(sec = sec)
   })
   
-  txt = 'some text'
+  txt <- 'some text'
   
-  it('highlighted',{
+  it('highlighted', {
     
-    res = paste0(before, txt, after)
+    res <- paste0(before, txt, after)
     
     set_text(txt, sec = sec, mark = entire_document)
     
