@@ -1,6 +1,12 @@
 #' @title Split Chunk
 #' @description Split a chunk into two chunks
 #' @details Will split below row of the current cursor position or under the hightled text.
+#' 
+#' \if{html}{
+#' \out{
+#'  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/chunksplit.gif?raw=true">
+#' }}
+#' 
 #' @rdname chunksplitr
 #' @export 
 #' @importFrom rstudioapi getSourceEditorContext insertText

@@ -13,5 +13,5 @@ BugReports: https://github.com/ThinkR-open/remedy/issues
 Encoding: UTF-8
 LazyData: true
 Imports: rstudioapi, knitr, jsonlite
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 6.0.1
 Suggests: testthat
