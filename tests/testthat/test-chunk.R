@@ -58,7 +58,7 @@ testthat::describe('wrapping',{
   
   it('full document',{
     
-    set_text(txt = 'aaa',sec = sec,mark = TRUE)
+    set_text(txt = 'aaa',sec = sec,mark = entire_document)
     
     chunkr_section()
     

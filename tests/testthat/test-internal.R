@@ -94,13 +94,14 @@ testthat::describe('enclose', {
   after  <- ' z'
   
   it('empty',{
+    
     res <- paste0(before, after)
     
     enclose(before, after)
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(sec$path, warn = FALSE), res)
+    testthat::expect_equal(readLines(sec$path, warn = FALSE), paste0(res,res))
     
     set_text(sec = sec)
   })
