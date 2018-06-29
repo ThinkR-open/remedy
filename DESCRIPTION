@@ -10,10 +10,14 @@ Description: An RStudio addin providing shortcut for writing in Markdown.
 License: MIT + file LICENSE
 URL: https://github.com/ThinkR-open/remedy
 BugReports: https://github.com/ThinkR-open/remedy/issues
-Encoding: UTF-8
-LazyData: true
-Imports: rstudioapi, knitr, jsonlite
-RoxygenNote: 6.0.1.9000
+Imports: 
+    jsonlite,
+    knitr,
+    rstudioapi
 Suggests: 
-    testthat,
-    covr
+    covr,
+    testthat
+Encoding: UTF-8
+Language: en-US
+LazyData: true
+RoxygenNote: 6.0.1.9000
