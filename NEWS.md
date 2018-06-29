@@ -1,4 +1,4 @@
-Added travis support. 
+Added travis support and codecov.
 
 # remedy 0.0.0.9000
 
