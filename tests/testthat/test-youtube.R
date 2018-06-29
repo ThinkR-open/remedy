@@ -1,13 +1,6 @@
 testthat::context("youtube")
-if(rstudioapi::isAvailable()){
-  
-  path <- tempfile(pattern = 'test',fileext = '.R')
-  file.create(path)
-  rstudioapi::navigateToFile(path)
-  Sys.sleep(1)
-  sec <- rstudioapi::getSourceEditorContext()
-  
-}
+
+sec <- scratch_file()
 
 testthat::describe('images',{
   
@@ -19,7 +12,7 @@ testthat::describe('images',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),
                            '<iframe width="100%" height="400" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>'
                            )
     
@@ -28,13 +21,13 @@ testthat::describe('images',{
   
   it('html',{
     
-    set_text('https://www.youtube.com/watch?v=O_kYuxP2pLA',sec = sec, mark = TRUE)
+    set_text('https://www.youtube.com/watch?v=O_kYuxP2pLA',sec = sec, mark = entire_document)
     
     youtuber()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),
                            '<iframe width="100%" height="400" src="https://www.youtube.com/embed/O_kYuxP2pLA" frameborder="0" allowfullscreen></iframe>')
     
     set_text(sec = sec)
@@ -43,13 +36,13 @@ testthat::describe('images',{
     
     remedy_opts$set(list(youtube_height = 100 , youtube_width = 100 ))
     
-    set_text('https://www.youtube.com/watch?v=O_kYuxP2pLA',sec = sec, mark = TRUE)
+    set_text('https://www.youtube.com/watch?v=O_kYuxP2pLA',sec = sec, mark = entire_document)
     
     youtuber()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),
                            '<iframe width="100" height="100" src="https://www.youtube.com/embed/O_kYuxP2pLA" frameborder="0" allowfullscreen></iframe>')
     
     set_text(sec = sec)
@@ -60,13 +53,13 @@ testthat::describe('images',{
     
     remedy_opts$set(list(youtube_output = 'md'))
     
-    set_text('https://www.youtube.com/watch?v=O_kYuxP2pLA',sec = sec, mark = TRUE)
+    set_text('https://www.youtube.com/watch?v=O_kYuxP2pLA',sec = sec, mark = entire_document)
     
     youtuber()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),
                            '[![ALT TEXT](http://img.youtube.com/vi/O_kYuxP2pLA/0.jpg)](https://www.youtube.com/watch?v=O_kYuxP2pLA)')
     
     set_text(sec = sec)

@@ -14,4 +14,6 @@ Encoding: UTF-8
 LazyData: true
 Imports: rstudioapi, knitr, jsonlite
 RoxygenNote: 6.0.1.9000
-Suggests: testthat
+Suggests: 
+    testthat,
+    covr

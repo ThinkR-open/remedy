@@ -1,6 +1,11 @@
-#' urlr
+#' @title urlr
 #'
-#' Convert selected text into a url
+#' @description Convert selected text into a url
+#'
+#' \if{html}{
+#' \out{
+#'  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/url.gif?raw=true">
+#' }}
 #'
 #' @return a markdown image link
 #' @export
