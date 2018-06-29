@@ -2,7 +2,7 @@
 [![Travis-CI Build
 Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage
 status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_06_28-yellowgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_06_29-yellowgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
 
 remedy
 ======
@@ -60,7 +60,7 @@ Turn the selected text into a chunk.
 
 ![](readme_gif/chunck.gif)
 
-### Emphasise
+### Emphasize
 
 Embolden, italicize or strikethrough the selected text.
 
@@ -147,25 +147,23 @@ Here’s a list of recommended shortcuts:
 remedy::remedy_opts$get('hotkeys')
 #>           backtick               bold              chunk 
 #>       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" 
-#>         chunksplit           footnote                 h1 
-#> "Ctrl+Shift+Alt+C" "Ctrl+Cmd+Shift+6"       "Ctrl+Cmd+1" 
-#>                 h2                 h3                 h4 
-#>       "Ctrl+Cmd+2"       "Ctrl+Cmd+3"       "Ctrl+Cmd+4" 
-#>                 h5                 h6        htmlcomment 
-#>       "Ctrl+Cmd+5"       "Ctrl+Cmd+6"       "Ctrl+Alt+C" 
-#>              image            italics              latex 
-#>       "Ctrl+Cmd+P"       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" 
-#>               list              right             strike 
-#> "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right"       "Ctrl+Cmd+S" 
-#>              table                url           xaringan 
-#>       "Ctrl+Cmd+T"       "Ctrl+Cmd+U"       "Ctrl+Cmd+X" 
-#>            youtube 
-#>       "Ctrl+Cmd+Y"
+#>         chunksplit                 h1                 h2 
+#> "Ctrl+Shift+Alt+C"       "Ctrl+Cmd+1"       "Ctrl+Cmd+2" 
+#>                 h3                 h4                 h5 
+#>       "Ctrl+Cmd+3"       "Ctrl+Cmd+4"       "Ctrl+Cmd+5" 
+#>                 h6        htmlcomment              image 
+#>       "Ctrl+Cmd+6"       "Ctrl+Alt+C"       "Ctrl+Cmd+P" 
+#>            italics              latex               list 
+#>       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+=" 
+#>              right             strike              table 
+#>    "Alt+Cmd+Right"       "Ctrl+Cmd+S"       "Ctrl+Cmd+T" 
+#>                url           xaringan            youtube 
+#>       "Ctrl+Cmd+U"       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"
 ```
 
 ### Managing Shortcuts
 
-Use the [`{rsam}`](https://github.com/yonicd/rsam) pacakge to set and
+Use the [`{rsam}`](https://github.com/yonicd/rsam) package to set and
 manage for you the hotkey settings of `{remedy}`.
 
 If you want to edit the default settings you can view the defaults
@@ -177,8 +175,8 @@ hotkeys <- remedy::remedy_opts$get("hotkeys")
 rsam::set_shortcut(sprintf('remedy::%sr',names(hotkeys)), hotkeys)
 ```
 
-Feedbacks and enhancement
--------------------------
+Feedback and enhancement
+------------------------
 
-You’ve found a bug, or have an enhancment idea? Feel free to open an
+You’ve found a bug, or have an enhancement idea? Feel free to open an
 issue : <https://github.com/ThinkR-open/remedy/issues>.
