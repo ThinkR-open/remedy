@@ -2,7 +2,7 @@
 % Please edit documentation in R/chunkr.R
 \name{chunkr}
 \alias{chunkr}
-\title{Interactivley Create Rmarkdown Chunks}
+\title{Interactively Create Rmarkdown Chunks}
 \usage{
 chunkr()
 }
