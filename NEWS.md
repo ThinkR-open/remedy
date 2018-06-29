@@ -1,3 +1,5 @@
+Added travis support. 
+
 # remedy 0.0.0.9000
 
 ## 2017-09-21

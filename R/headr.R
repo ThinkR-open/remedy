@@ -1,6 +1,12 @@
-#' Convert to header
+#' @title Convert to header
 #'
-#' Convert selected text into a header.
+#' @description Convert selected text into a header.
+#' 
+#' \if{html}{
+#' \out{
+#'  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/header.gif?raw=true">
+#' }}
+#'
 #' 
 #' @rdname header
 #'

@@ -11,4 +11,9 @@ a markdown image link
 }
 \description{
 Convert selected text into a url
+
+\if{html}{
+\out{
+ <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/url.gif?raw=true">
+}}
 }

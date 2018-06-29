@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)
+[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-`r sprintf('Last_Build_%s',strftime(Sys.Date(),format = '%Y_%m_%d'))`-yellowgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
 
 # remedy
 
@@ -64,7 +64,7 @@ Turn the selected text into a chunk.
 
 ![](readme_gif/chunck.gif)
 
-### Emphasise
+### Emphasize
 
 Embolden, italicize or strikethrough the selected text.
 
@@ -150,7 +150,7 @@ remedy::remedy_opts$get('hotkeys')
 
 ### Managing Shortcuts
 
-Use the [`{rsam}`](https://github.com/yonicd/rsam) pacakge to set and manage for you the hotkey settings of `{remedy}`.
+Use the [`{rsam}`](https://github.com/yonicd/rsam) package to set and manage for you the hotkey settings of `{remedy}`.
 
 If you want to edit the default settings you can view the defaults `remedy_opts$get('hotkeys')` and change them through `remedy_opts$set(hotkeys=<NEW_SETTINGS>)`.
 
@@ -159,6 +159,6 @@ hotkeys <- remedy::remedy_opts$get("hotkeys")
 rsam::set_shortcut(sprintf('remedy::%sr',names(hotkeys)), hotkeys)
 ```
 
-## Feedbacks and enhancement
+## Feedback and enhancement
 
-You've found a bug, or have an enhancment idea? Feel free to open an issue : [https://github.com/ThinkR-open/remedy/issues](https://github.com/ThinkR-open/remedy/issues). 
+You've found a bug, or have an enhancement idea? Feel free to open an issue : [https://github.com/ThinkR-open/remedy/issues](https://github.com/ThinkR-open/remedy/issues). 

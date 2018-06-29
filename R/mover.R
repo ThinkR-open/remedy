@@ -1,6 +1,11 @@
-#' Mover
+#' @title Mover
 #'
-#' Copy a selected text or the current line
+#' @description Copy a selected text or the current line
+#' 
+#' \if{html}{
+#' \out{
+#'  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/right.gif?raw=true">
+#' }}
 #' 
 #' @rdname move
 #'

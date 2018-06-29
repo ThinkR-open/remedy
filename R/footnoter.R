@@ -1,6 +1,11 @@
-#' Footnote
+#' @title Footnote
 #'
-#' Create a footnote from selected text.
+#' @description Create a footnote from selected text.
+#'
+# \if{html}{
+# \out{
+#  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/footnote.gif?raw=true">
+# }}
 #'
 #' @return footnote text (in markdown)
 #' 

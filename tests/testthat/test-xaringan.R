@@ -27,7 +27,7 @@ testthat::describe('urls',{
 
   it('highlighted',{
     
-    set_text('text',sec = sec, mark = TRUE)
+    set_text('text',sec = sec, mark = individual_lines)
     
     xaringanr()
     

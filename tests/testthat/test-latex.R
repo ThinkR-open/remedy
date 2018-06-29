@@ -1,14 +1,6 @@
 testthat::context("latex")
 
-if(rstudioapi::isAvailable()){
-  
-  path <- tempfile(pattern = 'test',fileext = '.R')
-  file.create(path)
-  rstudioapi::navigateToFile(path)
-  Sys.sleep(1)
-  sec <- rstudioapi::getSourceEditorContext()
-  
-}
+sec <- scratch_file()
 
 testthat::describe('latex',{
   
@@ -20,34 +12,48 @@ testthat::describe('latex',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'$$')
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),'$$')
     
     set_text(sec = sec)
   })
   
   it('highlighted',{
     
-    set_text('some text',sec = sec, mark = TRUE)
+    set_text('some text',sec = sec, mark = entire_document)
     
     latexr()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),'$some text$')
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),'$some text$')
     
     set_text(sec = sec)
   })
   
   it('multiline',{
     
-    set_text('some text\n more text',sec = sec, mark = TRUE)
+    set_text('some text\n more text',sec = sec, mark = entire_document)
     
     latexr()
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),c('$some text',' more text$'))
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),c('$some text',' more text$'))
     
     set_text(sec = sec)
   })
+  
+  it('multiselect',{
+    
+    set_text('some text\n more text',sec = sec, mark = individual_lines)
+    
+    latexr()
+    
+    rstudioapi::documentSave(sec$id)
+    
+    testthat::expect_equal(readLines(sec$path, warn = FALSE),c('$some text$','$ more text$'))
+    
+    set_text(sec = sec)
+  })
+  
 })

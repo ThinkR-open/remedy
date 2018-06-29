@@ -10,5 +10,10 @@ chunksplitr()
 Split a chunk into two chunks
 }
 \details{
-Will split below row of the current cursor position or under the hightled text.
+Will split below row of the current cursor position or under the highlighted text.
+
+\if{html}{
+\out{
+ <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/chunksplit.gif?raw=true">
+}}
 }
