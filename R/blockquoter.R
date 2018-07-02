@@ -6,4 +6,4 @@
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext insertText
 #' 
-blockquoter <- function() add_multiline_prefix('> ')
+blockquoter <- function() add_multiline_prefix('> ', as_is = TRUE)

@@ -11,4 +11,4 @@
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext insertText
 #' 
-listr <- function() add_multiline_prefix('+ ')
+listr <- function() add_multiline_prefix('+ ', as_is = FALSE)
