@@ -1,16 +1,16 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
 [![Travis-CI Build
 Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage
 status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_06_28-yellowgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_07_02-brightgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
 
-remedy
-======
+# remedy
 
 `{remedy}` provides addins to facilitate writing in markdown with
 RStudio.
 
-![](remedy_example.gif)
+![](readme_gif/remedy_example.gif)
 
 All the functions are meant to be mapped to keyboard shortcuts. A list
 of suggested shortcuts is provided towards the end of this README.
@@ -18,8 +18,7 @@ of suggested shortcuts is provided towards the end of this README.
 > Note that most of the addins/shortcuts below will also work without
 > selecting any text.
 
-Install
--------
+## Install
 
 ``` r
 devtools::install_github("ThinkR-open/remedy")
@@ -29,10 +28,9 @@ Once you’ve installed the package, you don’t need to load it with
 `library()`, the addins are installed on your machine as part of the
 package install process.
 
-Using `{remedy}`
-----------------
+## Using `{remedy}`
 
-Write quicker in markdown with `{remedy}`!
+Write quicker in markdown with `{remedy}`\!
 
 Here’s a list of all available helpers:
 
@@ -138,8 +136,7 @@ Insert a xaringan pull-left and pull-right template.
 
 ![](readme_gif/xaringan.gif)
 
-Recommended shortcuts (macOS)
------------------------------
+## Recommended shortcuts (macOS)
 
 Here’s a list of recommended shortcuts:
 
@@ -147,18 +144,20 @@ Here’s a list of recommended shortcuts:
 remedy::remedy_opts$get('hotkeys')
 #>           backtick               bold              chunk 
 #>       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" 
-#>         chunksplit                 h1                 h2 
-#> "Ctrl+Shift+Alt+C"       "Ctrl+Cmd+1"       "Ctrl+Cmd+2" 
-#>                 h3                 h4                 h5 
-#>       "Ctrl+Cmd+3"       "Ctrl+Cmd+4"       "Ctrl+Cmd+5" 
-#>                 h6        htmlcomment              image 
-#>       "Ctrl+Cmd+6"       "Ctrl+Alt+C"       "Ctrl+Cmd+P" 
-#>            italics              latex               list 
-#>       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+=" 
-#>              right             strike              table 
-#>    "Alt+Cmd+Right"       "Ctrl+Cmd+S"       "Ctrl+Cmd+T" 
-#>                url           xaringan            youtube 
-#>       "Ctrl+Cmd+U"       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"
+#>         chunksplit           footnote                 h1 
+#> "Ctrl+Shift+Alt+C" "Ctrl+Cmd+Shift+6"       "Ctrl+Cmd+1" 
+#>                 h2                 h3                 h4 
+#>       "Ctrl+Cmd+2"       "Ctrl+Cmd+3"       "Ctrl+Cmd+4" 
+#>                 h5                 h6        htmlcomment 
+#>       "Ctrl+Cmd+5"       "Ctrl+Cmd+6"       "Ctrl+Alt+C" 
+#>              image            italics              latex 
+#>       "Ctrl+Cmd+P"       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" 
+#>               list              right             strike 
+#> "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right"       "Ctrl+Cmd+S" 
+#>              table                url           xaringan 
+#>       "Ctrl+Cmd+T"       "Ctrl+Cmd+U"       "Ctrl+Cmd+X" 
+#>            youtube 
+#>       "Ctrl+Cmd+Y"
 ```
 
 ### Managing Shortcuts
@@ -175,8 +174,7 @@ hotkeys <- remedy::remedy_opts$get("hotkeys")
 rsam::set_shortcut(sprintf('remedy::%sr',names(hotkeys)), hotkeys)
 ```
 
-Feedback and enhancement
-------------------------
+## Feedback and enhancement
 
 You’ve found a bug, or have an enhancement idea? Feel free to open an
 issue : <https://github.com/ThinkR-open/remedy/issues>.
