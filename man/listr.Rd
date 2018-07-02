@@ -2,12 +2,17 @@
 % Please edit documentation in R/listr.R
 \name{listr}
 \alias{listr}
+\alias{olistr}
 \title{Convert to unordered list}
 \usage{
 listr()
+
+olistr()
 }
 \value{
-a markdown list
+an unordered markdown list
+
+an ordered markdown list
 }
 \description{
 Turn the selected text into an unordered list.
@@ -16,4 +21,6 @@ Turn the selected text into an unordered list.
 \out{
  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/list.gif?raw=true">
 }}
+
+Turn the selected text into an ordered list.
 }
