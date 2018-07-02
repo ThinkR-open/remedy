@@ -1,16 +1,16 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
 [![Travis-CI Build
 Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage
 status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage
-Summary](https://img.shields.io/badge/covrpage-2018_29_6-yellowgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_07_02-brightgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
 
-remedy
-======
+# remedy
 
 `{remedy}` provides addins to facilitate writing in markdown with
 RStudio.
 
-![](remedy_example.gif)
+![](readme_gif/remedy_example.gif)
 
 All the functions are meant to be mapped to keyboard shortcuts. A list
 of suggested shortcuts is provided towards the end of this README.
@@ -18,8 +18,7 @@ of suggested shortcuts is provided towards the end of this README.
 > Note that most of the addins/shortcuts below will also work without
 > selecting any text.
 
-Install
--------
+## Install
 
 ``` r
 devtools::install_github("ThinkR-open/remedy")
@@ -29,10 +28,9 @@ Once you’ve installed the package, you don’t need to load it with
 `library()`, the addins are installed on your machine as part of the
 package install process.
 
-Using `{remedy}`
-----------------
+## Using `{remedy}`
 
-Write quicker in markdown with `{remedy}`!
+Write quicker in markdown with `{remedy}`\!
 
 Here’s a list of all available helpers:
 
@@ -138,8 +136,7 @@ Insert a xaringan pull-left and pull-right template.
 
 ![](readme_gif/xaringan.gif)
 
-Recommended shortcuts (macOS)
------------------------------
+## Recommended shortcuts (macOS)
 
 Here’s a list of recommended shortcuts:
 
@@ -177,8 +174,7 @@ hotkeys <- remedy::remedy_opts$get("hotkeys")
 rsam::set_shortcut(sprintf('remedy::%sr',names(hotkeys)), hotkeys)
 ```
 
-Feedback and enhancement
-------------------------
+## Feedback and enhancement
 
 You’ve found a bug, or have an enhancement idea? Feel free to open an
 issue : <https://github.com/ThinkR-open/remedy/issues>.

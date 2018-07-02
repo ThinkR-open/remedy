@@ -1,7 +1,7 @@
 ---
 output:
   md_document:
-    variant: markdown_github
+    variant: gfm
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -14,13 +14,13 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-2018_29_6-yellowgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
+[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_07_02-brightgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
 
 # remedy
 
 `{remedy}` provides addins to facilitate writing in markdown with RStudio.
 
-![](remedy_example.gif)
+![](readme_gif/remedy_example.gif)
 
 All the functions are meant to be mapped to keyboard shortcuts. A list of suggested shortcuts is provided towards the end of this README. 
 
