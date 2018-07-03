@@ -32,8 +32,12 @@ add_multiline_prefix <- function(prefix, as_is = FALSE) {
         gsub("^\\s*", "", content[nzchar(content)])
       )
   }
-
-  content <- paste0(content, "\n", collapse = "")
+  
+  if (length(content) > 0) {
+    content <- paste0(content, "\n", collapse = "")
+  } else {
+    content <- ""
+  }
 
   rstudioapi::modifyRange(
     location = a$selection[[1]]$range,
