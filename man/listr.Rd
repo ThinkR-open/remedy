@@ -3,24 +3,22 @@
 \name{listr}
 \alias{listr}
 \alias{olistr}
-\title{Convert to unordered list}
+\title{Convert to list}
 \usage{
 listr()
 
 olistr()
 }
 \value{
-an unordered markdown list
+\code{listr()} returns an unordered markdown list
 
-an ordered markdown list
+\code{olistr()} returns an ordered markdown list
 }
 \description{
-Turn the selected text into an unordered list.
+Convert selected text into an (un)ordered list.
 
 \if{html}{
 \out{
  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/list.gif?raw=true">
 }}
-
-Turn the selected text into an ordered list.
 }
