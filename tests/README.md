@@ -62,6 +62,8 @@ package.
 | test-xaringan.R          | [test-xaringan.R](testthat/test-xaringan.R)                  |  2 | 0.483 |     0 |      0 |       0 |       0 |
 | test-youtube.R           | [test-youtube.R](testthat/test-youtube.R)                    |  4 | 1.112 |     0 |      0 |       0 |       0 |
 
+<details>
+  <summary> Show Detailed Output </summary>
 | file                                                              | context                         | test                                                   | status | n |  time |
 | :---------------------------------------------------------------- | :------------------------------ | :----------------------------------------------------- | :----- | -: | ----: |
 | [test-backtick.R](testthat/test-backtick.R#L15)                   | backticks                       | backticks: empty                                       | PASS   | 1 | 0.167 |
@@ -158,5 +160,7 @@ package.
 | [test-youtube.R](testthat/test-youtube.R#L30_L31)                 | youtube                         | images: html                                           | PASS   | 1 | 0.335 |
 | [test-youtube.R](testthat/test-youtube.R#L45_L46)                 | youtube                         | images: html width/height                              | PASS   | 1 | 0.303 |
 | [test-youtube.R](testthat/test-youtube.R#L62_L63)                 | youtube                         | images: html width/height                              | PASS   | 1 | 0.306 |
+
+</details>
 
 <!--- Final Status : pass --->
