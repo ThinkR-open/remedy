@@ -64,6 +64,7 @@ package.
 
 <details>
   <summary> Show Detailed Output </summary>
+  
 | file                                                              | context                         | test                                                   | status | n |  time |
 | :---------------------------------------------------------------- | :------------------------------ | :----------------------------------------------------- | :----- | -: | ----: |
 | [test-backtick.R](testthat/test-backtick.R#L15)                   | backticks                       | backticks: empty                                       | PASS   | 1 | 0.167 |
