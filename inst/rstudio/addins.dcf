@@ -13,6 +13,11 @@ Description: Backtick selected word(s)
 Binding: backtickr
 Interactive: false
 
+Name: Blockquote
+Description: Convert selected text into a blockquote
+Binding: blockquoter
+Interactive: false
+
 Name: Bold
 Description: Embolden selected text
 Binding: boldr
@@ -83,7 +88,12 @@ Description: Convert the selected text in inline LaTeX.
 Binding: latexr
 Interactive: false
 
-Name: List
+Name: List (ordered)
+Description: Convert selected text into an ordered list
+Binding: olistr
+Interactive: false
+
+Name: List (unordered)
 Description: Convert selected text into an unordered list
 Binding: listr
 Interactive: false

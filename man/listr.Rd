@@ -2,15 +2,20 @@
 % Please edit documentation in R/listr.R
 \name{listr}
 \alias{listr}
-\title{Listr}
+\alias{olistr}
+\title{Convert to list}
 \usage{
 listr()
+
+olistr()
 }
 \value{
-a markdown list
+\code{listr()} returns an unordered markdown list
+
+\code{olistr()} returns an ordered markdown list
 }
 \description{
-Turn the selected text into an unordered list.
+Convert selected text into an (un)ordered list.
 
 \if{html}{
 \out{

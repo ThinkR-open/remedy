@@ -15,6 +15,37 @@ add_prefix <- function(prefix) {
   }
 }
 
+add_multiline_prefix <- function(prefix, as_is = FALSE) {
+  a <- rstudioapi::getSourceEditorContext()
+
+  content <- strsplit(a$selection[[1]]$text, "\n")[[1]]
+
+  if (as_is) {
+    # blockquote: keep blank lines, ignore indentation
+    content <- paste0(prefix, content)
+  } else {
+    # list: ignore blank lines, keep indentation
+    content[nzchar(content)] <-
+      paste0(
+        gsub("\\b.*$", "", content[nzchar(content)], perl = TRUE),
+        prefix,
+        gsub("^\\s*", "", content[nzchar(content)])
+      )
+  }
+  
+  if (length(content) > 0) {
+    content <- paste0(content, "\n", collapse = "")
+  } else {
+    content <- ""
+  }
+
+  rstudioapi::modifyRange(
+    location = a$selection[[1]]$range,
+    text = content,
+    id = a$id
+  )
+}
+
 enclose <- function(prefix, postfix = prefix) {
   a <- rstudioapi::getSourceEditorContext()
   for (s in a$selection)

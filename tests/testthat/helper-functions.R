@@ -38,7 +38,7 @@ individual_lines <- function() {
 set_text <- function(txt = '', sec, mark) {
   rstudioapi::modifyRange(location = entire_document(), text = txt, id = sec$id)
   rstudioapi::documentSave(sec$id) 
-  
+  Sys.sleep(.1)
   if (!missing(mark))
     rstudioapi::setSelectionRanges(mark())
 }

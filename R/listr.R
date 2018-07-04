@@ -1,26 +1,20 @@
-#' @title Listr
+#' @title Convert to list
 #'
-#' @description Turn the selected text into an unordered list.
+#' @description Convert selected text into an (un)ordered list.
 #'
 #' \if{html}{
 #' \out{
 #'  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/list.gif?raw=true">
 #' }}
 #'
-#' @return a markdown list
+#' @return \code{listr()} returns an unordered markdown list
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext insertText
 #' 
-listr <- function(){
-  
-  adc <- rstudioapi::getSourceEditorContext()
+listr <- function() add_multiline_prefix('+ ', as_is = FALSE)
 
-  content <- strsplit(adc$selection[[1]]$text,'\n')[[1]]
-  
-  content[nzchar(content)] <- sprintf('+ %s',content[nzchar(content)])
-
-  content <- paste0(content,collapse = '\n')
-  
-  rstudioapi::modifyRange(location = adc$selection[[1]]$range, text = content, id = adc$id)
-  
-}
+#' @return \code{olistr()} returns an ordered markdown list
+#' @export
+#' @importFrom rstudioapi getSourceEditorContext insertText
+#' @rdname listr
+olistr <- function() add_multiline_prefix('1. ', as_is = FALSE)
