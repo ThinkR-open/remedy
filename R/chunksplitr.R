@@ -18,6 +18,11 @@ chunksplitr <- function(){
     end = rstudioapi::document_position(adc$selection[[1]]$range$end[1], Inf)
     )
   
-  rstudioapi::insertText(location = rng,
-                         text = "\n```\n \n```{r}")
+  idx <- max(grep('^```\\{r',adc$contents[1:adc$selection[[1]]$range$start[[1]]]))
+  chunk_params <- paste0(c('r',strsplit(gsub('```\\{|\\}','',adc$contents[idx]),',')[[1]][-1]),collapse = ',')
+  
+  rstudioapi::insertText(
+    location = rng,
+    text = sprintf("\n```\n \n```{%s}",chunk_params)
+    )
 }
