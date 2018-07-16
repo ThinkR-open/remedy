@@ -1,13 +1,13 @@
 #' @title urlr
 #'
-#' @description Convert selected text into a url
+#' @description Convert selected text into a link
 #'
 #' \if{html}{
 #' \out{
 #'  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/url.gif?raw=true">
 #' }}
 #'
-#' @return a markdown image link
+#' @return a markdown link
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext modifyRange
 #'
@@ -21,7 +21,7 @@ urlr <- function() {
   txt <- adc$selection[[1]]$text
   
   txt_last <- gsub(after_last_space,'',txt, perl = TRUE)
-  txt_last <- ifelse(is_link(txt_last),txt_last,"# Error : selection is not an image link")
+  txt_last <- ifelse(is_link(txt_last),txt_last,"# Error : selection is not a URL")
   
   content <- switch(as.character(strc(txt = txt)),
                     '0' = '[]()' ,
