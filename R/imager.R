@@ -25,8 +25,8 @@ imager <- function() {
   
   content <- switch(as.character(strc(txt = txt)),
          '0' = '![]()' ,
-         '-1' = sprintf('!()[%s]',txt_last),
-         sprintf('!(%s)[%s]',gsub(before_last_space,'',txt, perl = TRUE),txt_last)
+         '-1' = sprintf('![](%s)',txt_last),
+         sprintf('![%s](%s)',gsub(before_last_space,'',txt, perl = TRUE),txt_last)
          )
   
   rstudioapi::modifyRange(location = adc$selection[[1]]$range, text = content, id = adc$id)
