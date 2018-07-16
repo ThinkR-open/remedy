@@ -25,7 +25,7 @@ testthat::describe('urls',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(sec$path,warn = FALSE),'()[# Error : selection is not a URL]')
+    testthat::expect_equal(readLines(sec$path,warn = FALSE),'[](# Error : selection is not a URL)')
     
     set_text(sec = sec)
   })
@@ -38,7 +38,7 @@ testthat::describe('urls',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(sec$path,warn = FALSE),'(aaa)[# Error : selection is not a URL]')
+    testthat::expect_equal(readLines(sec$path,warn = FALSE),'[aaa](# Error : selection is not a URL)')
     
     set_text(sec = sec)
   })  
@@ -51,7 +51,7 @@ testthat::describe('urls',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(sec$path,warn = FALSE),'(http://www.text.com)[http://www.text.com]')
+    testthat::expect_equal(readLines(sec$path,warn = FALSE),'[http://www.text.com](http://www.text.com)')
     
     set_text(sec = sec)
   })  
@@ -64,7 +64,7 @@ testthat::describe('urls',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(sec$path,warn = FALSE),'(text)[http://www.text.com]')
+    testthat::expect_equal(readLines(sec$path,warn = FALSE),'[text](http://www.text.com)')
     
     set_text(sec = sec)
   })  
@@ -77,7 +77,7 @@ testthat::describe('urls',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(sec$path,warn = FALSE),'(more text)[http://www.text.com]')
+    testthat::expect_equal(readLines(sec$path,warn = FALSE),'[more text](http://www.text.com)')
     
     set_text(sec = sec)
   })
