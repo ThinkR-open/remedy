@@ -19,8 +19,12 @@ about: Create a report to help us improve
 
 <details open>
 <summary> Session Info </summary>  
+
+  ```r
+  # paste here the output
   
-  paste devtools::session_info() here
+  devtools::session_info()
+  ```
   
 </details>
 
