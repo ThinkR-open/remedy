@@ -21,9 +21,9 @@ about: Create a report to help us improve
 <summary> Session Info </summary>  
 
   ```r
-  # paste here the output
+  # paste here the output of devtools::session_info()
   
-  devtools::session_info()
+  
   ```
   
 </details>
