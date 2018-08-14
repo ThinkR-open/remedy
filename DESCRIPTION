@@ -21,4 +21,4 @@ Suggests:
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RoxygenNote: 6.0.1.9000
+RoxygenNote: 6.0.1

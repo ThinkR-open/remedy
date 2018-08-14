@@ -20,6 +20,9 @@ add_multiline_prefix <- function(prefix, as_is = FALSE) {
 
   content <- strsplit(a$selection[[1]]$text, "\n")[[1]]
 
+  # https://stackoverflow.com/a/47072999/3218296
+  prefix_content <- iconv(content, "latin1", "ASCII", sub="")
+  
   if (as_is) {
     # blockquote: keep blank lines, ignore indentation
     content <- paste0(prefix, content)
@@ -27,7 +30,7 @@ add_multiline_prefix <- function(prefix, as_is = FALSE) {
     # list: ignore blank lines, keep indentation
     content[nzchar(content)] <-
       paste0(
-        gsub("\\b.*$", "", content[nzchar(content)], perl = TRUE),
+        gsub("\\b.*$", "", prefix_content[nzchar(content)], perl = TRUE),
         prefix,
         gsub("^\\s*", "", content[nzchar(content)])
       )
