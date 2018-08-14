@@ -126,7 +126,7 @@ Turn your dataframe into a markdown table :
 
 ### URL
 
-Turn the selected text into an url. 
+Turn the selected text into a link. 
 
 This element is context aware: if you select a text and a link, it turns the text into title between `[]`, and puts the link between `()`. 
 
