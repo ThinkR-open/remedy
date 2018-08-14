@@ -7,10 +7,10 @@
 urlr()
 }
 \value{
-a markdown image link
+a markdown link
 }
 \description{
-Convert selected text into a url
+Convert selected text into a link
 
 \if{html}{
 \out{
