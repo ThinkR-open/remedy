@@ -1,56 +1,36 @@
 # forked from https://github.com/yihui/knitr/blob/master/R/defaults.R
-new_defaults <- function(value = list()) {
-  defaults <- value
-
-  get <- function(name, default = FALSE, drop = TRUE, regex=FALSE, ...) {
-    if (default) defaults <- value # this is only a local version
-    if (missing(name)) {
-      defaults
-    } else {
-      if (drop && length(name) == 1) {
-        if (regex) {
-          name_grep <- grep(name, names(defaults), value = TRUE, ...)
-          remedy_setNames(defaults[name_grep], name_grep)
-        } else {
-          defaults[[name]]
-        }
-      } else {
-        remedy_setNames(defaults[name], name)
+new_defaults = function(value = list()) {
+  defaults = value
+  
+  get = function(name, default = FALSE, drop = TRUE) {
+    if (default) defaults = value  # this is only a local version
+    if (missing(name)) defaults else {
+      if (drop && length(name) == 1) defaults[[name]] else {
+        stats::setNames(defaults[name], name)
       }
     }
   }
-
-  set <- function(...) {
-    dots <- list(...)
+  resolve = function(...) {
+    dots = list(...)
     if (length(dots) == 0) return()
-    if (is.null(names(dots)) && length(dots) == 1 && is.list(dots[[1]])) {
-      if (length(dots <- dots[[1]]) == 0) {
-        return()
-      }
-    }
-
-    defaults <<- merge(dots)
-    
+    if (is.null(names(dots)) && length(dots) == 1 && is.list(dots[[1]]))
+      if (length(dots <- dots[[1]]) == 0) return()
+    dots
+  }
+  set = function(...) {
+    dots = resolve(...)
+    if (length(dots)) defaults <<- merge(dots)
     invisible(NULL)
   }
-
-  merge <- function(values) merge_list(defaults, values)
-
-  restore <- function(target = value) defaults <<- target
-
-  append <- function(...) {
-    dots <- list(...)
-    if (length(dots) == 0) return()
-    if (is.null(names(dots)) && length(dots) == 1 && is.list(dots[[1]])) {
-      if (length(dots <- dots[[1]]) == 0) {
-        return()
-      }
-    }
-    dots <- sapply(names(dots), function(x) dots[[x]] <- c(defaults[[x]], dots[[x]]), simplify = FALSE)
-    defaults <<- merge(dots)
+  merge = function(values) merge_list(defaults, values)
+  restore = function(target = value) defaults <<- target
+  append = function(...) {
+    dots = resolve(...)
+    for (i in names(dots)) dots[[i]] <- c(defaults[[i]], dots[[i]])
+    if (length(dots)) defaults <<- merge(dots)
     invisible(NULL)
   }
-
+  
   list(get = get, set = set, append = append, merge = merge, restore = restore)
 }
 
@@ -133,7 +113,7 @@ merge_list <- function(x, y) {
 }
 
 #from stats
-remedy_setNames <- function (object = nm, nm) 
+setNames <- function (object = nm, nm) 
 {
   names(object) <- nm
   object

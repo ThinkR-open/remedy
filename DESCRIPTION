@@ -1,6 +1,6 @@
 Package: remedy
 Title: RStudio Addins to Simplify Markdown Writing
-Version: 0.0.0.9700
+Version: 0.0.0.9800
 Authors@R: c(person("Colin", "Fay", email = "colin@thinkr.fr", role = c("aut", "cre")),
              person("Jonathan", "Sidi", email = "yonicd@gmail.com", role = c("aut")),
              person("Luke", "Smith", email = "luke@protocolvital.info", role = c("aut"), comment = "author of seasmith/AlignAssign"),
@@ -14,7 +14,8 @@ BugReports: https://github.com/ThinkR-open/remedy/issues
 Imports: 
     jsonlite,
     knitr,
-    rstudioapi
+    rstudioapi,
+    rematch2
 Suggests: 
     covr,
     testthat

@@ -7,3 +7,4 @@
 readme_gif
 ^\.travis\.yml$
 ^codecov\.yml$
+.github
