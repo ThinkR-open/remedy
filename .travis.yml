@@ -1,7 +1,25 @@
 # R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
 
-language: R
-sudo: false
+language: r
 cache: packages
-  after_success:
-    - Rscript -e 'covr::codecov()'
+r_github_packages:
+- yonicd/covrpage
+- r-lib/pkgdown
+after_success:
+- Rscript -e 'covr::codecov()'
+- Rscript -e 'devtools::install(); covrpage::covrpage_ci()'
+- Rscript -e 'pkgdown::build_site()'
+after_failure:
+- Rscript -e 'devtools::install(); covrpage::covrpage_ci()'
+- Rscript -e 'pkgdown::build_site()'
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: "$GH_KEY"
+  keep-history: true
+  local-dir: docs
+  on:
+    branch: master
+env:
+  global:
+    secure: B4iEumoZ5niHckJYpM704ANGEDiFda09dkRCJzuOt9uXpv2lIJyqdPRBiXgYy88P71stxdl3ff6GSUWzrgJ+2/0rVdr+ma/B5OKMkzK2GQNGOAMKGioEkGlyCmPSkg2IYCTuEG1YK9fl+tdytcOlyeU35GIYyKOxApfDdyhfwSa/fU5QyoV+fiAqkmQRlDTMn/PbGnucXpqyRDE0U6ci8lYkhZajDObtvQ8k1xSezPCIBVFh8qVvwobetdaCKTTHeKUpLuUr7vhvSc71UCVe1G1XdeP5nogWSpmgCC1vCrTKVBrAK56VBZmJqoFyH/WmkSdyiF0QEWj2vXjjTurhr3kthKcQwAyaFj/VMuwq9Zj0vUgzVrpix17WSBxHEsFF5Rbi6QvibnozxlGm4uT3A5DNeyq5XiVandkEs/emVU1MfEHNgqvxig45d/HxIT/YLsUelCQcsOjAUXca+i1mTSLticfOgEyOSllb+dJqK3LffJOfVzgrFwltHgGlpNorLHGbBWj50c4m8ono9HRyOXdzYnUhbfeX2ek2Yn8zxfkYq8g5meUTrkOWYRlwnhMkKwe+KZnAuV/y/8o31GvhCUMxcypobQGF+FThezBlaTVXQ8dLwOR42xSoR+dLEoASZk7r67vT5sXzghsYZQU6KpTlbZEB6/ZfYdlUqAwwPNg=

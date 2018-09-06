@@ -51,7 +51,6 @@ new_defaults = function(value = list()) {
 #' Below is a list of default chunk options, retrieved via
 #' \code{remedy_opts$get()}:
 #'
-#' \Sexpr[results=verbatim]{str(remedy::remedy_opts$get())}
 # @references Usage: \url{https://yihui.name/knitr/objects/}
 #'
 #   A list of available options:

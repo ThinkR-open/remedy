@@ -27,9 +27,9 @@ frameborder="0" allowfullscreen></iframe>
 
 Default Settings:
  
-remedy_opts$get('youtube_output'): \Sexpr[results=verbatim]{str(remedy::remedy_opts$get('youtube_output'))}
+remedy_opts$get('youtube_output'): str(remedy::remedy_opts$get('youtube_output'))
 
-remedy_opts$get('youtube_height'): \Sexpr[results=verbatim]{str(remedy::remedy_opts$get('youtube_height'))}
+remedy_opts$get('youtube_height'): str(remedy::remedy_opts$get('youtube_height'))
 
-remedy_opts$get('youtube_width'): \Sexpr[results=verbatim]{str(remedy::remedy_opts$get('youtube_width'))}
+remedy_opts$get('youtube_width'): str(remedy::remedy_opts$get('youtube_width'))
 }

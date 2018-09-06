@@ -8,3 +8,5 @@ readme_gif
 ^\.travis\.yml$
 ^codecov\.yml$
 .github
+^_pkgdown\.yml$
+^docs$

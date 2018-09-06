@@ -26,8 +26,6 @@ options in a separate chunk.
 
 Below is a list of default chunk options, retrieved via
 \code{remedy_opts$get()}:
-
-\Sexpr[results=verbatim]{str(remedy::remedy_opts$get())}
 }
 \note{
 \code{remedy_opts_current} is read-only in the sense that it does nothing if
