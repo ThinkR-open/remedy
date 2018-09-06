@@ -5,6 +5,7 @@ sec <- scratch_file()
 
 testthat::describe('prefix', {
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   add_multiline_prefix <- remedy:::add_multiline_prefix
   

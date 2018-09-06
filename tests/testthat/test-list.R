@@ -4,7 +4,8 @@ sec <- scratch_file()
 
 testthat::describe("unordered lists", {
   skip_if_not_rstudio()
-
+  testthat::skip_on_travis()
+  
   it("empty", {
     listr()
 
@@ -66,7 +67,8 @@ testthat::describe("unordered lists", {
 
 testthat::describe("ordered lists", {
   skip_if_not_rstudio()
-
+  testthat::skip_on_travis()
+  
   it("empty", {
     olistr()
 

@@ -5,6 +5,7 @@ sec <- scratch_file()
 testthat::describe('latex',{
   
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   it('empty',{
     

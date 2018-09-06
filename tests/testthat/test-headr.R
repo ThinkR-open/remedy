@@ -4,6 +4,8 @@ sec <- scratch_file()
 
 testthat::describe('add headers to source editor',{
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
+  
   it(strrep('#',1),{
     remedy::h1r()
     rstudioapi::documentSave(sec$id)

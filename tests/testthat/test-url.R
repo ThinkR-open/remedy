@@ -5,6 +5,7 @@ sec <- scratch_file()
 testthat::describe('urls',{
   
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   it('empty',{
     

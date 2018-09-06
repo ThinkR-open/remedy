@@ -5,6 +5,7 @@ sec <- scratch_file()
 testthat::describe('italics',{
   
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   it('empty',{
     
@@ -35,6 +36,7 @@ testthat::describe('italics',{
 testthat::describe('bold',{
   
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   it('empty',{
     
@@ -65,6 +67,7 @@ testthat::describe('bold',{
 testthat::describe('strike',{
   
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   it('empty',{
     

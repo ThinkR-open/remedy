@@ -13,6 +13,7 @@ if(rstudioapi::isAvailable()){
 testthat::describe('splitting',{
   
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   it('splitting one chunk into two',{
     
@@ -35,6 +36,7 @@ testthat::describe('splitting',{
 testthat::describe('params',{
   
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   it('splitting one chunk into two carrying chunk params',{
     
@@ -57,6 +59,7 @@ testthat::describe('params',{
 testthat::describe('creating',{
   
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   it('full document',{
     
@@ -77,6 +80,7 @@ testthat::describe('creating',{
 testthat::describe('wrapping',{
   
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   it('full document',{
     

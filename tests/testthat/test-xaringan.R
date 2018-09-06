@@ -1,4 +1,5 @@
 testthat::context("xaringan")
+
 if(rstudioapi::isAvailable()){
   
   path <- tempfile(pattern = 'test',fileext = '.R')
@@ -12,6 +13,7 @@ if(rstudioapi::isAvailable()){
 testthat::describe('urls',{
   
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   it('empty',{
     

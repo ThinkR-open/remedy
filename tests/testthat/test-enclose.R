@@ -4,6 +4,7 @@ sec <- scratch_file()
 
 testthat::describe('enclose', {
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   enclose <- remedy:::enclose
   

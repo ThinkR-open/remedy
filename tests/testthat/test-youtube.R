@@ -5,6 +5,7 @@ sec <- scratch_file()
 testthat::describe('images',{
   
   skip_if_not_rstudio()
+  testthat::skip_on_travis()
   
   it('empty html',{
     

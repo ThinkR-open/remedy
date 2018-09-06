@@ -6,6 +6,8 @@ testthat::describe('backticks',{
   
   skip_if_not_rstudio()
   
+  testthat::skip_on_travis()
+  
   it('empty',{
     
     backtickr()
