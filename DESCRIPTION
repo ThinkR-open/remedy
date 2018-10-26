@@ -1,7 +1,7 @@
 Package: remedy
 Title: RStudio Addins to Simplify Markdown Writing
-Version: 0.0.0.9800
-Authors@R: c(person("Colin", "Fay", email = "colin@thinkr.fr", role = c("aut", "cre")),
+Version: 0.1.0
+Authors@R: c(person("Colin", "Fay", email = "contact@colinfay.me", role = c("aut", "cre")),
              person("Jonathan", "Sidi", email = "yonicd@gmail.com", role = c("aut")),
              person("Luke", "Smith", email = "luke@protocolvital.info", role = c("aut"), comment = "author of seasmith/AlignAssign"),
              person("Jonathan", "Carroll", email = "rpkg@jcarroll.com.au", role = c("ctb"), comment = c(ORCID = "0000-0002-1404-5264")),
