@@ -12,10 +12,11 @@ License: MIT + file LICENSE
 URL: https://github.com/ThinkR-open/remedy
 BugReports: https://github.com/ThinkR-open/remedy/issues
 Imports: 
-    jsonlite,
     knitr,
     rstudioapi,
-    rematch2
+    rematch2, 
+    utils, 
+    stats
 Suggests: 
     covr,
     testthat,
