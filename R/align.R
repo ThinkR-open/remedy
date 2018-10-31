@@ -73,6 +73,13 @@ insertr <- function(list) {
 #'
 #' @return Aligns the single assignment operators (\code{<-}) within a highlighted region.
 #' @export
+#' 
+#' @examples 
+#' \dontrun{
+#' # You'll likely never use remedy functions directly
+#' # But rather map them to keyboard shortcut
+#' align_arrow()
+#' }
 align_arrow <- function() {
   capture <- capture()
   area    <- capture_area(capture)
@@ -86,6 +93,12 @@ align_arrow <- function() {
 #' @return Aligns the equal sign assignment operators (\code{=}) within a
 #' highlighted region.
 #' @export
+#' @examples 
+#' \dontrun{
+#' # You'll likely never use remedy functions directly
+#' # But rather map them to keyboard shortcut
+#' align_equal()
+#' }
 align_equal <- function() {
   capture <- capture()
   area    <- capture_area(capture)
