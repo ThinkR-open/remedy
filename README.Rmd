@@ -29,7 +29,7 @@ All the functions are meant to be mapped to keyboard shortcuts. A list of sugges
 ## Install
 
 ```{r, eval = FALSE}
-devtools::install_github("ThinkR-open/remedy")
+remotes::install_github("ThinkR-open/remedy")
 ```
 
 Once you've installed the package, you don't need to load it with `library()`, the addins are installed on your machine as part of the package install process. 
@@ -58,11 +58,23 @@ Enclose the selected word(s) in backticks.
 
 ![](readme_gif/backtick.gif)
 
+### Blockquote
+
+Turn selected line(s) to blockquote.
+
+![](readme_gif/blockquote.gif)
+
 ### Chunk
 
 Turn the selected text into a chunk.
 
-![](readme_gif/chunck.gif)
+![](readme_gif/chunk.gif)
+
+> Note that every chunk is given a name. 
+
+chunksplit split the chunk at a given spot.
+
+![](readme_gif/chunksplit.gif)
 
 ### Emphasize
 
@@ -70,11 +82,23 @@ Embolden, italicize or strikethrough the selected text.
 
 ![](readme_gif/emphasise.gif)
 
+### Footnotes
+
+Turn the given text into a footnote.
+
+![](readme_gif/footnote.gif)
+
 ### Headers
 
 Turn the selected text into a header.
 
 ![](readme_gif/header.gif)
+
+### HTML Comment
+
+Turn the text into an html comment 
+ 
+![](readme_gif/htmlcomment.gif)
 
 ### Image
 
@@ -113,7 +137,7 @@ Insert a table inside your doc.
 
 There are basically two way to do that with remedy : 
 
-#### Empty table
+#### Ttable
 
 ![](readme_gif/table.gif)
 
@@ -133,6 +157,12 @@ This element is context aware: if you select a text and a link, it turns the tex
 If the last element of the selection is not a link, you get an error message straight into you markdown document. 
 
 ![](readme_gif/url.gif)
+
+### Youtube 
+
+Turn an url into a youtube embed: 
+
+![](readme_gif/youtube.gif)
 
 ### xaringan 
 

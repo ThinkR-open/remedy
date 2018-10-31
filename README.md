@@ -3,7 +3,7 @@
 [![Travis-CI Build
 Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage
 status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_08_13-brightgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_10_23-brightgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
 
 # remedy
 
@@ -21,7 +21,7 @@ of suggested shortcuts is provided towards the end of this README.
 ## Install
 
 ``` r
-devtools::install_github("ThinkR-open/remedy")
+remotes::install_github("ThinkR-open/remedy")
 ```
 
 Once you’ve installed the package, you don’t need to load it with
@@ -52,11 +52,23 @@ Enclose the selected word(s) in backticks.
 
 ![](readme_gif/backtick.gif)
 
+### Blockquote
+
+Turn selected line(s) to blockquote.
+
+![](readme_gif/blockquote.gif)
+
 ### Chunk
 
 Turn the selected text into a chunk.
 
-![](readme_gif/chunck.gif)
+![](readme_gif/chunk.gif)
+
+> Note that every chunk is given a name.
+
+chunksplit split the chunk at a given spot.
+
+![](readme_gif/chunksplit.gif)
 
 ### Emphasize
 
@@ -64,11 +76,23 @@ Embolden, italicize or strikethrough the selected text.
 
 ![](readme_gif/emphasise.gif)
 
+### Footnotes
+
+Turn the given text into a footnote.
+
+![](readme_gif/footnote.gif)
+
 ### Headers
 
 Turn the selected text into a header.
 
 ![](readme_gif/header.gif)
+
+### HTML Comment
+
+Turn the text into an html comment
+
+![](readme_gif/htmlcomment.gif)
 
 ### Image
 
@@ -108,7 +132,7 @@ Insert a table inside your doc.
 
 There are basically two way to do that with remedy :
 
-#### Empty table
+#### Ttable
 
 ![](readme_gif/table.gif)
 
@@ -129,6 +153,12 @@ If the last element of the selection is not a link, you get an error
 message straight into you markdown document.
 
 ![](readme_gif/url.gif)
+
+### Youtube
+
+Turn an url into a youtube embed:
+
+![](readme_gif/youtube.gif)
 
 ### xaringan
 
