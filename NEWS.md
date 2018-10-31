@@ -1,5 +1,9 @@
 Added travis support and codecov.
 
+# remedy 0.1.0
+
+CRAN ready version.
+
 # remedy 0.0.0.9000
 
 ## 2017-09-21

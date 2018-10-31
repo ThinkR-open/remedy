@@ -1,13 +1,17 @@
 Package: remedy
-Title: RStudio Addins to Simplify Markdown Writing
+Title: 'RStudio' Addins to Simplify 'Markdown' Writing
 Version: 0.1.0
-Authors@R: c(person("Colin", "Fay", email = "contact@colinfay.me", role = c("aut", "cre")),
-             person("Jonathan", "Sidi", email = "yonicd@gmail.com", role = c("aut")),
+Authors@R: c(person("Colin", "Fay", email = "contact@colinfay.me", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7343-1846")),
+             person("Jonathan", "Sidi", email = "yonicd@gmail.com", role = c("aut"), comment = c(ORCID = "0000-0002-4222-1819")),
              person("Luke", "Smith", email = "luke@protocolvital.info", role = c("aut"), comment = "author of seasmith/AlignAssign"),
              person("Jonathan", "Carroll", email = "rpkg@jcarroll.com.au", role = c("ctb"), comment = c(ORCID = "0000-0002-1404-5264")),
              person("Andrzej", "Oleś", email = "andrzej.oles@gmail.com", role = c("ctb"), comment = c(ORCID = "0000-0003-0285-2787")),
              person("Daniel", "Possenriede", email = "possenriede@gmail.com", role = c("ctb"), comment = c(ORCID = "0000-0002-6738-9845")))
-Description: An RStudio addin providing shortcut for writing in Markdown. 
+Description: An 'RStudio' addin providing shortcuts for writing in 'Markdown'. This package provides a series of 
+             functions that allow the user to be more efficient when using 'Markdown'. For example, you can select 
+             a word, and put it in bold or in italics, or change the alignment of elements inside you Rmd. The idea
+             is to map all the functionalities from 'remedy' on keyboard shortcuts, so that it provides an interface 
+             close to what you can find in any other text editor. 
 License: MIT + file LICENSE
 URL: https://github.com/ThinkR-open/remedy
 BugReports: https://github.com/ThinkR-open/remedy/issues
