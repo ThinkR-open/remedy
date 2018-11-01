@@ -3,7 +3,7 @@
 [![Travis-CI Build
 Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage
 status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_10_23-brightgreen.svg)](https://github.com/ThinkR-open/remedy/tree/master/tests/README.md)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_11_01-brightgreen.svg)](http://tinyurl.com/y76olv3v)
 
 # remedy
 
