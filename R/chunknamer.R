@@ -16,18 +16,30 @@ chunknamer <- function(){
 
   this <- adc$contents
   
-  x <- grep('^```\\{r',this)
+  x <- grep('^```\\{(.*?)r',this)
   
-  no_name <- which(!grepl('\\s',sapply(strsplit(this[x],','),'[',1)))
+  current_names <- gsub('```\\{(.*?)r|\\}|\\s+','',sapply(strsplit(this[x],','),'[',1))
+  
+  no_name <- which(!nzchar(current_names))
   
   counter_size <- pmax(nchar(as.character(length(no_name))) - 1,2)
   
   counter <- paste0('%0',counter_size,'d')
   
   for(i in seq_along(no_name)){
-    this[x][no_name[i]] <- gsub('^```\\{r',
-                                sprintf(paste0('```{r %s',counter),
-                                        remedy_opts$get('name'),i),
+    
+    bump <- 0
+    
+    new_name <- sprintf(paste0('%s',counter),remedy_opts$get('name'),(i + bump))
+    
+    # in case new name already exists bump counter until unused name is found
+      while(new_name%in%current_names){
+        bump <- bump + 1
+        new_name <- sprintf(paste0('%s',counter),remedy_opts$get('name'),(i + bump))
+      }
+    
+    this[x][no_name[i]] <- gsub('^```\\{(.*?)r',
+                                sprintf('```{r %s',new_name),
                                 this[x][no_name[i]]
     )
     
