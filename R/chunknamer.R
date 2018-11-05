@@ -20,6 +20,11 @@ chunknamer <- function(){
   
   current_names <- gsub('```\\{(.*?)r|\\}|\\s+','',sapply(strsplit(this[x],','),'[',1))
   
+  #remove chunk options that are in first position
+  no_name_opts <- which(grepl('=',current_names))
+  
+  current_names[no_name_opts] <- ""
+  
   no_name <- which(!nzchar(current_names))
   
   counter_size <- pmax(nchar(as.character(length(no_name))) - 1,2)
@@ -38,8 +43,10 @@ chunknamer <- function(){
         new_name <- sprintf(paste0('%s',counter),remedy_opts$get('name'),(i + bump))
       }
     
+    comma <- ifelse(no_name[i]%in%no_name_opts,',','')
+    
     this[x][no_name[i]] <- gsub('^```\\{(.*?)r',
-                                sprintf('```{r %s',new_name),
+                                sprintf('```{r %s%s',new_name,comma),
                                 this[x][no_name[i]]
     )
     
