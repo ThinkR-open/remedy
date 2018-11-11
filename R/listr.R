@@ -6,7 +6,14 @@
 #' \out{
 #'  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/list.gif?raw=true">
 #' }}
-#'
+#' @examples 
+#' if(interactive()){
+#' #unordered list
+#' remedy_example(c('line 1','line 2'),listr)
+#' 
+#' #ordered list
+#' remedy_example(c('line 1','line 2'),olistr)
+#' }
 #' @return \code{listr()} returns an unordered markdown list
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext insertText
