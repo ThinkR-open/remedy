@@ -17,3 +17,12 @@ Convert the selected text in inline LaTeX.
  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/latex.gif?raw=true">
 }}
 }
+\examples{
+\dontrun{
+remedy_example( 
+    c( "Latex stuffs"), 
+    latexr
+    )
+}
+
+}

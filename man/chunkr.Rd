@@ -2,9 +2,15 @@
 % Please edit documentation in R/chunkr.R
 \name{chunkr}
 \alias{chunkr}
+\alias{chunkr_doc}
+\alias{chunkr_section}
 \title{Interactively Create Rmarkdown Chunks}
 \usage{
 chunkr()
+
+chunkr_doc()
+
+chunkr_section()
 }
 \description{
 Addin that splits full documents into Rmarkdown chunks or
@@ -17,4 +23,14 @@ conversion (## ----chunk name,chunk options----).
 
 Setting \code{\link{remedy_opts}}$set(list(full_doc=FALSE)), user highlights text and chunky will
  wrap a new Rmarkdown chunk around it, utilizing the other options in \code{\link{remedy_opts}}.
+}
+\examples{
+\dontrun{
+remedy_example(
+    c( "# Create a chunk",
+    "a <- 12", 
+    "aaa <- 13"), 
+    chunkr
+    )
+}
 }

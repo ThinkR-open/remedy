@@ -12,3 +12,11 @@ a backticked text selection
 \description{
 Backtick selected word(s)
 }
+\examples{
+\dontrun{
+remedy_example(
+    c( "to_backtick"), 
+    backtickr
+    )
+}
+}

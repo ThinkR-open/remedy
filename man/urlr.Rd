@@ -17,3 +17,12 @@ Convert selected text into a link
  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/url.gif?raw=true">
 }}
 }
+\examples{
+\dontrun{
+remedy_example( 
+    "https://www.thinkr.fr", 
+    urlr
+    )
+}
+
+}

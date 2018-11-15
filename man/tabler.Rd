@@ -22,3 +22,12 @@ Insert a table in your file.
  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/table_remedy.gif?raw=true">
 }}
 }
+\examples{
+\dontrun{
+remedy_example( 
+    "head(iris)", 
+    tabler
+    )
+}
+
+}

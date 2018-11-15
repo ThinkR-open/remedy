@@ -14,8 +14,11 @@ Align a highlighted region's assignment operators.
 }
 \examples{
 \dontrun{
-# You'll likely never use remedy functions directly
-# But rather map them to keyboard shortcut
-align_arrow()
+remedy_example(
+    c( "# Align arrows",
+    "a <- 12", 
+    "aaa <- 13"), 
+    align_arrow
+    )
 }
 }

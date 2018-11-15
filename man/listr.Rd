@@ -23,11 +23,11 @@ Convert selected text into an (un)ordered list.
 }}
 }
 \examples{
-if(interactive()){
+\dontrun{
 #unordered list
 remedy_example(c('line 1','line 2'),listr)
 
 #ordered list
-remedy_example(c('line 1','line 2'),olistr)
+remedy_example(c('line 1','line 2'),olistr) 
 }
 }

@@ -33,3 +33,11 @@ remedy_opts$get('youtube_height'): str(remedy::remedy_opts$get('youtube_height')
 
 remedy_opts$get('youtube_width'): str(remedy::remedy_opts$get('youtube_width'))
 }
+\examples{
+\dontrun{
+remedy_example( 
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+    youtuber
+    )
+}
+}

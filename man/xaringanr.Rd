@@ -17,3 +17,12 @@ xaringan pull left and pull right
  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/xaringan.gif?raw=true">
 }}
 }
+\examples{
+\dontrun{
+remedy_example( 
+    "", 
+    xaringanr
+    )
+}
+
+}

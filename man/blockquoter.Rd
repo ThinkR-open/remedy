@@ -12,3 +12,11 @@ a markdown blockquote
 \description{
 Turn the selected text into a blockquote.
 }
+\examples{
+\dontrun{
+remedy_example(
+    c( "to_blockquote"), 
+    blockquoter
+    )
+}
+}

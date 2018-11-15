@@ -42,3 +42,8 @@ Something COMMENT Something
  
 Something COMMENT Something -->
 }
+\examples{
+\dontrun{
+remedy_example( c( "<b>This is bold</b>"), htmlcommentr)
+}
+}
