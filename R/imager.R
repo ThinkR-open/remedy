@@ -10,7 +10,14 @@
 #' @return a markdown image link
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext modifyRange
-#'
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( 
+#'     c( "https://thinkr.fr/wp-content/uploads/2015/03/thinkR1.png"), 
+#'     imager
+#'     )
+#' }
 imager <- function() {
   
   adc <- rstudioapi::getSourceEditorContext()

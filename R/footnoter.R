@@ -12,5 +12,11 @@
 #' @rdname footnote
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext insertText
-#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example(
+#'     c( "# Create a footnote"), 
+#'     footnoter
+#'     )
+#' }
 footnoter <- function() enclose("^[", "]")

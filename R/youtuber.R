@@ -29,6 +29,14 @@
 #' @rdname youtuber
 #' @export 
 #' @importFrom rstudioapi getSourceEditorContext modifyRange
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( 
+#'     "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+#'     youtuber
+#'     )
+#' }
 youtuber <- function(){
   
   adc <- rstudioapi::getSourceEditorContext()

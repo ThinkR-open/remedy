@@ -43,6 +43,11 @@
 #' @rdname htmlcommentr
 #' @export 
 #' @importFrom rstudioapi getSourceEditorContext modifyRange setCursorPosition
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( c( "<b>This is bold</b>"), htmlcommentr)
+#' }
 htmlcommentr <- function(){
   
   adc <- rstudioapi::getSourceEditorContext() 

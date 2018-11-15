@@ -13,6 +13,17 @@
 #'
 #' @rdname chunkr
 #' @export
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example(
+#'     c( "# Create a chunk",
+#'     "a <- 12", 
+#'     "aaa <- 13"), 
+#'     chunkr
+#'     )
+#' }
+
 chunkr <- function() {
   if (remedy_opts$get("full_doc")) {
     chunkr_doc()
@@ -22,6 +33,7 @@ chunkr <- function() {
 }
 
 #' @importFrom rstudioapi getSourceEditorContext
+#' @rdname chunkr
 chunkr_doc <- function() {
   adc <- rstudioapi::getSourceEditorContext()
 
@@ -64,6 +76,8 @@ chunkr_doc <- function() {
 }
 
 #' @importFrom rstudioapi insertText getActiveDocumentContext setCursorPosition
+#' @rdname chunkr
+#' 
 chunkr_section <- function() {
   adc <- rstudioapi::getActiveDocumentContext()
 

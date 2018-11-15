@@ -1,6 +1,6 @@
 #' @title Mover
 #'
-#' @description Copy a selected text or the current line
+#' @description Copy a selected text or the current line to the right
 #' 
 #' \if{html}{
 #' \out{
@@ -12,6 +12,14 @@
 #' @return a clone of the line
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext modifyRange setCursorPosition showDialog
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( 
+#'     c( "I like to move it "), 
+#'     rightr
+#'     )
+#' }
 #' 
 rightr <- function(){
   adc <- rstudioapi::getSourceEditorContext()

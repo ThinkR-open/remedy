@@ -10,6 +10,8 @@
 #' @rdname chunksplitr
 #' @export 
 #' @importFrom rstudioapi getSourceEditorContext insertText
+#' 
+
 chunksplitr <- function(){
   adc <- rstudioapi::getSourceEditorContext()
   
@@ -26,3 +28,4 @@ chunksplitr <- function(){
     text = sprintf("\n```\n \n```{%s}",chunk_params)
     )
 }
+

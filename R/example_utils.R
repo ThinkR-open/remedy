@@ -10,10 +10,13 @@
 #' @export 
 #' @importFrom rstudioapi documentSave
 remedy_example <- function(txt, addin, mark = entire_document){
-  sec <- scratch_file()
-  set_text(paste0(txt,collapse = '\n'), sec = sec, mark = mark)
-  addin()
-  invisible(rstudioapi::documentSave(sec$id))
+  if(interactive()){ 
+    sec <- scratch_file()
+    set_text(paste0(txt,collapse = '\n'), sec = sec, mark = mark)
+    Sys.sleep(0.5)
+    addin()
+    invisible(rstudioapi::documentSave(sec$id))
+    }
 }
 
 #' @rdname remedy_example
@@ -21,7 +24,7 @@ remedy_example <- function(txt, addin, mark = entire_document){
 #' @importFrom rstudioapi isAvailable navigateToFile getSourceEditorContext
 scratch_file <- function() {
   if (rstudioapi::isAvailable()) {
-    path <- tempfile(pattern = 'remedy', fileext = '.R')
+    path <- tempfile(pattern = 'remedy', fileext = '.Rmd')
     file.create(path)
     rstudioapi::navigateToFile(path)
     Sys.sleep(1)

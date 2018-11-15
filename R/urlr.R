@@ -10,6 +10,14 @@
 #' @return a markdown link
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext modifyRange
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( 
+#'     "https://www.thinkr.fr", 
+#'     urlr
+#'     )
+#' }
 #'
 urlr <- function() {
   

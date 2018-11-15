@@ -16,6 +16,13 @@
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext insertText
 #' @importFrom knitr kable
+#' @examples 
+#' \dontrun{
+#' remedy_example( 
+#'     "head(iris)", 
+#'     tabler
+#'     )
+#' }
 #' 
 tabler <- function(){
   adc <- rstudioapi::getSourceEditorContext()

@@ -12,4 +12,12 @@
 #' @rdname latex
 #' @export
 #' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( 
+#'     c( "Latex stuffs"), 
+#'     latexr
+#'     )
+#' }
+#' 
 latexr <- function() enclose("$")
