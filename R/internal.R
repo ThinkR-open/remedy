@@ -23,6 +23,8 @@ add_multiline_prefix <- function(prefix, as_is = FALSE) {
   # https://stackoverflow.com/a/47072999/3218296
   prefix_content <- iconv(content, "latin1", "ASCII", sub="")
   
+  prefix_content <- gsub('^["]','',prefix_content)
+  
   if (as_is) {
     # blockquote: keep blank lines, ignore indentation
     content <- paste0(prefix, content)
