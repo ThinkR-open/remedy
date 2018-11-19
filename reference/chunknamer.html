@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Interactively Create Rmarkdown Chunks — chunkr • remedy</title>
+<title>Interactively Add Names to Chunks — chunknamer • remedy</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
@@ -32,10 +32,10 @@
 
 
 
-<meta property="og:title" content="Interactively Create Rmarkdown Chunks — chunkr" />
+<meta property="og:title" content="Interactively Add Names to Chunks — chunknamer" />
 
-<meta property="og:description" content="Addin that splits full documents into Rmarkdown chunks or
-wraps highlighted text in an active RStudio document editor in a Rmarkdown chunk." />
+<meta property="og:description" content="Addin that add in bulk a names to unnamed chunks in a 
+Rmarkdown document in the source editor." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -116,27 +116,25 @@ wraps highlighted text in an active RStudio document editor in a Rmarkdown chunk
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Interactively Create Rmarkdown Chunks</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ThinkR-open/remedy/blob/master/R/chunkr.R'><code>R/chunkr.R</code></a></small>
-    <div class="hidden name"><code>chunkr.Rd</code></div>
+    <h1>Interactively Add Names to Chunks</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ThinkR-open/remedy/blob/master/R/chunknamer.R'><code>R/chunknamer.R</code></a></small>
+    <div class="hidden name"><code>chunknamer.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Addin that splits full documents into Rmarkdown chunks or
-wraps highlighted text in an active RStudio document editor in a Rmarkdown chunk.</p>
+    <p>Addin that add in bulk a names to unnamed chunks in a 
+Rmarkdown document in the source editor.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>chunkr</span>()</pre>
+    <pre class="usage"><span class='fu'>chunknamer</span>()</pre>
         
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Setting <code><a href='remedyOpts.html'>remedy_opts</a></code>$set(list(full_doc=TRUE)) chunkr will convert entire document by
-<code><a href='remedyOpts.html'>remedy_opts</a></code>$get('token_purl'). The default token is the output from a <code><a href='http://www.rdocumentation.org/packages/knitr/topics/knit'>purl</a></code>
-conversion (## ----chunk name,chunk options----).</p>
-<p>Setting <code><a href='remedyOpts.html'>remedy_opts</a></code>$set(list(full_doc=FALSE)), user highlights text and chunkr will
- wrap a new Rmarkdown chunk around it, utilizing the other options in <code><a href='remedyOpts.html'>remedy_opts</a></code>.</p>
+    <p>By default the addin will use "remedy" as the stem of the chunk names. this an be changed using
+<code><a href='remedyOpts.html'>remedy_opts</a></code>$set(name='ANOTHER NAME'). The names are then added in sequential order using
+an <!-- %02d naming scheme. --></p>
     
 
   </div>
