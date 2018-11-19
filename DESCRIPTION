@@ -20,11 +20,14 @@ Imports:
     rstudioapi,
     rematch2, 
     utils, 
-    stats
+    stats,
+    sinew
 Suggests: 
     covr,
     testthat,
     rmarkdown
+Remotes:
+    metrumresearchgroup/sinew
 Encoding: UTF-8
 Language: en-US
 LazyData: true

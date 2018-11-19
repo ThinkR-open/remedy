@@ -88,6 +88,11 @@ Description: Convert the selected text in inline LaTeX.
 Binding: latexr
 Interactive: false
 
+Name: Library
+Description: Adds library chunk to top of script.
+Binding: libraryr
+Interactive: false
+
 Name: List (ordered)
 Description: Convert selected text into an ordered list
 Binding: olistr

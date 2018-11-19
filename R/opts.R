@@ -91,6 +91,7 @@ remedy_opts <- new_defaults(list(
     image = "Ctrl+Cmd+P",
     italics = "Ctrl+Cmd+I",
     latex = "Ctrl+Cmd+L",
+    library = "Ctrl+Cmd+Shift+L",
     list = "Ctrl+Shift+Cmd+=",
     right = "Alt+Cmd+Right",
     strike = "Ctrl+Cmd+S",

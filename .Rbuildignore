@@ -11,3 +11,4 @@ readme_gif
 .github
 ^_pkgdown\.yml$
 ^docs$
+mytest

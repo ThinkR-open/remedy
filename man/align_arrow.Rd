@@ -12,3 +12,10 @@ Aligns the single assignment operators (\code{<-}) within a highlighted region.
 \description{
 Align a highlighted region's assignment operators.
 }
+\examples{
+\dontrun{
+# You'll likely never use remedy functions directly
+# But rather map them to keyboard shortcut
+align_arrow()
+}
+}
