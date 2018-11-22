@@ -33,6 +33,6 @@ Below is a list of default chunk options, retrieved via
   \code{remedy_opts_current$get()}.
 }
 \examples{
-remedy_opts$get('name')
+remedy_opts$get()
 }
 \keyword{datasets}

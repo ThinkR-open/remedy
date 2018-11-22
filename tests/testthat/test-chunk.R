@@ -63,16 +63,19 @@ testthat::describe('creating',{
   
   it('full document',{
     
-    set_text(txt = '',sec = sec)
+    set_text(txt = c("## ----aaa----\n\n## ----bbb----"),sec = sec)
+    
+    remedy_opts$set(full_doc=TRUE)
     
     chunkr()
 
     rstudioapi::documentSave(sec$id)
         
     testthat::expect_equal(readLines(path,warn = FALSE),
-                           c('', '```{r remedy001}', '', '```')
+                           c("```{r aaa}","","```","```{r bbb}","```")
     )
     set_text(sec = sec)
+    remedy_opts$set(full_doc=FALSE)
   })
   
 })
@@ -82,7 +85,7 @@ testthat::describe('wrapping',{
   skip_if_not_rstudio()
   testthat::skip_on_travis()
   
-  it('full document',{
+  it('section',{
     
     set_text(txt = 'aaa',sec = sec,mark = entire_document)
     
