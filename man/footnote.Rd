@@ -12,3 +12,11 @@ footnote text (in markdown)
 \description{
 Create a footnote from selected text.
 }
+\examples{
+\dontrun{
+remedy_example(
+    c( "# Create a footnote"), 
+    footnoter
+    )
+}
+}

@@ -1,17 +1,20 @@
 #' @title Mover
 #'
-#' @description Copy a selected text or the current line
-#' 
-#' \if{html}{
-#' \out{
-#'  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/right.gif?raw=true">
-#' }}
+#' @description Copy a selected text or the current line to the right
 #' 
 #' @rdname move
 #'
 #' @return a clone of the line
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext modifyRange setCursorPosition showDialog
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( 
+#'     c( "I like to move it "), 
+#'     rightr
+#'     )
+#' }
 #' 
 rightr <- function(){
   adc <- rstudioapi::getSourceEditorContext()

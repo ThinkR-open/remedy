@@ -7,3 +7,7 @@ devtools::use_news_md()
 devtools::use_readme_rmd()
 devtools::use_package("rstudioapi")
 devtools::use_package("stringr")
+
+devtools::document()
+devtools::build_vignettes()
+pkgdown::build_site()

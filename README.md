@@ -36,6 +36,14 @@ Here’s a list of all available helpers:
 
 ![](readme_gif/remedy_example.gif)
 
+You can also have an overview of how the functions behave with the
+`remedy_example()` function:
+
+``` r
+library(remedy)
+remedy_example( c("Never gonna", "give you up", "let you down"), listr )
+```
+
 ### Align
 
 Align selected blocks to their assignment operator, either `<-`
@@ -174,20 +182,20 @@ Here’s a list of recommended shortcuts:
 remedy::remedy_opts$get('hotkeys')
 #>           backtick               bold              chunk 
 #>       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" 
-#>         chunksplit           footnote                 h1 
-#> "Ctrl+Shift+Alt+C" "Ctrl+Cmd+Shift+6"       "Ctrl+Cmd+1" 
-#>                 h2                 h3                 h4 
-#>       "Ctrl+Cmd+2"       "Ctrl+Cmd+3"       "Ctrl+Cmd+4" 
-#>                 h5                 h6        htmlcomment 
-#>       "Ctrl+Cmd+5"       "Ctrl+Cmd+6"       "Ctrl+Alt+C" 
-#>              image            italics              latex 
-#>       "Ctrl+Cmd+P"       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" 
-#>               list              right             strike 
-#> "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right"       "Ctrl+Cmd+S" 
-#>              table                url           xaringan 
-#>       "Ctrl+Cmd+T"       "Ctrl+Cmd+U"       "Ctrl+Cmd+X" 
-#>            youtube 
-#>       "Ctrl+Cmd+Y"
+#>         chunksplit          chunkname           footnote 
+#> "Ctrl+Shift+Alt+C" "Ctrl+Shift+Alt+N" "Ctrl+Cmd+Shift+6" 
+#>                 h1                 h2                 h3 
+#>       "Ctrl+Cmd+1"       "Ctrl+Cmd+2"       "Ctrl+Cmd+3" 
+#>                 h4                 h5                 h6 
+#>       "Ctrl+Cmd+4"       "Ctrl+Cmd+5"       "Ctrl+Cmd+6" 
+#>        htmlcomment              image            italics 
+#>       "Ctrl+Alt+C"       "Ctrl+Cmd+P"       "Ctrl+Cmd+I" 
+#>              latex               list              right 
+#>       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right" 
+#>             strike              table                url 
+#>       "Ctrl+Cmd+S"       "Ctrl+Cmd+T"       "Ctrl+Cmd+U" 
+#>           xaringan            youtube 
+#>       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"
 ```
 
 ### Managing Shortcuts

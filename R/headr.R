@@ -1,18 +1,21 @@
 #' @title Convert to header
 #'
 #' @description Convert selected text into a header.
-#' 
-#' \if{html}{
-#' \out{
-#'  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/header.gif?raw=true">
-#' }}
 #'
 #' 
 #' @rdname header
 #'
 #' @return a markdown header
 #' @export
-#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( c( "h1"), h1r)
+#' remedy_example( c( "h2"), h2r)
+#' remedy_example( c( "h3"), h3r)
+#' remedy_example( c( "h4"), h4r)
+#' remedy_example( c( "h5"), h5r)
+#' remedy_example( c( "h6"), h6r)
+#' }
 h1r <- function() add_prefix("# ")
 
 #' @rdname header

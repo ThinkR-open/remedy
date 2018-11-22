@@ -11,9 +11,13 @@ a template for xaringan pull left and right
 }
 \description{
 xaringan pull left and pull right
+}
+\examples{
+\dontrun{
+remedy_example( 
+    "", 
+    xaringanr
+    )
+}
 
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/xaringan.gif?raw=true">
-}}
 }

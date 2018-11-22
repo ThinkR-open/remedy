@@ -16,9 +16,13 @@ olistr()
 }
 \description{
 Convert selected text into an (un)ordered list.
+}
+\examples{
+\dontrun{
+#unordered list
+remedy_example(c('line 1','line 2'),listr)
 
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/list.gif?raw=true">
-}}
+#ordered list
+remedy_example(c('line 1','line 2'),olistr) 
+}
 }

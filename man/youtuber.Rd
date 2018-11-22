@@ -9,11 +9,6 @@ youtuber()
 \description{
 Highlight youtube link in source editor and it will be converted
 to a markdown link with an image saved in youtube.
-
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/youtube.gif?raw=true">
-}}
 }
 \details{
 if remedy_opts$get('youtube_output')=='md' then the output will be of the form
@@ -32,4 +27,12 @@ remedy_opts$get('youtube_output'): str(remedy::remedy_opts$get('youtube_output')
 remedy_opts$get('youtube_height'): str(remedy::remedy_opts$get('youtube_height'))
 
 remedy_opts$get('youtube_width'): str(remedy::remedy_opts$get('youtube_width'))
+}
+\examples{
+\dontrun{
+remedy_example( 
+    "https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+    youtuber
+    )
+}
 }

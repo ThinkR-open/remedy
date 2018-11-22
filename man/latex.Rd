@@ -11,9 +11,13 @@ inline LaTeX text (in markdown)
 }
 \description{
 Convert the selected text in inline LaTeX.
+}
+\examples{
+\dontrun{
+remedy_example( 
+    c( "Latex stuffs"), 
+    latexr
+    )
+}
 
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/latex.gif?raw=true">
-}}
 }

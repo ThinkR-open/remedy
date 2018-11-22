@@ -17,9 +17,21 @@ emboldened, italicized or strikethrough text (in markdown)
 }
 \description{
 Emphasize the selected text.
+}
+\examples{
+\dontrun{
+remedy_example(
+    c( "to_italic"), 
+    italicsr
+    )
+remedy_example(
+    c( "to_bold"), 
+    boldr
+    )
+remedy_example(
+    c( "to_strike"), 
+    striker
+    )
+}
 
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/emphasise.gif?raw=true">
-}}
 }

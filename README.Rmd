@@ -42,6 +42,14 @@ Here's a list of all available helpers:
 
 ![](readme_gif/remedy_example.gif)
 
+You can also have an overview of how the functions behave with the `remedy_example()` function: 
+
+```{r eval = FALSE}
+library(remedy)
+remedy_example( c("Never gonna", "give you up", "let you down"), listr )
+```
+
+
 ### Align
 
 Align selected blocks to their assignment operator, either `<-`
