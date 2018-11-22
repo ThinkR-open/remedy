@@ -11,11 +11,6 @@ inline LaTeX text (in markdown)
 }
 \description{
 Convert the selected text in inline LaTeX.
-
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/latex.gif?raw=true">
-}}
 }
 \examples{
 \dontrun{

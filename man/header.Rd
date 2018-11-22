@@ -26,11 +26,6 @@ a markdown header
 }
 \description{
 Convert selected text into a header.
-
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/header.gif?raw=true">
-}}
 }
 \examples{
 \dontrun{

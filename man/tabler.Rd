@@ -11,16 +11,6 @@ a markdown table
 }
 \description{
 Insert a table in your file.
-
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/table.gif?raw=true">
-}}
-
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/table_remedy.gif?raw=true">
-}}
 }
 \examples{
 \dontrun{

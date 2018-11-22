@@ -11,11 +11,6 @@ a markdown image link
 }
 \description{
 Convert the selected path into an embedded image
-
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/image.gif?raw=true">
-}}
 }
 \examples{
 \dontrun{

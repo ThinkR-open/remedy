@@ -16,6 +16,8 @@ remedy_example <- function(txt, addin, mark = entire_document){
     Sys.sleep(0.5)
     addin()
     invisible(rstudioapi::documentSave(sec$id))
+  } else {
+      message("{remedy} not available in non-interactive sessions.")
     }
 }
 

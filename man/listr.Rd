@@ -16,11 +16,6 @@ olistr()
 }
 \description{
 Convert selected text into an (un)ordered list.
-
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/list.gif?raw=true">
-}}
 }
 \examples{
 \dontrun{
