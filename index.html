@@ -112,6 +112,9 @@
 <p>Write quicker in markdown with <code>{remedy}</code>!</p>
 <p>Here’s a list of all available helpers:</p>
 <p><img src="readme_gif/remedy_example.gif"></p>
+<p>You can also have an overview of how the functions behave with the <code><a href="reference/remedy_example.html">remedy_example()</a></code> function:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(remedy)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="reference/remedy_example.html">remedy_example</a></span>( <span class="kw">c</span>(<span class="st">"Never gonna"</span>, <span class="st">"give you up"</span>, <span class="st">"let you down"</span>), listr )</a></code></pre></div>
 <div id="align" class="section level3">
 <h3 class="hasAnchor">
 <a href="#align" class="anchor"></a>Align</h3>
@@ -239,30 +242,30 @@
 <h2 class="hasAnchor">
 <a href="#recommended-shortcuts-macos" class="anchor"></a>Recommended shortcuts (macOS)</h2>
 <p>Here’s a list of recommended shortcuts:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">remedy<span class="op">::</span>remedy_opts<span class="op">$</span><span class="kw">get</span>(<span class="st">'hotkeys'</span>)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt;           backtick               bold              chunk </span></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" </span></a>
-<a class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;         chunksplit          chunkname           footnote </span></a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; "Ctrl+Shift+Alt+C" "Ctrl+Shift+Alt+N" "Ctrl+Cmd+Shift+6" </span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;                 h1                 h2                 h3 </span></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;       "Ctrl+Cmd+1"       "Ctrl+Cmd+2"       "Ctrl+Cmd+3" </span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;                 h4                 h5                 h6 </span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;       "Ctrl+Cmd+4"       "Ctrl+Cmd+5"       "Ctrl+Cmd+6" </span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;        htmlcomment              image            italics </span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;       "Ctrl+Alt+C"       "Ctrl+Cmd+P"       "Ctrl+Cmd+I" </span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;              latex               list              right </span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right" </span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;             strike              table                url </span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt;       "Ctrl+Cmd+S"       "Ctrl+Cmd+T"       "Ctrl+Cmd+U" </span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="co">#&gt;           xaringan            youtube </span></a>
-<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="co">#&gt;       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">remedy<span class="op">::</span>remedy_opts<span class="op">$</span><span class="kw">get</span>(<span class="st">'hotkeys'</span>)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#&gt;           backtick               bold              chunk </span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt;       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" </span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt;         chunksplit          chunkname           footnote </span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt; "Ctrl+Shift+Alt+C" "Ctrl+Shift+Alt+N" "Ctrl+Cmd+Shift+6" </span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt;                 h1                 h2                 h3 </span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt;       "Ctrl+Cmd+1"       "Ctrl+Cmd+2"       "Ctrl+Cmd+3" </span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt;                 h4                 h5                 h6 </span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt;       "Ctrl+Cmd+4"       "Ctrl+Cmd+5"       "Ctrl+Cmd+6" </span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt;        htmlcomment              image            italics </span></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt;       "Ctrl+Alt+C"       "Ctrl+Cmd+P"       "Ctrl+Cmd+I" </span></a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt;              latex               list              right </span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt;       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right" </span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt;             strike              table                url </span></a>
+<a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt;       "Ctrl+Cmd+S"       "Ctrl+Cmd+T"       "Ctrl+Cmd+U" </span></a>
+<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt;           xaringan            youtube </span></a>
+<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt;       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"</span></a></code></pre></div>
 <div id="managing-shortcuts" class="section level3">
 <h3 class="hasAnchor">
 <a href="#managing-shortcuts" class="anchor"></a>Managing Shortcuts</h3>
 <p>Use the <a href="https://github.com/yonicd/rsam"><code>{rsam}</code></a> package to set and manage for you the hotkey settings of <code>{remedy}</code>.</p>
 <p>If you want to edit the default settings you can view the defaults <code>remedy_opts$get('hotkeys')</code> and change them through <code>remedy_opts$set(hotkeys=&lt;NEW_SETTINGS&gt;)</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">hotkeys &lt;-<span class="st"> </span>remedy<span class="op">::</span>remedy_opts<span class="op">$</span><span class="kw">get</span>(<span class="st">"hotkeys"</span>)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2">rsam<span class="op">::</span><span class="kw">set_shortcut</span>(<span class="kw">sprintf</span>(<span class="st">'remedy::%sr'</span>,<span class="kw">names</span>(hotkeys)), hotkeys)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">hotkeys &lt;-<span class="st"> </span>remedy<span class="op">::</span>remedy_opts<span class="op">$</span><span class="kw">get</span>(<span class="st">"hotkeys"</span>)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">rsam<span class="op">::</span><span class="kw">set_shortcut</span>(<span class="kw">sprintf</span>(<span class="st">'remedy::%sr'</span>,<span class="kw">names</span>(hotkeys)), hotkeys)</a></code></pre></div>
 </div>
 </div>
 <div id="feedback-and-enhancement" class="section level2">
@@ -307,7 +310,7 @@
 <ul class="list-unstyled">
 <li><a href="https://travis-ci.org/ThinkR-open/remedy"><img src="https://travis-ci.org/ThinkR-open/remedy.svg?branch=master" alt="Travis-CI Build Status"></a></li>
 <li><a href="https://codecov.io/github/ThinkR-open/remedy?branch=master"><img src="https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
-<li><a href="http://tinyurl.com/y76olv3v"><img src="https://img.shields.io/badge/covrpage-Last_Build_2018_11_19-brightgreen.svg" alt="Covrpage Summary"></a></li>
+<li><a href="http://tinyurl.com/y76olv3v"><img src="https://img.shields.io/badge/covrpage-Last_Build_2018_11_22-brightgreen.svg" alt="Covrpage Summary"></a></li>
 </ul>
 </div>
 </div>

@@ -128,7 +128,11 @@ wraps highlighted text in an active RStudio document editor in a Rmarkdown chunk
     
     </div>
 
-    <pre class="usage"><span class='fu'>chunkr</span>()</pre>
+    <pre class="usage"><span class='fu'>chunkr</span>()
+
+<span class='fu'>chunkr_doc</span>()
+
+<span class='fu'>chunkr_section</span>()</pre>
         
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
@@ -139,13 +143,24 @@ conversion (## ----chunk name,chunk options----).</p>
  wrap a new Rmarkdown chunk around it, utilizing the other options in <code><a href='remedyOpts.html'>remedy_opts</a></code>.</p>
     
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='fu'><a href='remedy_example.html'>remedy_example</a></span>(
+    <span class='fu'>c</span>( <span class='st'>"# Create a chunk"</span>,
+    <span class='st'>"a &lt;- 12"</span>,
+    <span class='st'>"aaa &lt;- 13"</span>),
+    <span class='no'>chunkr</span>
+    )
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       
       <li><a href="#details">Details</a></li>
-          </ul>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
   </div>
 </div>

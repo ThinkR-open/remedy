@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>html commenting — htmlcommentr • remedy</title>
+<title>Functions to run examples and tests — remedy_example • remedy</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
 
@@ -32,9 +32,9 @@
 
 
 
-<meta property="og:title" content="html commenting — htmlcommentr" />
+<meta property="og:title" content="Functions to run examples and tests — remedy_example" />
 
-<meta property="og:description" content="RStudio addin to add/remove html comments to highlighted text" />
+<meta property="og:description" content="Utility functions to deploy functions and tests for addins" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -115,52 +115,67 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>html commenting</h1>
-    <small class="dont-index">Source: <a href='https://github.com/ThinkR-open/remedy/blob/master/R/htmlcommentr.R'><code>R/htmlcommentr.R</code></a></small>
-    <div class="hidden name"><code>htmlcommentr.Rd</code></div>
+    <h1>Functions to run examples and tests</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ThinkR-open/remedy/blob/master/R/example_utils.R'><code>R/example_utils.R</code></a></small>
+    <div class="hidden name"><code>remedy_example.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>RStudio addin to add/remove html comments to highlighted text</p>
+    <p>Utility functions to deploy functions and tests for addins</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>htmlcommentr</span>()</pre>
-        
+    <pre class="usage"><span class='fu'>remedy_example</span>(<span class='no'>txt</span>, <span class='no'>addin</span>, <span class='kw'>mark</span> <span class='kw'>=</span> <span class='no'>entire_document</span>)
+
+<span class='fu'>scratch_file</span>()
+
+<span class='fu'>entire_document</span>()
+
+<span class='fu'>individual_lines</span>()
+
+<span class='fu'>set_text</span>(<span class='kw'>txt</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='no'>sec</span>, <span class='no'>mark</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>txt</th>
+      <td><p>character, text to place in temporary document</p></td>
+    </tr>
+    <tr>
+      <th>addin</th>
+      <td><p>function, addin function to deploy</p></td>
+    </tr>
+    <tr>
+      <th>mark</th>
+      <td><p>function, highlight using entire_document or individual_lines</p></td>
+    </tr>
+    <tr>
+      <th>sec</th>
+      <td><p>source editor context object</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>New document in source editor of RStudio</p>
+    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Highlighting text will add html comment tags around it</p>
-<p>Highlighting commented text will remove tags.</p>
-<p><strong>Highlighting</strong></p>
-<p>Something COMMENT Something</p>
-<p>Something &lt;!-- COMMENT --&gt; Something</p>
-<p><strong>New Comment</strong></p>
-<p>Something COMMENT [cursor here] Something</p> 
-<p>Something COMMENT  &lt;!--  --&gt;  Something</p>
-<p><strong>Start of Row</strong></p>
-<p>[cursor here] Something COMMENT Something</p>
-<p>&lt;!-- Something COMMENT Something --&gt;</p> 
-<p><strong>Highlighting Multiple rows</strong></p>
-<p>Something COMMENT Something</p> 
-<p>Something COMMENT Something</p>
-<p>&lt;!-- Something COMMENT Something</p> 
-<p>Something COMMENT Something --&gt;</p>
+    <p>These function only will work in a RStudio IDE</p>
     
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'><a href='remedy_example.html'>remedy_example</a></span>( <span class='fu'>c</span>( <span class='st'>"&lt;b&gt;This is bold&lt;/b&gt;"</span>), <span class='no'>htmlcommentr</span>)
-<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
       
+      <li><a href="#value">Value</a></li>
+
       <li><a href="#details">Details</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
+          </ul>
 
   </div>
 </div>
