@@ -4,15 +4,26 @@
 #' @return NULL
 #' @details
 #'
-#' Setting \code{\link{remedy_opts}}$set(list(full_doc=TRUE)) chunky will convert entire document by
+#' Setting \code{\link{remedy_opts}}$set(list(full_doc=TRUE)) chunkr will convert entire document by
 #' \code{\link{remedy_opts}}$get('token_purl'). The default token is the output from a \code{\link[knitr]{purl}}
 #' conversion (## ----chunk name,chunk options----).
 #'
-#' Setting \code{\link{remedy_opts}}$set(list(full_doc=FALSE)), user highlights text and chunky will
+#' Setting \code{\link{remedy_opts}}$set(list(full_doc=FALSE)), user highlights text and chunkr will
 #'  wrap a new Rmarkdown chunk around it, utilizing the other options in \code{\link{remedy_opts}}.
 #'
 #' @rdname chunkr
 #' @export
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example(
+#'     c( "# Create a chunk",
+#'     "a <- 12", 
+#'     "aaa <- 13"), 
+#'     chunkr
+#'     )
+#' }
+
 chunkr <- function() {
   if (remedy_opts$get("full_doc")) {
     chunkr_doc()
@@ -22,6 +33,7 @@ chunkr <- function() {
 }
 
 #' @importFrom rstudioapi getSourceEditorContext
+#' @rdname chunkr
 chunkr_doc <- function() {
   adc <- rstudioapi::getSourceEditorContext()
 
@@ -64,6 +76,8 @@ chunkr_doc <- function() {
 }
 
 #' @importFrom rstudioapi insertText getActiveDocumentContext setCursorPosition
+#' @rdname chunkr
+#' 
 chunkr_section <- function() {
   adc <- rstudioapi::getActiveDocumentContext()
 

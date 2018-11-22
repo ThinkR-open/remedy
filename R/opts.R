@@ -60,7 +60,7 @@ new_defaults = function(value = list()) {
 #'   \code{remedy_opts_current$get()}.
 #' @export
 #' @rdname remedyOpts
-#' @examples remedy_opts$get('name')
+#' @examples remedy_opts$get()
 remedy_opts <- new_defaults(list(
   basic=FALSE,
   name='remedy',
@@ -68,7 +68,7 @@ remedy_opts <- new_defaults(list(
   chunk_opts=NULL,
   kable_opts=NULL,
   full_doc=FALSE,
-  token_purl='^#{2} -{4}(.*?)-{4+}$',
+  token_purl='^#{2} -{4}(.*?)-{4,}$',
   token_url = "^(?:(?:https?|ftp|file)://|www\\.|ftp\\.)[A-z0-9+&@#/%=~_|$?!:,.-]*[A-z0-9+&@#/%=~_|$]$", # URL regex
   token_rel_link = "^.*[/|\\.][^\\.]+$", # Relative link regex
   token_img_link = c('jpeg','jpg','png','gif'), # Image link
@@ -80,6 +80,7 @@ remedy_opts <- new_defaults(list(
     bold = "Ctrl+Cmd+B",
     chunk = "Ctrl+Alt+Cmd+C",
     chunksplit = "Ctrl+Shift+Alt+C",
+    chunkname = "Ctrl+Shift+Alt+N",
     footnote = "Ctrl+Cmd+Shift+6",
     h1 = "Ctrl+Cmd+1",
     h2 = "Ctrl+Cmd+2",

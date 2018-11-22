@@ -1,4 +1,4 @@
-testthat::context("chunks")
+testthat::context("chunknamer")
 
 if(rstudioapi::isAvailable()){
   
@@ -17,17 +17,16 @@ testthat::describe('splitting',{
   
   it('splitting one chunk into two',{
     
-    set_text(txt = '```{r}\n \n```',sec = sec)
-    
+    set_text(txt = '```{r}\n \n```\n\n```{r}\n \n```\n\n```{r}\n \n```\n\n',sec = sec)
     rstudioapi::setCursorPosition(rstudioapi::document_position(2,1),id = sec$id)
     
-    chunksplitr()
+    chunknamer()
     
     rstudioapi::documentSave(sec$id)
-        
-    testthat::expect_equal(readLines(path,warn = FALSE),
-                           c('```{r}',' ','```',' ','```{r}','```')
-                           )
+    browser()
+    # testthat::expect_equal(readLines(path,warn = FALSE),
+    #                        c('```{r}',' ','```',' ','```{r}','```')
+    #)
     set_text(sec = sec)
   })
   

@@ -11,9 +11,13 @@ a markdown link
 }
 \description{
 Convert selected text into a link
+}
+\examples{
+\dontrun{
+remedy_example( 
+    "https://www.thinkr.fr", 
+    urlr
+    )
+}
 
-\if{html}{
-\out{
- <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/url.gif?raw=true">
-}}
 }

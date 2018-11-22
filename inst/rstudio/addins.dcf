@@ -33,6 +33,11 @@ Description: Split chunk into two chunks
 Binding: chunksplitr
 Interactive: false
 
+Name: Chunkname
+Description: Name unnamed chunks in bulk
+Binding: chunknamer
+Interactive: false
+
 Name: Footnote
 Description: Convert selected text into a footnote
 Binding: footnoter

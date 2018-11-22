@@ -2,19 +2,35 @@
 % Please edit documentation in R/chunkr.R
 \name{chunkr}
 \alias{chunkr}
+\alias{chunkr_doc}
+\alias{chunkr_section}
 \title{Interactively Create Rmarkdown Chunks}
 \usage{
 chunkr()
+
+chunkr_doc()
+
+chunkr_section()
 }
 \description{
 Addin that splits full documents into Rmarkdown chunks or
 wraps highlighted text in an active RStudio document editor in a Rmarkdown chunk.
 }
 \details{
-Setting \code{\link{remedy_opts}}$set(list(full_doc=TRUE)) chunky will convert entire document by
+Setting \code{\link{remedy_opts}}$set(list(full_doc=TRUE)) chunkr will convert entire document by
 \code{\link{remedy_opts}}$get('token_purl'). The default token is the output from a \code{\link[knitr]{purl}}
 conversion (## ----chunk name,chunk options----).
 
-Setting \code{\link{remedy_opts}}$set(list(full_doc=FALSE)), user highlights text and chunky will
+Setting \code{\link{remedy_opts}}$set(list(full_doc=FALSE)), user highlights text and chunkr will
  wrap a new Rmarkdown chunk around it, utilizing the other options in \code{\link{remedy_opts}}.
+}
+\examples{
+\dontrun{
+remedy_example(
+    c( "# Create a chunk",
+    "a <- 12", 
+    "aaa <- 13"), 
+    chunkr
+    )
+}
 }

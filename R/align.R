@@ -76,9 +76,12 @@ insertr <- function(list) {
 #' 
 #' @examples 
 #' \dontrun{
-#' # You'll likely never use remedy functions directly
-#' # But rather map them to keyboard shortcut
-#' align_arrow()
+#' remedy_example(
+#'     c( "# Align arrows",
+#'     "a <- 12", 
+#'     "aaa <- 13"), 
+#'     align_arrow
+#'     )
 #' }
 align_arrow <- function() {
   capture <- capture()
@@ -95,9 +98,12 @@ align_arrow <- function() {
 #' @export
 #' @examples 
 #' \dontrun{
-#' # You'll likely never use remedy functions directly
-#' # But rather map them to keyboard shortcut
-#' align_equal()
+#' remedy_example(
+#'     c( "# Align equal signs",
+#'     "a = 12", 
+#'     "aaa = 13"), 
+#'     align_equal
+#'     )
 #' }
 align_equal <- function() {
   capture <- capture()

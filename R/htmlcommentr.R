@@ -1,11 +1,6 @@
 #' @title html commenting 
 #' @description RStudio addin to add/remove html comments to highlighted text
 #' 
-# \if{html}{
-# \out{
-#  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/htmlcomment.gif?raw=true">
-# }}
-#' 
 #' @details 
 #' 
 #' Highlighting text will add html comment tags around it
@@ -43,6 +38,11 @@
 #' @rdname htmlcommentr
 #' @export 
 #' @importFrom rstudioapi getSourceEditorContext modifyRange setCursorPosition
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( c( "<b>This is bold</b>"), htmlcommentr)
+#' }
 htmlcommentr <- function(){
   
   adc <- rstudioapi::getSourceEditorContext() 

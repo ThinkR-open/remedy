@@ -2,15 +2,18 @@
 #'
 #' @description Convert the selected path into an embedded image
 #'
-#' \if{html}{
-#' \out{
-#'  <img src = "https://github.com/ThinkR-open/remedy/blob/master/readme_gif/image.gif?raw=true">
-#' }}
 #'
 #' @return a markdown image link
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext modifyRange
-#'
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( 
+#'     c( "https://thinkr.fr/wp-content/uploads/2015/03/thinkR1.png"), 
+#'     imager
+#'     )
+#' }
 imager <- function() {
   
   adc <- rstudioapi::getSourceEditorContext()

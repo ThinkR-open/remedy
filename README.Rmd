@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_10_26-brightgreen.svg)](http://tinyurl.com/y76olv3v)
+[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_11_01-brightgreen.svg)](http://tinyurl.com/y76olv3v)
 
 # remedy
 
@@ -41,6 +41,14 @@ Write quicker in markdown with `{remedy}`!
 Here's a list of all available helpers:
 
 ![](readme_gif/remedy_example.gif)
+
+You can also have an overview of how the functions behave with the `remedy_example()` function: 
+
+```{r eval = FALSE}
+library(remedy)
+remedy_example( c("Never gonna", "give you up", "let you down"), listr )
+```
+
 
 ### Align
 
