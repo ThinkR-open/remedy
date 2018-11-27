@@ -1,20 +1,26 @@
 ---
-output:
-  md_document:
-    variant: gfm
+output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r, echo=FALSE, results=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "README-"
 )
+# Copy images to docs
+# file.copy(list.files("readme_gif", full.names = TRUE),
+#           "docs/readme_gif", overwrite = TRUE)
 ```
 
 [![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_11_01-brightgreen.svg)](http://tinyurl.com/y76olv3v)
+
+```{r, echo=FALSE, out.width="250px"}
+knitr::include_graphics("readme_gif/thinkr-hex-remedy.png")
+```
+
 
 # remedy
 

@@ -24,9 +24,10 @@ Imports:
 Suggests: 
     covr,
     testthat,
-    rmarkdown
+    rmarkdown,
+    rstudioapi
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 VignetteBuilder: knitr
