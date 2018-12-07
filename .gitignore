@@ -5,3 +5,5 @@ doc
 .RData
 .Ruserdata
 inst/doc
+docs
+man/figures/*
