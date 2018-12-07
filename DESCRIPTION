@@ -24,8 +24,7 @@ Imports:
 Suggests: 
     covr,
     testthat,
-    rmarkdown,
-    rstudioapi
+    rmarkdown
 Encoding: UTF-8
 Language: en-US
 LazyData: true
