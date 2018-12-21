@@ -21,14 +21,9 @@ if (dir.exists("docs")) {
 }
 ```
 
-[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_11_01-brightgreen.svg)](http://tinyurl.com/y76olv3v)
+[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_12_21-brightgreen.svg)](http://tinyurl.com/y76olv3v)
 
-```{r, echo=FALSE, out.width="250px"}
-knitr::include_graphics("reference/figures/thinkr-hex-remedy.png")
-```
-
-
-# remedy
+# remedy `r if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers') '<img src="https://github.com/ThinkR-open/remedy/blob/master/reference/figures/thinkr-hex-remedy-small.png?raw=true" align="right"/>'`
 
 `{remedy}` provides addins to facilitate writing in markdown with RStudio.
 
