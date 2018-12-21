@@ -1,3 +1,4 @@
+^images$
 ^Meta$
 ^doc$
 ^README\.md$
@@ -13,3 +14,4 @@ readme_gif
 .github
 ^_pkgdown\.yml$
 ^docs$
+^reference$

@@ -1,26 +1,38 @@
 ---
-output:
-  md_document:
-    variant: gfm
+output: github_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
+```{r, echo=FALSE, results=FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   fig.path = "README-"
 )
+# Copy reference/images to man/images
+# reference folder is required to work with pkgdown
+if (!dir.exists("man/figures")) {dir.create("man/figures")}
+file.copy(list.files("reference/figures", full.names = TRUE),
+          "man/figures", overwrite = TRUE)
+if (dir.exists("docs")) {
+  file.copy("reference/figures/thinkr-hex-remedy-favicon.ico",
+            "docs/favicon.ico", overwrite = TRUE)
+}
 ```
 
 [![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_11_01-brightgreen.svg)](http://tinyurl.com/y76olv3v)
+
+```{r, echo=FALSE, out.width="250px"}
+knitr::include_graphics("reference/figures/thinkr-hex-remedy.png")
+```
+
 
 # remedy
 
 `{remedy}` provides addins to facilitate writing in markdown with RStudio.
 
-![](readme_gif/remedy_example.gif)
+![](reference/figures/remedy_example.gif)
 
 All the functions are meant to be mapped to keyboard shortcuts. A list of suggested shortcuts is provided towards the end of this README. 
 
@@ -40,7 +52,7 @@ Write quicker in markdown with `{remedy}`!
 
 Here's a list of all available helpers:
 
-![](readme_gif/remedy_example.gif)
+![](reference/figures/remedy_example.gif)
 
 You can also have an overview of how the functions behave with the `remedy_example()` function: 
 
@@ -54,59 +66,59 @@ remedy_example( c("Never gonna", "give you up", "let you down"), listr )
 
 Align selected blocks to their assignment operator, either `<-`
 
-![](readme_gif/align.gif)
+![](reference/figures/align.gif)
 
 or `=`
 
-![](readme_gif/alignequal.gif)
+![](reference/figures/alignequal.gif)
 
 ### Backtick
 
 Enclose the selected word(s) in backticks. 
 
-![](readme_gif/backtick.gif)
+![](reference/figures/backtick.gif)
 
 ### Blockquote
 
 Turn selected line(s) to blockquote.
 
-![](readme_gif/blockquote.gif)
+![](reference/figures/blockquote.gif)
 
 ### Chunk
 
 Turn the selected text into a chunk.
 
-![](readme_gif/chunk.gif)
+![](reference/figures/chunk.gif)
 
 > Note that every chunk is given a name. 
 
 chunksplit split the chunk at a given spot.
 
-![](readme_gif/chunksplit.gif)
+![](reference/figures/chunksplit.gif)
 
 ### Emphasize
 
 Embolden, italicize or strikethrough the selected text.
 
-![](readme_gif/emphasise.gif)
+![](reference/figures/emphasise.gif)
 
 ### Footnotes
 
 Turn the given text into a footnote.
 
-![](readme_gif/footnote.gif)
+![](reference/figures/footnote.gif)
 
 ### Headers
 
 Turn the selected text into a header.
 
-![](readme_gif/header.gif)
+![](reference/figures/header.gif)
 
 ### HTML Comment
 
 Turn the text into an html comment 
  
-![](readme_gif/htmlcomment.gif)
+![](reference/figures/htmlcomment.gif)
 
 ### Image
 
@@ -116,19 +128,19 @@ This element is context aware: if you select a text and a link, it turns the tex
 
 If the last element of the selection is not a link, you get an error message straight into you markdown document. 
 
-![](readme_gif/image.gif)
+![](reference/figures/image.gif)
 
 ### LaTeX
 
 LaTeX syntax : 
 
-![](readme_gif/latex.gif)
+![](reference/figures/latex.gif)
 
 ### List
 
 Turn the selected text into an unordered list. 
 
-![](readme_gif/list.gif)
+![](reference/figures/list.gif)
 
 ### Moving 
 
@@ -136,7 +148,7 @@ Turn the selected text into an unordered list.
 
 Copy the selected text or the current line to the right.
 
-![](readme_gif/right.gif)
+![](reference/figures/right.gif)
 
 
 ### Table
@@ -147,13 +159,13 @@ There are basically two way to do that with remedy :
 
 #### Ttable
 
-![](readme_gif/table.gif)
+![](reference/figures/table.gif)
 
 #### Parse your data 
 
 Turn your dataframe into a markdown table :
 
-![](readme_gif/table_remedy.gif)
+![](reference/figures/table_remedy.gif)
 
 
 ### URL
@@ -164,19 +176,19 @@ This element is context aware: if you select a text and a link, it turns the tex
 
 If the last element of the selection is not a link, you get an error message straight into you markdown document. 
 
-![](readme_gif/url.gif)
+![](reference/figures/url.gif)
 
 ### Youtube 
 
 Turn an url into a youtube embed: 
 
-![](readme_gif/youtube.gif)
+![](reference/figures/youtube.gif)
 
 ### xaringan 
 
 Insert a xaringan pull-left and pull-right template. 
 
-![](readme_gif/xaringan.gif)
+![](reference/figures/xaringan.gif)
 
 ## Recommended shortcuts (macOS)
 

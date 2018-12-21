@@ -1,10 +1,12 @@
-Added travis support and codecov.
+# remedy 0.1.0.9000
+
+* Clean pkgdown on github
+* Added travis support and codecov.
 
 # remedy 0.1.0
 
-Added examples.
-
-CRAN ready version.
+* Added examples.
+* CRAN ready version.
 
 # remedy 0.0.0.9000
 
