@@ -21,7 +21,8 @@ if (dir.exists("docs")) {
 }
 ```
 
-[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_12_21-brightgreen.svg)](http://tinyurl.com/y76olv3v)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/remedy)](https://cran.r-project.org/package=remedy)
+[![](http://cranlogs.r-pkg.org/badges/remedy)](https://cran.r-project.org/package=remedy)[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_12_21-brightgreen.svg)](http://tinyurl.com/y76olv3v)
 
 # remedy `r if(knitr::opts_knit$get('rmarkdown.pandoc.to')=='gfm-ascii_identifiers') '<img src="https://github.com/ThinkR-open/remedy/blob/master/reference/figures/thinkr-hex-remedy-small.png?raw=true" align="right"/>'`
 
@@ -43,7 +44,9 @@ Once you've installed the package, you don't need to load it with `library()`, t
 
 ## Using `{remedy}`
 
-Write quicker in markdown with `{remedy}`!
+Write quicker in markdown with `{remedy}`!  
+Read the full manual in the associated {pkgdown} website: <https://thinkr-open.github.io/remedy/>  
+
 
 Here's a list of all available helpers:
 
@@ -207,3 +210,7 @@ rsam::set_shortcut(sprintf('remedy::%sr',names(hotkeys)), hotkeys)
 ## Feedback and enhancement
 
 You've found a bug, or have an enhancement idea? Feel free to open an issue : [https://github.com/ThinkR-open/remedy/issues](https://github.com/ThinkR-open/remedy/issues). 
+
+## Code of conduct
+
+Please note that the 'remedy' project is released with a [Contributor Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
