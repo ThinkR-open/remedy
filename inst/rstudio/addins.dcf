@@ -103,6 +103,11 @@ Description: Convert selected text into an unordered list
 Binding: listr
 Interactive: false
 
+Name: Markdownify
+Description: Convert selected text from HTML into markdown
+Binding: markdownify
+Interactive: false
+
 Name: Right
 Description: Copy selected text (or line) to the right
 Binding: rightr

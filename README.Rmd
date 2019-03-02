@@ -140,6 +140,20 @@ Turn the selected text into an unordered list.
 
 ![](reference/figures/list.gif)
 
+### Markdownify
+
+If you have existing HTML tags (e.g. for pages exported from elsewhere) you can 
+convert these to markdown syntax with the Markdownify Addin
+
+```
+turns <i>this</i> into _this_
+turns <b>this</b> into **this**
+turns <a href="https://sub.domain.mylink.html">this</a> into [this](https://sub.domain.mylink.html)
+turns <img src="~/dir/image.png"> into ![](~/dir/image.png)
+turns <img src="~/dir/image.png" alt="with text"> into ![with text](~/dir/image.png)
+leaves normal text unchanged
+```
+
 ### Moving 
 
 #### On the right 
