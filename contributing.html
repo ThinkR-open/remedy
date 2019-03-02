@@ -141,6 +141,26 @@
 <ul>
 <li><p>[ ] binding functions have a trailing <code>r</code> (for example <code><a href="reference/listr.html">listr()</a></code> or <code><a href="reference/urlr.html">urlr()</a></code>)</p></li>
 <li><p>[ ] documentation contain example (CRAN forces examples for the addins)</p></li>
+</ul>
+<p>Example roxygen2 header</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co">#' @title Imager</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co">#'</span></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#' @description Convert the selected path into an embedded image</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co">#'</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#'</span></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#' @return a markdown image link</span></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#' @export</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#' @importFrom rstudioapi getSourceEditorContext modifyRange</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#' </span></a>
+<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#' @examples </span></a>
+<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="co">#' \dontrun{</span></a>
+<a class="sourceLine" id="cb1-12" data-line-number="12"><span class="co">#' remedy_example( </span></a>
+<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co">#'     c( "https://thinkr.fr/wp-content/uploads/2015/03/thinkR1.png"), </span></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#'     imager</span></a>
+<a class="sourceLine" id="cb1-15" data-line-number="15"><span class="co">#'     )</span></a>
+<a class="sourceLine" id="cb1-16" data-line-number="16"><span class="co">#' }</span></a>
+<a class="sourceLine" id="cb1-17" data-line-number="17">imager &lt;-<span class="st"> </span><span class="cf">function</span>() {</a></code></pre></div>
+<ul>
 <li><p>[ ] you’ve updated the binding field in addins.dcf</p></li>
 <li><p>[ ] you’ve added element to hotkey field in <a href="https://github.com/ThinkR-open/remedy/blob/master/R/opts.R#L78">opts.R</a>. Name of element function name without the trailing <code>r</code>.</p></li>
 <li><p>[ ] you’ve added suggested hotkey for macOS, this is for when end users add hotkeys in bulk and use <code>remedy::remedy_opts$get("hotkeys")</code></p></li>
