@@ -24,6 +24,28 @@ Before opening a Pull Request, be sure that:
 
 + [ ] documentation contain example (CRAN forces examples for the addins)
 
+Example roxygen2 header
+
+```r
+#' @title Imager
+#'
+#' @description Convert the selected path into an embedded image
+#'
+#'
+#' @return a markdown image link
+#' @export
+#' @importFrom rstudioapi getSourceEditorContext modifyRange
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( 
+#'     c( "https://thinkr.fr/wp-content/uploads/2015/03/thinkR1.png"), 
+#'     imager
+#'     )
+#' }
+imager <- function() {
+```
+
 + [ ] you've updated the binding field in addins.dcf
 
 + [ ] you've added element to hotkey field in [opts.R](https://github.com/ThinkR-open/remedy/blob/master/R/opts.R#L78). Name of element function name without the trailing `r`.
