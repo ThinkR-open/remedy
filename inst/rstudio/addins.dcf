@@ -1,6 +1,6 @@
 Name: Align
-Description: Align <- in selection
-Binding: align_arrow
+Description: Align regex in selection set in remedy_opts
+Binding: align
 Interactive: false
 
 Name: AlignEqual

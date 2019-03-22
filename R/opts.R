@@ -62,12 +62,13 @@ new_defaults = function(value = list()) {
 #' @rdname remedyOpts
 #' @examples remedy_opts$get()
 remedy_opts <- new_defaults(list(
-  basic=FALSE,
-  name='remedy',
-  counter=TRUE,
-  chunk_opts=NULL,
-  kable_opts=NULL,
-  full_doc=FALSE,
+  basic = FALSE,
+  name = 'remedy',
+  counter = TRUE,
+  chunk_opts = NULL,
+  kable_opts = NULL,
+  full_doc = FALSE,
+  align_pattern = '<-',
   token_purl='^#{2} -{4}(.*?)-{4,}$',
   token_url = "^(?:(?:https?|ftp|file)://|www\\.|ftp\\.)[A-z0-9+&@#/%=~_|$?!:,.-]*[A-z0-9+&@#/%=~_|$]$", # URL regex
   token_rel_link = "^.*[/|\\.][^\\.]+$", # Relative link regex

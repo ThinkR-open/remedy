@@ -13,5 +13,6 @@ readme_gif
 ^codecov\.yml$
 .github
 ^_pkgdown\.yml$
+^\.travis\.yml$
 ^docs$
 ^reference$

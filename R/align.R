@@ -6,7 +6,7 @@
 
 capture <- function() {
   # Get context
-  rstudioapi::getActiveDocumentContext()
+  rstudioapi::getSourceEditorContext()
 }
 
 capture_area <- function(capture) {
@@ -23,12 +23,16 @@ capture_area <- function(capture) {
 find_regex <- function(find, where) {
   
   # Find matches, extract positions, find furthest <-, get rows/cols to align.
-  matched.rows <- grep(find, where)
-  positions <- regexec(find, where)
+  matched.rows <- grep(find, where,fixed = TRUE)
+  positions <- regexec(find, where,fixed = TRUE)
   positions <- positions[matched.rows]
   
   lines.highlighted <- as.integer(names(where))
   matched.cols      <- sapply(positions, `[[`, 1L)
+  
+  if(length(matched.cols)==0)
+    return(NULL)
+  
   which.max.col     <- which.max(matched.cols)
   
   furthest_row    <- lines.highlighted[matched.rows[which.max.col]]
@@ -69,12 +73,11 @@ insertr <- function(list) {
   rstudioapi::insertText(list[["location"]], list[["text"]])
 }
 
-#' Align a highlighted region's assignment operators.
-#'
-#' @return Aligns the single assignment operators (\code{<-}) within a highlighted region.
-#' @export
-#' 
-#' @examples 
+#' Align a highlighted region's by pattern.
+#' @param pattern regex pattern to align on, Default: remedy_opts$get('align_pattern')
+#' @return Aligns by regex pattern within a highlighted region.
+
+#' @examples
 #' \dontrun{
 #' remedy_example(
 #'     c( "# Align arrows",
@@ -82,22 +85,7 @@ insertr <- function(list) {
 #'     "aaa <- 13"), 
 #'     align_arrow
 #'     )
-#' }
-align_arrow <- function() {
-  capture <- capture()
-  area    <- capture_area(capture)
-  loc     <- find_regex("<-", area)
-  insertList <- assemble_insert(loc)
-  insertr(insertList)
-}
-
-#' Align a highlighted region's assignment operators.
-#'
-#' @return Aligns the equal sign assignment operators (\code{=}) within a
-#' highlighted region.
-#' @export
-#' @examples 
-#' \dontrun{
+#'     
 #' remedy_example(
 #'     c( "# Align equal signs",
 #'     "a = 12", 
@@ -105,10 +93,28 @@ align_arrow <- function() {
 #'     align_equal
 #'     )
 #' }
-align_equal <- function() {
+#' @rdname align
+#' @export
+align <- function(pattern = remedy_opts$get('align_pattern')) {
   capture <- capture()
   area    <- capture_area(capture)
-  loc     <- find_regex("=", area)
+  loc     <- find_regex(pattern, area)
+  
+  if(is.null(loc))
+    return(NULL)
+  
   insertList <- assemble_insert(loc)
   insertr(insertList)
+}
+
+#' @rdname align
+#' @export
+align_arrow <- function(pattern = '<-'){
+  align(pattern = pattern) 
+}
+
+#' @rdname align
+#' @export
+align_equal <- function(pattern = '='){
+  align(pattern = pattern) 
 }
