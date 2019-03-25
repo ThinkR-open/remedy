@@ -47,11 +47,7 @@ find_regex <- function(find, where) {
 
 assemble_insert <-function(info) {
   # Unload variables
-  matched.rows      <- info$matched.rows
-  matched.cols      <- info$matched.cols
-  lines.highlighted <- info$lines.highlighted
-  which.max.col     <- info$which.max.col
-  furthest_column   <- info$furthest_column
+  list2env(info,envir = environment())
   
   # Find the rows to align and the current column position of each regEx match.
   rows_to_align    <- lines.highlighted[matched.rows[-which.max.col]]
@@ -69,14 +65,21 @@ assemble_insert <-function(info) {
   return(list(location = location, text = text))
 }
 
+trim_insert <-function(rows,text,id) {
+
+  location <- Map(c, Map(c,rows,1), Map(c,rows,Inf))
+  rstudioapi::modifyRange(location, text,id = id)
+  
+}
+
 insertr <- function(list) {
   rstudioapi::insertText(list[["location"]], list[["text"]])
 }
 
-#' Align a highlighted region's by pattern.
-#' @param pattern regex pattern to align on, Default: remedy_opts$get('align_pattern')
+#' @title Align a highlighted region's by pattern.
+#' @param pattern character, regex pattern to align on, Default: remedy_opts$get('align_pattern')
+#' @param anchor character, align to the 'right' or 'left', Default: remedy_opts$get('align_anchor')
 #' @return Aligns by regex pattern within a highlighted region.
-
 #' @examples
 #' \dontrun{
 #' remedy_example(
@@ -95,13 +98,19 @@ insertr <- function(list) {
 #' }
 #' @rdname align
 #' @export
-align <- function(pattern = remedy_opts$get('align_pattern')) {
+align <- function(pattern = remedy_opts$get('align_pattern'), anchor = remedy_opts$get('align_anchor')) {
   capture <- capture()
   area    <- capture_area(capture)
   loc     <- find_regex(pattern, area)
   
   if(is.null(loc))
     return(NULL)
+
+  if(anchor=='left'){
+    area[loc$matched.rows] <- gsub('\\s+',' ',area[loc$matched.rows])
+    trim_insert(loc$lines.highlighted[loc$matched.rows],area[loc$matched.rows],id = capture$id)
+    loc     <- find_regex(pattern, area)
+  }
   
   insertList <- assemble_insert(loc)
   insertr(insertList)
@@ -109,12 +118,12 @@ align <- function(pattern = remedy_opts$get('align_pattern')) {
 
 #' @rdname align
 #' @export
-align_arrow <- function(pattern = '<-'){
-  align(pattern = pattern) 
+align_arrow <- function(pattern = '<-', anchor = remedy_opts$get('align_anchor')){
+  align(pattern = pattern, anchor = remedy_opts$get('align_anchor')) 
 }
 
 #' @rdname align
 #' @export
-align_equal <- function(pattern = '='){
-  align(pattern = pattern) 
+align_equal <- function(pattern = '=', anchor = remedy_opts$get('align_anchor')){
+  align(pattern = pattern, anchor = remedy_opts$get('align_anchor')) 
 }

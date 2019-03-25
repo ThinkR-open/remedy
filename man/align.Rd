@@ -6,14 +6,17 @@
 \alias{align_equal}
 \title{Align a highlighted region's by pattern.}
 \usage{
-align(pattern = remedy_opts$get("align_pattern"))
+align(pattern = remedy_opts$get("align_pattern"),
+  anchor = remedy_opts$get("align_anchor"))
 
-align_arrow(pattern = "<-")
+align_arrow(pattern = "<-", anchor = remedy_opts$get("align_anchor"))
 
-align_equal(pattern = "=")
+align_equal(pattern = "=", anchor = remedy_opts$get("align_anchor"))
 }
 \arguments{
-\item{pattern}{regex pattern to align on, Default: remedy_opts$get('align_pattern')}
+\item{pattern}{character, regex pattern to align on, Default: remedy_opts$get('align_pattern')}
+
+\item{anchor}{character, align to the 'right' or 'left', Default: remedy_opts$get('align_anchor')}
 }
 \value{
 Aligns by regex pattern within a highlighted region.
