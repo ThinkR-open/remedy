@@ -33,6 +33,7 @@ before_install:
 after_success:
   - Rscript -e 'devtools::test()'
   - Rscript -e 'covr::codecov()'
+  - Rscript -e 'install.packages("devtools")'
   - Rscript -e 'devtools::install(); covrpage::covrpage_ci()'
   - Rscript -e 'pkgdown::build_site()'
 
