@@ -16,3 +16,4 @@ readme_gif
 ^_pkgdown\.yml$
 ^docs$
 ^reference$
+^contributing\.md$
