@@ -15,8 +15,10 @@ Wrap selected text in a function call
 \examples{
 \dontrun{
 remedy_example(
-    c( "wrapped in function call"), 
+    c("wrapped in function call"), 
     functionwrapr
     )
 }
+
+
 }
