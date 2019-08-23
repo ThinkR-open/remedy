@@ -23,7 +23,7 @@ if (dir.exists("docs")) {
 
 <!-- badges: start -->
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/remedy)](https://cran.r-project.org/package=remedy)
-[![](http://cranlogs.r-pkg.org/badges/remedy)](https://cran.r-project.org/package=remedy)[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_12_21-brightgreen.svg)](http://tinyurl.com/y76olv3v)
+[![](http://cranlogs.r-pkg.org/badges/remedy)](https://cran.r-project.org/package=remedy)[![Travis-CI Build Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_08_23-red.svg)](http://tinyurl.com/y76olv3v)
 <!-- badges: end -->
 
 <img src="https://raw.githubusercontent.com/ThinkR-open/remedy/master/reference/figures/thinkr-hex-remedy.png" width=250px>

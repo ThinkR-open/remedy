@@ -44,8 +44,8 @@ Binding: footnoter
 Interactive: false
 
 Name: FunctionWrap
-Description: Wrap a selection with a function call
-Binding: function_wrap
+Description: Wrap a selection in a function call
+Binding: functionwrapr
 Interactive: false
 
 Name: H1
