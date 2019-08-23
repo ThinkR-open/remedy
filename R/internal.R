@@ -30,7 +30,7 @@ add_multiline_prefix <- function(prefix, as_is = FALSE) {
     content <- paste0(prefix, content)
   } else {
     # list: ignore blank lines, keep indentation
-    content[nzchar(content)] <-
+    content[nzchar(conetnt)] <-
       paste0(
         gsub("\\b.*$", "", prefix_content[nzchar(content)], perl = TRUE),
         prefix,
@@ -51,8 +51,12 @@ add_multiline_prefix <- function(prefix, as_is = FALSE) {
   )
 }
 
+
+
 enclose <- function(prefix, postfix = prefix) {
   a <- rstudioapi::getSourceEditorContext()
   for (s in a$selection)
     rstudioapi::insertText(location = s$range, text = sprintf("%s%s%s", prefix, s$text, postfix))
+  
+  return(invisible(a))
 }

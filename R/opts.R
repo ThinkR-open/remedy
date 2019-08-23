@@ -82,6 +82,7 @@ remedy_opts <- new_defaults(list(
     chunksplit = "Ctrl+Shift+Alt+C",
     chunkname = "Ctrl+Shift+Alt+N",
     footnote = "Ctrl+Cmd+Shift+6",
+    functionwrap = "Ctrl+Alt+9",
     h1 = "Ctrl+Cmd+1",
     h2 = "Ctrl+Cmd+2",
     h3 = "Ctrl+Cmd+3",

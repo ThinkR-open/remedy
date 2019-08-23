@@ -8,7 +8,7 @@
 Build
 Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage
 status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_12_21-brightgreen.svg)](http://tinyurl.com/y76olv3v)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2019_08_23-red.svg)](http://tinyurl.com/y76olv3v)
 <!-- badges: end -->
 
 <img src="https://raw.githubusercontent.com/ThinkR-open/remedy/master/reference/figures/thinkr-hex-remedy.png" width=250px>
@@ -194,18 +194,18 @@ remedy::remedy_opts$get('hotkeys')
 #>       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" 
 #>         chunksplit          chunkname           footnote 
 #> "Ctrl+Shift+Alt+C" "Ctrl+Shift+Alt+N" "Ctrl+Cmd+Shift+6" 
-#>                 h1                 h2                 h3 
-#>       "Ctrl+Cmd+1"       "Ctrl+Cmd+2"       "Ctrl+Cmd+3" 
-#>                 h4                 h5                 h6 
-#>       "Ctrl+Cmd+4"       "Ctrl+Cmd+5"       "Ctrl+Cmd+6" 
-#>        htmlcomment              image            italics 
-#>       "Ctrl+Alt+C"       "Ctrl+Cmd+P"       "Ctrl+Cmd+I" 
-#>              latex               list              right 
-#>       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right" 
-#>             strike              table                url 
-#>       "Ctrl+Cmd+S"       "Ctrl+Cmd+T"       "Ctrl+Cmd+U" 
-#>           xaringan            youtube 
-#>       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"
+#>       functionwrap                 h1                 h2 
+#>       "Ctrl+Alt+9"       "Ctrl+Cmd+1"       "Ctrl+Cmd+2" 
+#>                 h3                 h4                 h5 
+#>       "Ctrl+Cmd+3"       "Ctrl+Cmd+4"       "Ctrl+Cmd+5" 
+#>                 h6        htmlcomment              image 
+#>       "Ctrl+Cmd+6"       "Ctrl+Alt+C"       "Ctrl+Cmd+P" 
+#>            italics              latex               list 
+#>       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+=" 
+#>              right             strike              table 
+#>    "Alt+Cmd+Right"       "Ctrl+Cmd+S"       "Ctrl+Cmd+T" 
+#>                url           xaringan            youtube 
+#>       "Ctrl+Cmd+U"       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"
 ```
 
 ### Managing Shortcuts
