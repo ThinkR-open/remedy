@@ -34,3 +34,4 @@ boldr <- function() enclose("__")
 #' @export
 #' 
 striker <- function() enclose("~~")
+

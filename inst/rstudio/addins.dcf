@@ -43,6 +43,11 @@ Description: Convert selected text into a footnote
 Binding: footnoter
 Interactive: false
 
+Name: FunctionWrap
+Description: Wrap a selection with a function call
+Binding: function_wrap
+Interactive: false
+
 Name: H1
 Description: Convert selected text into an h1 header
 Binding: h1r

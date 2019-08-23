@@ -51,8 +51,27 @@ add_multiline_prefix <- function(prefix, as_is = FALSE) {
   )
 }
 
+
+
 enclose <- function(prefix, postfix = prefix) {
   a <- rstudioapi::getSourceEditorContext()
   for (s in a$selection)
     rstudioapi::insertText(location = s$range, text = sprintf("%s%s%s", prefix, s$text, postfix))
+  
+  return(a)
+}
+
+#' Function Wrap
+#'
+#' @param prefix 
+#' @param postfix 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+function_wrap <- function(prefix = "(", postfix = ")"){
+  a <- enclose(prefix, postfix)
+  rstudioapi::setCursorPosition(a$selection[[1]][["range"]][[1]])
+  
 }
