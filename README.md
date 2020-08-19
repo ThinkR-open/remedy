@@ -86,6 +86,12 @@ chunksplit split the chunk at a given spot.
 
 ![](reference/figures/chunksplit.gif)
 
+### Cross references
+
+ID, table and figure cross-reference
+
+![](reference/figures/cross-ref.gif)
+
 ### Emphasize
 
 Embolden, italicize or strikethrough the selected text.
