@@ -38,6 +38,11 @@ Description: Name unnamed chunks in bulk
 Binding: chunknamer
 Interactive: false
 
+Name: Fig Ref
+Description: Create a Markdown Figure cross-reference
+Binding: fig_ref
+Interactive: false
+
 Name: Footnote
 Description: Convert selected text into a footnote
 Binding: footnoter
@@ -78,6 +83,11 @@ Description: Convert selected text into an HTML comment or insert new comment
 Binding: htmlcommentr
 Interactive: false
 
+Name: ID Ref
+Description: Create a Markdown ID cross-reference
+Binding: id_ref
+Interactive: false
+
 Name: Image
 Description: Convert selected path into an embedded image
 Binding: imager
@@ -116,6 +126,11 @@ Interactive: false
 Name: Table
 Description: Insert a markdown table
 Binding: tabler
+Interactive: false
+
+Name: Table Ref
+Description: Create a Markdown Figure cross-reference
+Binding: tab_ref
 Interactive: false
 
 Name: Url

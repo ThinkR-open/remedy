@@ -3,9 +3,10 @@
 [![Travis-CI Build
 Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage
 status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_11_01-brightgreen.svg)](http://tinyurl.com/y76olv3v)
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_11_22-brightgreen.svg)](http://tinyurl.com/y76olv3v)
 
-# remedy
+remedy
+======
 
 `{remedy}` provides addins to facilitate writing in markdown with
 RStudio.
@@ -18,19 +19,19 @@ of suggested shortcuts is provided towards the end of this README.
 > Note that most of the addins/shortcuts below will also work without
 > selecting any text.
 
-## Install
+Install
+-------
 
-``` r
-remotes::install_github("ThinkR-open/remedy")
-```
+    remotes::install_github("ThinkR-open/remedy")
 
 Once you’ve installed the package, you don’t need to load it with
 `library()`, the addins are installed on your machine as part of the
 package install process.
 
-## Using `{remedy}`
+Using `{remedy}`
+----------------
 
-Write quicker in markdown with `{remedy}`\!
+Write quicker in markdown with `{remedy}`!
 
 Here’s a list of all available helpers:
 
@@ -39,10 +40,8 @@ Here’s a list of all available helpers:
 You can also have an overview of how the functions behave with the
 `remedy_example()` function:
 
-``` r
-library(remedy)
-remedy_example( c("Never gonna", "give you up", "let you down"), listr )
-```
+    library(remedy)
+    remedy_example( c("Never gonna", "give you up", "let you down"), listr )
 
 ### Align
 
@@ -174,29 +173,24 @@ Insert a xaringan pull-left and pull-right template.
 
 ![](readme_gif/xaringan.gif)
 
-## Recommended shortcuts (macOS)
+Recommended shortcuts (macOS)
+-----------------------------
 
 Here’s a list of recommended shortcuts:
 
-``` r
-remedy::remedy_opts$get('hotkeys')
-#>           backtick               bold              chunk 
-#>       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" 
-#>         chunksplit          chunkname           footnote 
-#> "Ctrl+Shift+Alt+C" "Ctrl+Shift+Alt+N" "Ctrl+Cmd+Shift+6" 
-#>                 h1                 h2                 h3 
-#>       "Ctrl+Cmd+1"       "Ctrl+Cmd+2"       "Ctrl+Cmd+3" 
-#>                 h4                 h5                 h6 
-#>       "Ctrl+Cmd+4"       "Ctrl+Cmd+5"       "Ctrl+Cmd+6" 
-#>        htmlcomment              image            italics 
-#>       "Ctrl+Alt+C"       "Ctrl+Cmd+P"       "Ctrl+Cmd+I" 
-#>              latex               list              right 
-#>       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right" 
-#>             strike              table                url 
-#>       "Ctrl+Cmd+S"       "Ctrl+Cmd+T"       "Ctrl+Cmd+U" 
-#>           xaringan            youtube 
-#>       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"
-```
+    remedy::remedy_opts$get('hotkeys')
+    #>           backtick               bold              chunk         chunksplit 
+    #>       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" "Ctrl+Shift+Alt+C" 
+    #>          chunkname           footnote                 h1                 h2 
+    #> "Ctrl+Shift+Alt+N" "Ctrl+Cmd+Shift+6"       "Ctrl+Cmd+1"       "Ctrl+Cmd+2" 
+    #>                 h3                 h4                 h5                 h6 
+    #>       "Ctrl+Cmd+3"       "Ctrl+Cmd+4"       "Ctrl+Cmd+5"       "Ctrl+Cmd+6" 
+    #>        htmlcomment              image            italics              latex 
+    #>       "Ctrl+Alt+C"       "Ctrl+Cmd+P"       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" 
+    #>               list              right             strike              table 
+    #> "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right"       "Ctrl+Cmd+S"       "Ctrl+Cmd+T" 
+    #>                url           xaringan            youtube 
+    #>       "Ctrl+Cmd+U"       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"
 
 ### Managing Shortcuts
 
@@ -207,12 +201,11 @@ If you want to edit the default settings you can view the defaults
 `remedy_opts$get('hotkeys')` and change them through
 `remedy_opts$set(hotkeys=<NEW_SETTINGS>)`.
 
-``` r
-hotkeys <- remedy::remedy_opts$get("hotkeys")
-rsam::set_shortcut(sprintf('remedy::%sr',names(hotkeys)), hotkeys)
-```
+    hotkeys <- remedy::remedy_opts$get("hotkeys")
+    rsam::set_shortcut(sprintf('remedy::%sr',names(hotkeys)), hotkeys)
 
-## Feedback and enhancement
+Feedback and enhancement
+------------------------
 
 You’ve found a bug, or have an enhancement idea? Feel free to open an
 issue : <https://github.com/ThinkR-open/remedy/issues>.

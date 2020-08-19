@@ -1,6 +1,6 @@
 Package: remedy
 Title: 'RStudio' Addins to Simplify 'Markdown' Writing
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person("Colin", "Fay", email = "contact@colinfay.me", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7343-1846")),
              person("Jonathan", "Sidi", email = "yonicd@gmail.com", role = c("aut"), comment = c(ORCID = "0000-0002-4222-1819")),
              person("Luke", "Smith", email = "luke@protocolvital.info", role = c("aut"), comment = "author of seasmith/AlignAssign"),
@@ -22,11 +22,10 @@ Imports:
     utils, 
     stats
 Suggests: 
-    covr,
     testthat,
     rmarkdown
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RoxygenNote: 6.1.0
+RoxygenNote: 7.1.0
 VignetteBuilder: knitr

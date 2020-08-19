@@ -5,7 +5,11 @@
 \alias{remedy_opts}
 \alias{remedy_opts_current}
 \title{Default and current remedy options}
-\format{An object of class \code{list} of length 5.}
+\format{
+An object of class \code{list} of length 5.
+
+An object of class \code{list} of length 5.
+}
 \usage{
 remedy_opts
 
