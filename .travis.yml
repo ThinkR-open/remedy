@@ -1,20 +1,42 @@
-language: r
+# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+language: R
+sudo: false
 cache: packages
+
 r_github_packages:
-- yonicd/covrpage
-- metrumresearchgroup/pkgdown
+  - ThinkR-open/remedy  # pre-install to avoid vignette package errors
+  - yonicd/covrpage
+
+# build matrix; turn on vdiffr only on r release
+matrix:
+  include:
+  - r: devel
+  - r: release
+    env: VDIFFR_RUN_TESTS=true
+    before_cache:
+    - Rscript -e 'remotes::install_cran("pkgdown")'
+    - Rscript -e 'remotes::install_github("ThinkR-open/thinkrtemplate")'
+    deploy:
+      provider: pages
+      skip-cleanup: true
+      github-token: $GITHUB_PAT
+      keep-history: true
+      local-dir: docs
+      on:
+        branch: master
+      skip_cleanup: true
+  - r: oldrel
+
+before_install:
+  - Rscript -e 'update.packages(ask = FALSE)'
+
 after_success:
-- Rscript -e 'covr::codecov()'
-- Rscript -e 'devtools::install(); covrpage::covrpage_ci()'
-- Rscript -e 'pkgdown::build_site()'
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: "$GITHUB_PAT"
-  keep-history: true
-  local-dir: docs
-  on:
-    branch: master
+  - Rscript -e 'devtools::test()'
+  - Rscript -e 'covr::codecov()'
+  - Rscript -e 'install.packages("devtools")'
+  - Rscript -e 'devtools::install(); covrpage::covrpage_ci()'
+  - Rscript -e 'pkgdown::build_site()'
+
 env:
   global:
     secure: XD+r1YkimwwxPC+Vsh4rRIHxnDOF+KLSYgsw7C7YhCbZbfc/cMUj0/uwc1+AOg/DEBPMq4mt6TPqNsfThKCFTxGdCV2f06dcehHq+s2JYnNEH90io3JqftvF6vc14iUSBR896WNY3/a7+GmVrK/PatbMzJOV8k5t4TZqrRenEbjnV5bPO+kbWjFy0CXi79bJzF8+ov6xvfLO+npYnD+zELQ2ZH+ewxy2HvOreQGqFXsS3NmJDEmriGDnDbNvS5Y0nQc16zm+v+Y/G4uAJzNBBKTZIcDzjGsOTs6pAenLVRt4lYfmhXVFAQU490rYQ8kKLYh21G5lgsdxNGsMqx4L3vCGU47ZNlq0+oPWFkrn2/LcC19bNTmYT+yolM7bSsSFKP6QnjnEKp+fCS1kGS3A8qgl59n3bGShmCfastYmGk/Wox9e8dVPxwJo3JZNh0IL6485OyTgoxS9mAmPu/hv8DksVh26IqrKjPc1VhG7Lms25rphBD5qUrzPb0JGwh2rnU2ryMUUQpn5Nt9FwlwHKe0E51NPUzI8PIle1gmsTNjIizd8vVfoKOpU6aQ060McnlEADLpPCCsD8opAixymkOZSxUovDMKEz7kSDPygWPZrJ70gc/c2Srnp2V5rFcqP8isk6qpigJRnYCZTl7Dsc5VFOf/Q3F2bs7DQcZKp4zA=

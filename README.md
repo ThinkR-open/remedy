@@ -1,9 +1,21 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-[![Travis-CI Build
+<!-- badges: start -->
+
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/remedy)](https://cran.r-project.org/package=remedy)
+[![](http://cranlogs.r-pkg.org/badges/remedy)](https://cran.r-project.org/package=remedy)[![Travis-CI
+Build
 Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage
 status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage
+<<<<<<< HEAD
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_11_22-brightgreen.svg)](http://tinyurl.com/y76olv3v)
+=======
+Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_12_21-brightgreen.svg)](http://tinyurl.com/y76olv3v)
+<!-- badges: end -->
+
+<img src="https://raw.githubusercontent.com/ThinkR-open/remedy/master/reference/figures/thinkr-hex-remedy.png" width=250px>
+>>>>>>> 13075ebb0078fbed3caff77112abcb61e745908e
 
 remedy
 ======
@@ -11,7 +23,7 @@ remedy
 `{remedy}` provides addins to facilitate writing in markdown with
 RStudio.
 
-![](readme_gif/remedy_example.gif)
+![](reference/figures/remedy_example.gif)
 
 All the functions are meant to be mapped to keyboard shortcuts. A list
 of suggested shortcuts is provided towards the end of this README.
@@ -31,11 +43,17 @@ package install process.
 Using `{remedy}`
 ----------------
 
+<<<<<<< HEAD
 Write quicker in markdown with `{remedy}`!
+=======
+Write quicker in markdown with `{remedy}`\!  
+Read the full manual in the associated {pkgdown} website:
+<https://thinkr-open.github.io/remedy/>
+>>>>>>> 13075ebb0078fbed3caff77112abcb61e745908e
 
 Here’s a list of all available helpers:
 
-![](readme_gif/remedy_example.gif)
+![](reference/figures/remedy_example.gif)
 
 You can also have an overview of how the functions behave with the
 `remedy_example()` function:
@@ -47,59 +65,59 @@ You can also have an overview of how the functions behave with the
 
 Align selected blocks to their assignment operator, either `<-`
 
-![](readme_gif/align.gif)
+![](reference/figures/align.gif)
 
 or `=`
 
-![](readme_gif/alignequal.gif)
+![](reference/figures/alignequal.gif)
 
 ### Backtick
 
 Enclose the selected word(s) in backticks.
 
-![](readme_gif/backtick.gif)
+![](reference/figures/backtick.gif)
 
 ### Blockquote
 
 Turn selected line(s) to blockquote.
 
-![](readme_gif/blockquote.gif)
+![](reference/figures/blockquote.gif)
 
 ### Chunk
 
 Turn the selected text into a chunk.
 
-![](readme_gif/chunk.gif)
+![](reference/figures/chunk.gif)
 
 > Note that every chunk is given a name.
 
 chunksplit split the chunk at a given spot.
 
-![](readme_gif/chunksplit.gif)
+![](reference/figures/chunksplit.gif)
 
 ### Emphasize
 
 Embolden, italicize or strikethrough the selected text.
 
-![](readme_gif/emphasise.gif)
+![](reference/figures/emphasise.gif)
 
 ### Footnotes
 
 Turn the given text into a footnote.
 
-![](readme_gif/footnote.gif)
+![](reference/figures/footnote.gif)
 
 ### Headers
 
 Turn the selected text into a header.
 
-![](readme_gif/header.gif)
+![](reference/figures/header.gif)
 
 ### HTML Comment
 
 Turn the text into an html comment
 
-![](readme_gif/htmlcomment.gif)
+![](reference/figures/htmlcomment.gif)
 
 ### Image
 
@@ -111,19 +129,19 @@ the text into title between `![]`, and puts the link between `()`.
 If the last element of the selection is not a link, you get an error
 message straight into you markdown document.
 
-![](readme_gif/image.gif)
+![](reference/figures/image.gif)
 
 ### LaTeX
 
 LaTeX syntax :
 
-![](readme_gif/latex.gif)
+![](reference/figures/latex.gif)
 
 ### List
 
 Turn the selected text into an unordered list.
 
-![](readme_gif/list.gif)
+![](reference/figures/list.gif)
 
 ### Moving
 
@@ -131,7 +149,7 @@ Turn the selected text into an unordered list.
 
 Copy the selected text or the current line to the right.
 
-![](readme_gif/right.gif)
+![](reference/figures/right.gif)
 
 ### Table
 
@@ -141,13 +159,13 @@ There are basically two way to do that with remedy :
 
 #### Ttable
 
-![](readme_gif/table.gif)
+![](reference/figures/table.gif)
 
 #### Parse your data
 
 Turn your dataframe into a markdown table :
 
-![](readme_gif/table_remedy.gif)
+![](reference/figures/table_remedy.gif)
 
 ### URL
 
@@ -159,19 +177,19 @@ the text into title between `[]`, and puts the link between `()`.
 If the last element of the selection is not a link, you get an error
 message straight into you markdown document.
 
-![](readme_gif/url.gif)
+![](reference/figures/url.gif)
 
 ### Youtube
 
 Turn an url into a youtube embed:
 
-![](readme_gif/youtube.gif)
+![](reference/figures/youtube.gif)
 
 ### xaringan
 
 Insert a xaringan pull-left and pull-right template.
 
-![](readme_gif/xaringan.gif)
+![](reference/figures/xaringan.gif)
 
 Recommended shortcuts (macOS)
 -----------------------------
@@ -209,3 +227,9 @@ Feedback and enhancement
 
 You’ve found a bug, or have an enhancement idea? Feel free to open an
 issue : <https://github.com/ThinkR-open/remedy/issues>.
+
+## Code of conduct
+
+Please note that the ‘remedy’ project is released with a [Contributor
+Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
+you agree to abide by its terms.

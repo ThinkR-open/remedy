@@ -1,14 +1,6 @@
 testthat::context("chunks")
 
-if(rstudioapi::isAvailable()){
-  
-  path <- tempfile(pattern = 'test',fileext = '.R')
-  file.create(path)
-  rstudioapi::navigateToFile(path)
-  Sys.sleep(1)
-  sec <- rstudioapi::getSourceEditorContext()
-  
-}
+sec <- scratch_file()
 
 testthat::describe('splitting',{
   
@@ -25,7 +17,7 @@ testthat::describe('splitting',{
     
     rstudioapi::documentSave(sec$id)
         
-    testthat::expect_equal(readLines(path,warn = FALSE),
+    testthat::expect_equal(readLines(sec$path,warn = FALSE),
                            c('```{r}',' ','```',' ','```{r}','```')
                            )
     set_text(sec = sec)
@@ -48,7 +40,7 @@ testthat::describe('params',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),
+    testthat::expect_equal(readLines(sec$path,warn = FALSE),
                            c('```{r, echo = FALSE, warnings = TRUE}',' ','```',' ','```{r, echo = FALSE, warnings = TRUE}','```')
     )
     set_text(sec = sec)
@@ -71,7 +63,7 @@ testthat::describe('creating',{
 
     rstudioapi::documentSave(sec$id)
         
-    testthat::expect_equal(readLines(path,warn = FALSE),
+    testthat::expect_equal(readLines(sec$path,warn = FALSE),
                            c("```{r aaa}","","```","```{r bbb}","```")
     )
     set_text(sec = sec)
@@ -93,7 +85,7 @@ testthat::describe('wrapping',{
     
     rstudioapi::documentSave(sec$id)
     
-    testthat::expect_equal(readLines(path,warn = FALSE),
+    testthat::expect_equal(readLines(sec$path,warn = FALSE),
                            c("","```{r remedy001}","aaa","```")
     )
     set_text(sec = sec)
