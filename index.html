@@ -5,16 +5,18 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>'RStudio' Addins to Simplify 'Markdown' Writing • remedy</title>
-<!-- jquery --><script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="cosmo.css" rel="stylesheet">
+<title>RStudio Addins to Simplify Markdown Writing • remedy</title>
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="bootstrap-toc.css">
+<script src="bootstrap-toc.js"></script><!-- Bootstrap --><link href="cosmo.css" rel="stylesheet">
 <link href="thinkr.css" rel="stylesheet">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="'RStudio' Addins to Simplify 'Markdown' Writing">
-<meta property="og:description" content="An 'RStudio' addin providing shortcuts for writing in 'Markdown'. This package provides a series of 
-             functions that allow the user to be more efficient when using 'Markdown'. For example, you can select 
+<script src="pkgdown.js"></script><meta property="og:title" content="RStudio Addins to Simplify Markdown Writing">
+<meta property="og:description" content="An RStudio addin providing shortcuts for writing in Markdown. This package provides a series of 
+             functions that allow the user to be more efficient when using Markdown. For example, you can select 
              a word, and put it in bold or in italics, or change the alignment of elements inside you Rmd. The idea
-             is to map all the functionalities from 'remedy' on keyboard shortcuts, so that it provides an interface 
+             is to map all the functionalities from remedy on keyboard shortcuts, so that it provides an interface 
              close to what you can find in any other text editor. ">
 <meta name="twitter:card" content="summary">
 <!-- mathjax
@@ -38,8 +40,8 @@
 </script>
 -->
 </head>
-<body>
-    <div class="container template-article">
+<body data-spy="scroll" data-target="#toc">
+    <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -51,7 +53,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">remedy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -59,7 +61,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -92,8 +94,8 @@
 </div>
         </li>
         <li>
-  <a href="https://github.com/ThinkR-open/remedy">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/ThinkR-open/remedy/">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -106,14 +108,10 @@
 <!--/.navbar -->
 
       
-      </header><div class="row">
-  <div class="col-md-9 contents">
-    
 
-    
-    
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-<!-- badges: start -->
+      </header><div class="row">
+  <div class="contents col-md-9">
+
 
 <p><img src="https://raw.githubusercontent.com/ThinkR-open/remedy/master/reference/figures/thinkr-hex-remedy.png" width="250px"></p>
 <div id="remedy" class="section level1">
@@ -128,8 +126,8 @@
 <div id="install" class="section level2">
 <h2 class="hasAnchor">
 <a href="#install" class="anchor"></a>Install</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"ThinkR-open/remedy"</span>)</a></code></pre></div>
-<p>Once you’ve installed the package, you don’t need to load it with <code><a href="https://www.rdocumentation.org/packages/base/topics/library">library()</a></code>, the addins are installed on your machine as part of the package install process.</p>
+<div class="sourceCode" id="cb1"><pre class="r"><span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"ThinkR-open/remedy"</span>)</pre></div>
+<p>Once you’ve installed the package, you don’t need to load it with <code>library()</code>, the addins are installed on your machine as part of the package install process.</p>
 </div>
 <div id="using-remedy" class="section level2">
 <h2 class="hasAnchor">
@@ -140,8 +138,8 @@ Read the full manual in the associated {pkgdown} website: <a href="https://think
 <p>Here’s a list of all available helpers:</p>
 <p><img src="reference/figures/remedy_example.gif"></p>
 <p>You can also have an overview of how the functions behave with the <code><a href="reference/remedy_example.html">remedy_example()</a></code> function:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(remedy)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"><span class="kw"><a href="reference/remedy_example.html">remedy_example</a></span>( <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Never gonna"</span>, <span class="st">"give you up"</span>, <span class="st">"let you down"</span>), listr )</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">remedy</span>)
+<span class="fu"><a href="reference/remedy_example.html">remedy_example</a></span>( <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"Never gonna"</span>, <span class="st">"give you up"</span>, <span class="st">"let you down"</span>), <span class="no">listr</span> )</pre></div>
 <div id="align" class="section level3">
 <h3 class="hasAnchor">
 <a href="#align" class="anchor"></a>Align</h3>
@@ -269,30 +267,26 @@ Read the full manual in the associated {pkgdown} website: <a href="https://think
 <h2 class="hasAnchor">
 <a href="#recommended-shortcuts-macos" class="anchor"></a>Recommended shortcuts (macOS)</h2>
 <p>Here’s a list of recommended shortcuts:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">remedy<span class="op">::</span>remedy_opts<span class="op">$</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/get">get</a></span>(<span class="st">'hotkeys'</span>)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#&gt;           backtick               bold              chunk </span></a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt;       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" </span></a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt;         chunksplit          chunkname           footnote </span></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt; "Ctrl+Shift+Alt+C" "Ctrl+Shift+Alt+N" "Ctrl+Cmd+Shift+6" </span></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt;                 h1                 h2                 h3 </span></a>
-<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt;       "Ctrl+Cmd+1"       "Ctrl+Cmd+2"       "Ctrl+Cmd+3" </span></a>
-<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt;                 h4                 h5                 h6 </span></a>
-<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt;       "Ctrl+Cmd+4"       "Ctrl+Cmd+5"       "Ctrl+Cmd+6" </span></a>
-<a class="sourceLine" id="cb3-10" data-line-number="10"><span class="co">#&gt;        htmlcomment              image            italics </span></a>
-<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="co">#&gt;       "Ctrl+Alt+C"       "Ctrl+Cmd+P"       "Ctrl+Cmd+I" </span></a>
-<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt;              latex               list              right </span></a>
-<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt;       "Ctrl+Cmd+L" "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right" </span></a>
-<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt;             strike              table                url </span></a>
-<a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt;       "Ctrl+Cmd+S"       "Ctrl+Cmd+T"       "Ctrl+Cmd+U" </span></a>
-<a class="sourceLine" id="cb3-16" data-line-number="16"><span class="co">#&gt;           xaringan            youtube </span></a>
-<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="co">#&gt;       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="r"><span class="kw pkg">remedy</span><span class="kw ns">::</span><span class="no"><a href="reference/remedyOpts.html">remedy_opts</a></span>$<span class="fu"><a href="https://rdrr.io/r/base/get.html">get</a></span>(<span class="st">'hotkeys'</span>)
+<span class="co">#&gt;           backtick               bold              chunk         chunksplit </span>
+<span class="co">#&gt;       "Ctrl+Cmd+`"       "Ctrl+Cmd+B"   "Ctrl+Alt+Cmd+C" "Ctrl+Shift+Alt+C" </span>
+<span class="co">#&gt;          chunkname           footnote                 h1                 h2 </span>
+<span class="co">#&gt; "Ctrl+Shift+Alt+N" "Ctrl+Cmd+Shift+6"       "Ctrl+Cmd+1"       "Ctrl+Cmd+2" </span>
+<span class="co">#&gt;                 h3                 h4                 h5                 h6 </span>
+<span class="co">#&gt;       "Ctrl+Cmd+3"       "Ctrl+Cmd+4"       "Ctrl+Cmd+5"       "Ctrl+Cmd+6" </span>
+<span class="co">#&gt;        htmlcomment              image            italics              latex </span>
+<span class="co">#&gt;       "Ctrl+Alt+C"       "Ctrl+Cmd+P"       "Ctrl+Cmd+I"       "Ctrl+Cmd+L" </span>
+<span class="co">#&gt;               list              right             strike              table </span>
+<span class="co">#&gt; "Ctrl+Shift+Cmd+="    "Alt+Cmd+Right"       "Ctrl+Cmd+S"       "Ctrl+Cmd+T" </span>
+<span class="co">#&gt;                url           xaringan            youtube </span>
+<span class="co">#&gt;       "Ctrl+Cmd+U"       "Ctrl+Cmd+X"       "Ctrl+Cmd+Y"</span></pre></div>
 <div id="managing-shortcuts" class="section level3">
 <h3 class="hasAnchor">
 <a href="#managing-shortcuts" class="anchor"></a>Managing Shortcuts</h3>
 <p>Use the <a href="https://github.com/yonicd/rsam"><code>{rsam}</code></a> package to set and manage for you the hotkey settings of <code>{remedy}</code>.</p>
 <p>If you want to edit the default settings you can view the defaults <code>remedy_opts$get('hotkeys')</code> and change them through <code>remedy_opts$set(hotkeys=&lt;NEW_SETTINGS&gt;)</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">hotkeys &lt;-<span class="st"> </span>remedy<span class="op">::</span>remedy_opts<span class="op">$</span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/get">get</a></span>(<span class="st">"hotkeys"</span>)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2">rsam<span class="op">::</span><span class="kw">set_shortcut</span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/sprintf">sprintf</a></span>(<span class="st">'remedy::%sr'</span>,<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/names">names</a></span>(hotkeys)), hotkeys)</a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="r"><span class="no">hotkeys</span> <span class="kw">&lt;-</span> <span class="kw pkg">remedy</span><span class="kw ns">::</span><span class="no"><a href="reference/remedyOpts.html">remedy_opts</a></span>$<span class="fu"><a href="https://rdrr.io/r/base/get.html">get</a></span>(<span class="st">"hotkeys"</span>)
+<span class="kw pkg">rsam</span><span class="kw ns">::</span><span class="fu">set_shortcut</span>(<span class="fu"><a href="https://rdrr.io/r/base/sprintf.html">sprintf</a></span>(<span class="st">'remedy::%sr'</span>,<span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span>(<span class="no">hotkeys</span>)), <span class="no">hotkeys</span>)</pre></div>
 </div>
 </div>
 <div id="feedback-and-enhancement" class="section level2">
@@ -306,15 +300,16 @@ Read the full manual in the associated {pkgdown} website: <a href="https://think
 <p>Please note that the ‘remedy’ project is released with a <a href="CODE_OF_CONDUCT.html">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
+
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
 <li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=remedy">https://​cloud.r-project.org/​package=remedy</a>
 </li>
-<li>Browse source code at <br><a href="https://github.com/ThinkR-open/remedy">https://​github.com/​ThinkR-open/​remedy</a>
+<li>Browse source code at <br><a href="https://github.com/ThinkR-open/remedy/">https://​github.com/​ThinkR-open/​remedy/​</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/ThinkR-open/remedy/issues">https://​github.com/​ThinkR-open/​remedy/​issues</a>
 </li>
@@ -328,29 +323,34 @@ Read the full manual in the associated {pkgdown} website: <a href="https://think
 </li>
 </ul>
 </div>
+<div class="community">
+<h2>Community</h2>
+<ul class="list-unstyled">
+<li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
+</ul>
+</div>
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Colin Fay <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-7343-1846" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
-<li>Jonathan Sidi <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-4222-1819" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
+<li>Colin Fay <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-7343-1846" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Jonathan Sidi <br><small class="roles"> Author </small> <a href="https://orcid.org/0000-0002-4222-1819" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>Luke Smith <br><small class="roles"> Author </small>  <br><small>(author of seasmith/AlignAssign)</small>
 </li>
 <li><a href="authors.html">All authors...</a></li>
 </ul>
 </div>
 
-      <div class="dev-status">
+  <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://cran.r-project.org/package=remedy"><img src="http://www.r-pkg.org/badges/version/remedy" alt="CRAN_Status_Badge"></a></li>
 <li><a href="https://cran.r-project.org/package=remedy"><img src="http://cranlogs.r-pkg.org/badges/remedy"></a></li>
 <li><a href="https://travis-ci.org/ThinkR-open/remedy"><img src="https://travis-ci.org/ThinkR-open/remedy.svg?branch=master" alt="Travis-CI Build Status"></a></li>
 <li><a href="https://codecov.io/github/ThinkR-open/remedy?branch=master"><img src="https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
-<li><a href="http://tinyurl.com/y76olv3v"><img src="https://img.shields.io/badge/covrpage-Last_Build_2019_05_15-brightgreen.svg" alt="Covrpage Summary"></a></li>
+<li><a href="http://tinyurl.com/y76olv3v"><img src="https://img.shields.io/badge/covrpage-Last_Build_2020_08_19-brightgreen.svg" alt="Covrpage Summary"></a></li>
 </ul>
 </div>
 </div>
-
 </div>
 
 
@@ -364,10 +364,12 @@ Read the full manual in the associated {pkgdown} website: <a href="https://think
     Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
   </p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>

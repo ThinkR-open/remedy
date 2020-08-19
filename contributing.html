@@ -8,8 +8,13 @@
 
 <title>NA • remedy</title>
 
+
 <!-- jquery -->
-<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="bootstrap-toc.css">
+<script src="bootstrap-toc.js"></script>
 
 <!-- Bootstrap -->
 <link href="cosmo.css" rel="stylesheet">
@@ -17,7 +22,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Font Awesome icons -->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
@@ -30,6 +36,7 @@
 <script src="pkgdown.js"></script>
 
 <meta property="og:title" content="NA" />
+
 
 
 
@@ -63,9 +70,10 @@
  gtag('config', 'UA-115082821-1');
 </script>
 -->
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-title-body">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -79,7 +87,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">remedy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.1</span>
       </span>
     </div>
 
@@ -87,7 +95,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -110,14 +118,13 @@
   <a href="news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
           <div id="code-folding-buttons" class="btn-group"><button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-_extension-text-contrast=""><span>Show/Hide all code</span><span class="caret"></span></button><ul class="dropdown-menu" style="min-width: 50px;"><li><a id="rmd-show-all-code" href="#">Show All Code</a></li><li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li></ul></div>
         </li>
         <li>
-  <a href="https://github.com/ThinkR-open/remedy">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/ThinkR-open/remedy/">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -128,6 +135,7 @@
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -164,36 +172,43 @@
 <li><p>[ ] documentation contain example (CRAN forces examples for the addins)</p></li>
 </ul>
 <p>Example roxygen2 header</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co">#' @title Imager</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="co">#'</span></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#' @description Convert the selected path into an embedded image</span></a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co">#'</span></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#'</span></a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#' @return a markdown image link</span></a>
-<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#' @export</span></a>
-<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#' @importFrom rstudioapi getSourceEditorContext modifyRange</span></a>
-<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#' </span></a>
-<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#' @examples </span></a>
-<a class="sourceLine" id="cb1-11" data-line-number="11"><span class="co">#' \dontrun{</span></a>
-<a class="sourceLine" id="cb1-12" data-line-number="12"><span class="co">#' remedy_example( </span></a>
-<a class="sourceLine" id="cb1-13" data-line-number="13"><span class="co">#'     c( "https://thinkr.fr/wp-content/uploads/2015/03/thinkR1.png"), </span></a>
-<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#'     imager</span></a>
-<a class="sourceLine" id="cb1-15" data-line-number="15"><span class="co">#'     )</span></a>
-<a class="sourceLine" id="cb1-16" data-line-number="16"><span class="co">#' }</span></a>
-<a class="sourceLine" id="cb1-17" data-line-number="17">imager &lt;-<span class="st"> </span><span class="cf">function</span>() {</a></code></pre></div>
+<div class="sourceCode" id="cb1"><html><pre class="r">#' @title Imager
+#'
+#' @description Convert the selected path into an embedded image
+#'
+#'
+#' @return a markdown image link
+#' @export
+#' @importFrom rstudioapi getSourceEditorContext modifyRange
+#' 
+#' @examples 
+#' \dontrun{
+#' remedy_example( 
+#'     c( "https://thinkr.fr/wp-content/uploads/2015/03/thinkR1.png"), 
+#'     imager
+#'     )
+#' }
+imager &lt;- function() {</pre></html></div>
 <ul>
 <li><p>[ ] you’ve updated the binding field in addins.dcf</p></li>
 <li><p>[ ] you’ve added element to hotkey field in <a href="https://github.com/ThinkR-open/remedy/blob/master/R/opts.R#L78">opts.R</a>. Name of element function name without the trailing <code>r</code>.</p></li>
 <li><p>[ ] you’ve added suggested hotkey for macOS, this is for when end users add hotkeys in bulk and use <code>remedy::remedy_opts$get("hotkeys")</code></p></li>
 <li><p>[ ] you’ve added unit tests in testthat</p></li>
-<li><p>[ ] you’ve run covrpage <code><a href="https://www.rdocumentation.org/packages/covrpage/topics/covrpage">covrpage::covrpage(update_badge = TRUE,vignette = TRUE)</a></code> locally since ci can’t run the unit tests for addins.</p></li>
+<li><p>[ ] you’ve run covrpage <code><a href="https://rdrr.io/pkg/covrpage/man/covrpage.html">covrpage::covrpage(update_badge = TRUE,vignette = TRUE)</a></code> locally since ci can’t run the unit tests for addins.</p></li>
 </ul>
 </div>
 
 
   </div>
 
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
+  </div>
+
 </div>
+
 
 
       <footer>
@@ -207,11 +222,14 @@
     Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
   </p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 
