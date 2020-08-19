@@ -1,6 +1,5 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
 <!-- badges: start -->
 
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/remedy)](https://cran.r-project.org/package=remedy)
@@ -8,14 +7,10 @@
 Build
 Status](https://travis-ci.org/ThinkR-open/remedy.svg?branch=master)](https://travis-ci.org/ThinkR-open/remedy)[![Coverage
 status](https://codecov.io/gh/ThinkR-open/remedy/branch/master/graph/badge.svg)](https://codecov.io/github/ThinkR-open/remedy?branch=master)[![Covrpage
-<<<<<<< HEAD
-Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_11_22-brightgreen.svg)](http://tinyurl.com/y76olv3v)
-=======
 Summary](https://img.shields.io/badge/covrpage-Last_Build_2018_12_21-brightgreen.svg)](http://tinyurl.com/y76olv3v)
 <!-- badges: end -->
 
 <img src="https://raw.githubusercontent.com/ThinkR-open/remedy/master/reference/figures/thinkr-hex-remedy.png" width=250px>
->>>>>>> 13075ebb0078fbed3caff77112abcb61e745908e
 
 remedy
 ======
@@ -43,13 +38,9 @@ package install process.
 Using `{remedy}`
 ----------------
 
-<<<<<<< HEAD
-Write quicker in markdown with `{remedy}`!
-=======
-Write quicker in markdown with `{remedy}`\!  
+Write quicker in markdown with `{remedy}`!  
 Read the full manual in the associated {pkgdown} website:
-<https://thinkr-open.github.io/remedy/>
->>>>>>> 13075ebb0078fbed3caff77112abcb61e745908e
+<a href="https://thinkr-open.github.io/remedy/" class="uri">https://thinkr-open.github.io/remedy/</a>
 
 Here’s a list of all available helpers:
 
@@ -228,7 +219,8 @@ Feedback and enhancement
 You’ve found a bug, or have an enhancement idea? Feel free to open an
 issue : <https://github.com/ThinkR-open/remedy/issues>.
 
-## Code of conduct
+Code of conduct
+---------------
 
 Please note that the ‘remedy’ project is released with a [Contributor
 Code of Conduct](CODE_OF_CONDUCT.md). By contributing to this project,
