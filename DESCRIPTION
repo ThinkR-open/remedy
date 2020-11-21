@@ -7,6 +7,7 @@ Authors@R: c(person("Colin", "Fay", email = "contact@colinfay.me", role = c("aut
              person("Jonathan", "Carroll", email = "rpkg@jcarroll.com.au", role = c("ctb"), comment = c(ORCID = "0000-0002-1404-5264")),
              person("Andrzej", "Oleś", email = "andrzej.oles@gmail.com", role = c("ctb"), comment = c(ORCID = "0000-0003-0285-2787")),
              person("Daniel", "Possenriede", email = "possenriede@gmail.com", role = c("ctb"), comment = c(ORCID = "0000-0002-6738-9845")),
+             person("Roel M.", "Hogervorst", email = "hogervorst.rm@gmail.com", role = c("ctb"),comment = c(ORCID = "0000-0001-7509-0328")),
              person(given = "ThinkR", role = "cph"))
 Description: An 'RStudio' addin providing shortcuts for writing in 'Markdown'. This package provides a series of 
              functions that allow the user to be more efficient when using 'Markdown'. For example, you can select 

@@ -198,6 +198,10 @@ Turn an url into a youtube embed:
 Insert a xaringan pull-left and pull-right template. 
 
 ![](reference/figures/xaringan.gif)
+### CRAN url 
+
+Turn package names into canonical CRAN links. From remedy to [{remedy}](https://CRAN.R-project.org/package=remedy).
+
 
 ## Recommended shortcuts (macOS)
 

@@ -147,3 +147,8 @@ Name: Youtube
 Description: Convert selected text into a markdown youtube frame
 Binding: youtuber
 Interactive: false
+
+Name: CRAN Link
+Description: Turn package name into CRAN link and add curly braces
+Binding: packager
+Interactive: false
