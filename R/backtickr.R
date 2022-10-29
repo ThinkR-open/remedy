@@ -4,11 +4,11 @@
 #'
 #' @return a backticked text selection
 #' @export
-#' @examples 
+#' @examples
 #' \dontrun{
 #' remedy_example(
-#'     c( "to_backtick"), 
-#'     backtickr
-#'     )
+#'   c("to_backtick"),
+#'   backtickr
+#' )
 #' }
 backtickr <- function() enclose("`")

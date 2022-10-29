@@ -5,7 +5,7 @@ sec <- scratch_file()
 testthat::describe("unordered lists", {
   skip_if_not_rstudio()
   testthat::skip_on_travis()
-  
+
   it("empty", {
     listr()
 
@@ -42,16 +42,16 @@ testthat::describe("unordered lists", {
 
   it("multiple lines with quote at start", {
     set_text('"some" text\nmore text', sec = sec, mark = entire_document)
-    
+
     listr()
-    
+
     rstudioapi::documentSave(sec$id)
-    
+
     testthat::expect_equal(readLines(sec$path, warn = FALSE), c('+ "some" text', "+ more text"))
-    
+
     set_text(sec = sec)
   })
-  
+
   it("multiple paragraphs", {
     set_text("some text\n\nmore text", sec = sec, mark = entire_document)
 
@@ -63,16 +63,16 @@ testthat::describe("unordered lists", {
 
     set_text(sec = sec)
   })
-  
+
   it("nested list", {
     set_text("some text\n    more text", sec = sec, mark = entire_document)
-    
+
     listr()
-    
+
     rstudioapi::documentSave(sec$id)
-    
+
     testthat::expect_equal(readLines(sec$path, warn = FALSE), c("+ some text", "    + more text"))
-    
+
     set_text(sec = sec)
   })
 })
@@ -80,7 +80,7 @@ testthat::describe("unordered lists", {
 testthat::describe("ordered lists", {
   skip_if_not_rstudio()
   testthat::skip_on_travis()
-  
+
   it("empty", {
     olistr()
 

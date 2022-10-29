@@ -4,15 +4,15 @@
 #'
 #' @return a template for xaringan pull left and right
 #' @export
-#' 
-#' @examples 
+#'
+#' @examples
 #' \dontrun{
-#' remedy_example( 
-#'     "", 
-#'     xaringanr
-#'     )
+#' remedy_example(
+#'   "",
+#'   xaringanr
+#' )
 #' }
-#' 
-xaringanr <- function(){
+#'
+xaringanr <- function() {
   enclose(".pull-left[\n\n]\n", "\n.pull-right[\n\n]\n")
 }

@@ -12,12 +12,18 @@ knitr::opts_chunk$set(
 )
 # Copy reference/images to man/images
 # reference folder is required to work with pkgdown
-if (!dir.exists("man/figures")) {dir.create("man/figures")}
+if (!dir.exists("man/figures")) {
+  dir.create("man/figures")
+}
 file.copy(list.files("reference/figures", full.names = TRUE),
-          "man/figures", overwrite = TRUE)
+  "man/figures",
+  overwrite = TRUE
+)
 if (dir.exists("docs")) {
   file.copy("reference/figures/thinkr-hex-remedy-favicon.ico",
-            "docs/favicon.ico", overwrite = TRUE)
+    "docs/favicon.ico",
+    overwrite = TRUE
+  )
 }
 ```
 
@@ -61,7 +67,7 @@ You can also have an overview of how the functions behave with the `remedy_examp
 
 ```{r eval = FALSE}
 library(remedy)
-remedy_example( c("Never gonna", "give you up", "let you down"), listr )
+remedy_example(c("Never gonna", "give you up", "let you down"), listr)
 ```
 
 
@@ -204,7 +210,7 @@ Insert a xaringan pull-left and pull-right template.
 Here's a list of recommended shortcuts: 
 
 ```{r}
-remedy::remedy_opts$get('hotkeys')
+remedy::remedy_opts$get("hotkeys")
 ```
 
 ### Managing Shortcuts
@@ -215,7 +221,7 @@ If you want to edit the default settings you can view the defaults `remedy_opts$
 
 ```{r, eval = FALSE}
 hotkeys <- remedy::remedy_opts$get("hotkeys")
-rsam::set_shortcut(sprintf('remedy::%sr',names(hotkeys)), hotkeys)
+rsam::set_shortcut(sprintf("remedy::%sr", names(hotkeys)), hotkeys)
 ```
 
 ## Feedback and enhancement

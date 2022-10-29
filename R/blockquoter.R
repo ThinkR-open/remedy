@@ -5,11 +5,11 @@
 #' @return a markdown blockquote
 #' @export
 #' @importFrom rstudioapi getSourceEditorContext insertText
-#' @examples 
+#' @examples
 #' \dontrun{
 #' remedy_example(
-#'     c( "to_blockquote"), 
-#'     blockquoter
-#'     )
+#'   c("to_blockquote"),
+#'   blockquoter
+#' )
 #' }
-blockquoter <- function() add_multiline_prefix('> ', as_is = TRUE)
+blockquoter <- function() add_multiline_prefix("> ", as_is = TRUE)

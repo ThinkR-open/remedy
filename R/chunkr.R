@@ -13,17 +13,19 @@
 #'
 #' @rdname chunkr
 #' @export
-#' 
-#' @examples 
+#'
+#' @examples
 #' \dontrun{
 #' remedy_example(
-#'     c( "# Create a chunk",
-#'     "a <- 12", 
-#'     "aaa <- 13"), 
-#'     chunkr
-#'     )
+#'   c(
+#'     "# Create a chunk",
+#'     "a <- 12",
+#'     "aaa <- 13"
+#'   ),
+#'   chunkr
+#' )
 #' }
-
+#'
 chunkr <- function() {
   if (remedy_opts$get("full_doc")) {
     chunkr_doc()
@@ -37,16 +39,18 @@ chunkr <- function() {
 chunkr_doc <- function() {
   adc <- rstudioapi::getSourceEditorContext()
 
-  find_chunks <- grep(remedy_opts$get('token_purl'), adc$contents)
+  find_chunks <- grep(remedy_opts$get("token_purl"), adc$contents)
 
-  if (length(find_chunks) == 0) return(NULL)
-
-  if (length(find_chunks) == 1){
-    chunk_idx <- list(find_chunks:length(adc$contents)) 
-  }else{
-    chunk_idx <- mapply(seq, find_chunks, to = c(find_chunks[-1] - 1, length(adc$contents)))  
+  if (length(find_chunks) == 0) {
+    return(NULL)
   }
-  
+
+  if (length(find_chunks) == 1) {
+    chunk_idx <- list(find_chunks:length(adc$contents))
+  } else {
+    chunk_idx <- mapply(seq, find_chunks, to = c(find_chunks[-1] - 1, length(adc$contents)))
+  }
+
   new_chunks <- lapply(chunk_idx, function(x) {
     this <- adc$contents[x]
     this[1] <- sprintf("```{r%s}", gsub("[#-]", "", this[1]))
@@ -56,28 +60,26 @@ chunkr_doc <- function() {
 
   new_text <- c(adc$contents[1:chunk_idx[[1]][1] - 1], unlist(new_chunks))
 
-  if(nzchar(adc$path)){
-    cat(new_text, file = adc$path, sep = "\n")  
-  }else{
-    
-    tail_pos <- nchar(adc$contents[length(adc$contents)])+1
-    
+  if (nzchar(adc$path)) {
+    cat(new_text, file = adc$path, sep = "\n")
+  } else {
+    tail_pos <- nchar(adc$contents[length(adc$contents)]) + 1
+
     add_rng <- Map(c, Map(c, length(adc$contents), tail_pos), Map(c, length(adc$contents), tail_pos))
-    rstudioapi::setCursorPosition(position = add_rng,id = adc$id)
-    
+    rstudioapi::setCursorPosition(position = add_rng, id = adc$id)
+
     add_num <- length(new_text) - length(adc$contents)
-    
-    rstudioapi::insertText(location = add_rng,text = strrep('\n',add_num),id = adc$id)
-    
-    rng <- Map(c, Map(c, 1:length(new_text), 1), Map(c, 1:length(new_text), max(nchar(adc$contents))+1))
-    rstudioapi::modifyRange(location = rng, text = new_text,id = adc$id)
+
+    rstudioapi::insertText(location = add_rng, text = strrep("\n", add_num), id = adc$id)
+
+    rng <- Map(c, Map(c, 1:length(new_text), 1), Map(c, 1:length(new_text), max(nchar(adc$contents)) + 1))
+    rstudioapi::modifyRange(location = rng, text = new_text, id = adc$id)
   }
-  
 }
 
 #' @importFrom rstudioapi insertText getActiveDocumentContext setCursorPosition
 #' @rdname chunkr
-#' 
+#'
 chunkr_section <- function() {
   adc <- rstudioapi::getActiveDocumentContext()
 

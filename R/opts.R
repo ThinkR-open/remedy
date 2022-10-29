@@ -1,36 +1,45 @@
 # forked from https://github.com/yihui/knitr/blob/master/R/defaults.R
-new_defaults = function(value = list()) {
-  defaults = value
-  
-  get = function(name, default = FALSE, drop = TRUE) {
-    if (default) defaults = value  # this is only a local version
-    if (missing(name)) defaults else {
-      if (drop && length(name) == 1) defaults[[name]] else {
+new_defaults <- function(value = list()) {
+  defaults <- value
+
+  get <- function(name, default = FALSE, drop = TRUE) {
+    if (default) defaults <- value # this is only a local version
+    if (missing(name)) {
+      defaults
+    } else {
+      if (drop && length(name) == 1) {
+        defaults[[name]]
+      } else {
         stats::setNames(defaults[name], name)
       }
     }
   }
-  resolve = function(...) {
-    dots = list(...)
-    if (length(dots) == 0) return()
-    if (is.null(names(dots)) && length(dots) == 1 && is.list(dots[[1]]))
-      if (length(dots <- dots[[1]]) == 0) return()
+  resolve <- function(...) {
+    dots <- list(...)
+    if (length(dots) == 0) {
+      return()
+    }
+    if (is.null(names(dots)) && length(dots) == 1 && is.list(dots[[1]])) {
+      if (length(dots <- dots[[1]]) == 0) {
+        return()
+      }
+    }
     dots
   }
-  set = function(...) {
-    dots = resolve(...)
+  set <- function(...) {
+    dots <- resolve(...)
     if (length(dots)) defaults <<- merge(dots)
     invisible(NULL)
   }
-  merge = function(values) merge_list(defaults, values)
-  restore = function(target = value) defaults <<- target
-  append = function(...) {
-    dots = resolve(...)
+  merge <- function(values) merge_list(defaults, values)
+  restore <- function(target = value) defaults <<- target
+  append <- function(...) {
+    dots <- resolve(...)
     for (i in names(dots)) dots[[i]] <- c(defaults[[i]], dots[[i]])
     if (length(dots)) defaults <<- merge(dots)
     invisible(NULL)
   }
-  
+
   list(get = get, set = set, append = append, merge = merge, restore = restore)
 }
 
@@ -62,19 +71,19 @@ new_defaults = function(value = list()) {
 #' @rdname remedyOpts
 #' @examples remedy_opts$get()
 remedy_opts <- new_defaults(list(
-  basic=FALSE,
-  name='remedy',
-  counter=TRUE,
-  chunk_opts=NULL,
-  kable_opts=NULL,
-  full_doc=FALSE,
-  token_purl='^#{2} -{4}(.*?)-{4,}$',
+  basic = FALSE,
+  name = "remedy",
+  counter = TRUE,
+  chunk_opts = NULL,
+  kable_opts = NULL,
+  full_doc = FALSE,
+  token_purl = "^#{2} -{4}(.*?)-{4,}$",
   token_url = "^(?:(?:https?|ftp|file)://|www\\.|ftp\\.)[A-z0-9+&@#/%=~_|$?!:,.-]*[A-z0-9+&@#/%=~_|$]$", # URL regex
   token_rel_link = "^.*[/|\\.][^\\.]+$", # Relative link regex
-  token_img_link = c('jpeg','jpg','png','gif'), # Image link
-  youtube_output = 'html',
-  youtube_width = '100%',
-  youtube_height = '400',
+  token_img_link = c("jpeg", "jpg", "png", "gif"), # Image link
+  youtube_output = "html",
+  youtube_width = "100%",
+  youtube_height = "400",
   hotkeys = c(
     backtick = "Ctrl+Cmd+`",
     bold = "Ctrl+Cmd+B",
@@ -112,9 +121,8 @@ merge_list <- function(x, y) {
   x
 }
 
-#from stats
-setNames <- function (object = nm, nm) 
-{
+# from stats
+setNames <- function(object = nm, nm) {
   names(object) <- nm
   object
 }

@@ -10,8 +10,9 @@ add_prefix <- function(prefix) {
     pos[2L] <- 1
     rstudioapi::insertText(location = pos, text = prefix)
   } else {
-    for (i in s)
+    for (i in s) {
       rstudioapi::insertText(location = i$range$start, text = prefix)
+    }
   }
 }
 
@@ -21,10 +22,10 @@ add_multiline_prefix <- function(prefix, as_is = FALSE) {
   content <- strsplit(a$selection[[1]]$text, "\n")[[1]]
 
   # https://stackoverflow.com/a/47072999/3218296
-  prefix_content <- iconv(content, "latin1", "ASCII", sub="")
-  
-  prefix_content <- gsub('^["]','',prefix_content)
-  
+  prefix_content <- iconv(content, "latin1", "ASCII", sub = "")
+
+  prefix_content <- gsub('^["]', "", prefix_content)
+
   if (as_is) {
     # blockquote: keep blank lines, ignore indentation
     content <- paste0(prefix, content)
@@ -37,7 +38,7 @@ add_multiline_prefix <- function(prefix, as_is = FALSE) {
         gsub("^\\s*", "", content[nzchar(content)])
       )
   }
-  
+
   if (length(content) > 0) {
     content <- paste0(content, "\n", collapse = "")
   } else {
@@ -53,6 +54,7 @@ add_multiline_prefix <- function(prefix, as_is = FALSE) {
 
 enclose <- function(prefix, postfix = prefix) {
   a <- rstudioapi::getSourceEditorContext()
-  for (s in a$selection)
+  for (s in a$selection) {
     rstudioapi::insertText(location = s$range, text = sprintf("%s%s%s", prefix, s$text, postfix))
+  }
 }
