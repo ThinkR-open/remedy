@@ -5,6 +5,17 @@
   `rename_chunks()` for easier testing.
 * `chunknamer()` / `rename_chunks()` accept `remedy_opts$set(name = "")` to
   disable auto-naming (#73).
+* New `align_tilde()` addin aligns `~` in a highlighted region (#67).
+* New `align_pipe()` addin aligns `|` columns in a markdown table (#58),
+  backed by the pure helper `align_pipe_text()`.
+* New helper `align_text()` factored out from the `align_*` addins.
+* New `default_hotkeys()` helper builds the default hotkey map; on
+  Windows / Linux `Cmd` is rewritten to `Ctrl` so the defaults are usable
+  cross-platform (#70). Shortcuts for `align_arrow`, `align_equal`,
+  `align_tilde`, `align_pipe` and `br` are included by default (#29, #60).
+* New `br_r()` addin inserts a `<br>` line break at the cursor (#60).
+* New `headr_toggler()` addin and `toggle_header()` helper cycle the header
+  level of the current line (#59).
 * Clean pkgdown on github
 * Added travis support and codecov.
 
