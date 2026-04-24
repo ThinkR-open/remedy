@@ -16,6 +16,9 @@
 * New `br_r()` addin inserts a `<br>` line break at the cursor (#60).
 * New `headr_toggler()` addin and `toggle_header()` helper cycle the header
   level of the current line (#59).
+* New `cite_packages()` helper returns a bulleted markdown list of the
+  citations for packages referenced in the current document (#20). The
+  discovery helper `packages_in_text()` is also exported.
 * Clean pkgdown on github
 * Added travis support and codecov.
 
