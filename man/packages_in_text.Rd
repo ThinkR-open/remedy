@@ -14,5 +14,7 @@ a character vector of unique package names.
 }
 \description{
 Scans lines for `library(pkg)`, `require(pkg)`, `requireNamespace("pkg")`
-and `pkg::fun` patterns and returns the set of package names.
+and `pkg::fun` patterns and returns the set of package names. Quoted and
+unquoted spellings (`library(dplyr)` and `library("dplyr")`) collapse to
+the same name.
 }

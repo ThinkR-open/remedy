@@ -1,7 +1,9 @@
 #' Discover package names referenced in a character vector
 #'
 #' Scans lines for `library(pkg)`, `require(pkg)`, `requireNamespace("pkg")`
-#' and `pkg::fun` patterns and returns the set of package names.
+#' and `pkg::fun` patterns and returns the set of package names. Quoted and
+#' unquoted spellings (`library(dplyr)` and `library("dplyr")`) collapse to
+#' the same name.
 #'
 #' @param lines character vector of lines.
 #'
@@ -9,21 +11,27 @@
 #' @export
 packages_in_text <- function(lines) {
   text <- paste(lines, collapse = "\n")
+  # R package names: start with a letter, then letters/digits/dot.
+  pkg_re <- "[A-Za-z][A-Za-z0-9.]*"
   pkgs <- character()
-  pkgs <- c(pkgs, regmatches_all(text,
-    "(?<=library\\()\\s*['\"]?([.A-Za-z][.A-Za-z0-9]*)"))
-  pkgs <- c(pkgs, regmatches_all(text,
-    "(?<=require\\()\\s*['\"]?([.A-Za-z][.A-Za-z0-9]*)"))
-  pkgs <- c(pkgs, regmatches_all(text,
-    "(?<=requireNamespace\\()\\s*['\"]?([.A-Za-z][.A-Za-z0-9]*)"))
-  pkgs <- c(pkgs, regmatches_all(text,
-    "([.A-Za-z][.A-Za-z0-9]*)(?=::)"))
+  pkgs <- c(pkgs, regmatches_group(
+    text, sprintf("library\\(\\s*['\"]?(%s)", pkg_re)))
+  pkgs <- c(pkgs, regmatches_group(
+    text, sprintf("require\\(\\s*['\"]?(%s)", pkg_re)))
+  pkgs <- c(pkgs, regmatches_group(
+    text, sprintf("requireNamespace\\(\\s*['\"]?(%s)", pkg_re)))
+  pkgs <- c(pkgs, regmatches_group(
+    text, sprintf("(%s)::", pkg_re)))
   unique(pkgs[nzchar(pkgs)])
 }
 
-regmatches_all <- function(text, pattern) {
-  m <- gregexpr(pattern, text, perl = TRUE)
-  unlist(regmatches(text, m))
+# Returns the first capture group of every match of `pattern` in `text`.
+regmatches_group <- function(text, pattern) {
+  m <- gregexpr(pattern, text, perl = TRUE)[[1L]]
+  if (length(m) == 1L && m == -1L) return(character())
+  starts <- attr(m, "capture.start")[, 1L]
+  lengths <- attr(m, "capture.length")[, 1L]
+  substring(text, starts, starts + lengths - 1L)
 }
 
 #' Render a bulleted list of package citations
