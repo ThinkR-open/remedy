@@ -73,6 +73,19 @@ testthat::describe("rename_chunks", {
     )
   })
 
+  it("zero-pads to enough digits for >= 100 unnamed chunks (regression)", {
+    # 100 empty R chunks should produce names remedy001..remedy100, all
+    # with the same width so lexical sort matches numeric order.
+    chunks <- as.character(rep(c("```{r}", "```", ""), 100))
+    out <- rename_chunks(chunks, name = "remedy")
+    headers <- grep("^```\\{r remedy", out, value = TRUE)
+    testthat::expect_equal(length(headers), 100L)
+    nums <- sub("^```\\{r remedy([0-9]+)\\}$", "\\1", headers)
+    widths <- nchar(nums)
+    testthat::expect_true(length(unique(widths)) == 1L)
+    testthat::expect_equal(unique(widths), 3L)
+  })
+
   it("does not rename when name is empty (issue #73)", {
     input <- c(
       "```{r}",

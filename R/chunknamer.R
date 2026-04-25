@@ -77,7 +77,7 @@ rename_chunks <- function(lines, name = "remedy") {
   no_name <- which(!nzchar(current_names))
   if (!length(no_name)) return(lines)
 
-  counter_size <- pmax(nchar(as.character(length(no_name))) - 1, 2)
+  counter_size <- max(nchar(as.character(length(no_name))), 2L)
   counter <- paste0("%0", counter_size, "d")
 
   taken <- current_names
