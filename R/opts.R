@@ -70,7 +70,10 @@ default_hotkeys_impl <- function(os = Sys.info()[["sysname"]]) {
     backtick = "Ctrl+Cmd+`",
     bold = "Ctrl+Cmd+B",
     br = "Ctrl+Cmd+Shift+B",
-    chunk = "Ctrl+Alt+Cmd+C",
+    # `chunk` was historically Ctrl+Alt+Cmd+C, which on non-macOS collapses
+    # to Ctrl+Alt+C and clashes with `htmlcomment`. Use a Shift-bearing
+    # combo instead so the non-Cmd rewrite still yields a unique chord.
+    chunk = "Ctrl+Cmd+Shift+I",
     chunksplit = "Ctrl+Shift+Alt+C",
     chunkname = "Ctrl+Shift+Alt+N",
     footnote = "Ctrl+Cmd+Shift+6",
@@ -95,9 +98,20 @@ default_hotkeys_impl <- function(os = Sys.info()[["sysname"]]) {
 
   if (!identical(os, "Darwin")) {
     base <- gsub("Cmd", "Ctrl", base, fixed = TRUE)
-    # collapse duplicate "Ctrl+Ctrl" that can result from the substitution
+    # Collapse repeated "Ctrl+Ctrl" that can result from the substitution.
     base <- gsub("Ctrl\\+Ctrl(\\+|$)", "Ctrl\\1", base)
   }
+
+  dup <- base[duplicated(base)]
+  if (length(dup)) {
+    stop(
+      "default_hotkeys() produced colliding shortcuts on os = '", os, "': ",
+      paste(unique(dup), collapse = ", "),
+      ".\nUpdate the base map so the Cmd->Ctrl rewrite stays collision-free.",
+      call. = FALSE
+    )
+  }
+
   base
 }
 

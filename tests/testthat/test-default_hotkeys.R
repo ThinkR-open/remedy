@@ -34,4 +34,14 @@ testthat::describe("default_hotkeys", {
     keys <- default_hotkeys(os = "Darwin")
     testthat::expect_true("br" %in% names(keys))
   })
+
+  it("does not produce colliding shortcuts on any OS (regression)", {
+    for (os in c("Darwin", "Linux", "Windows")) {
+      keys <- default_hotkeys(os = os)
+      testthat::expect_equal(
+        length(keys), length(unique(keys)),
+        info = paste("collision detected on", os)
+      )
+    }
+  })
 })
