@@ -27,6 +27,15 @@ testthat::describe("align_text", {
     out <- align_text(input, find = "=")
     testthat::expect_equal(out, c("a   = 1", "aaa = 2"))
   })
+
+  it("aligns `<-` for the align_arrow addin", {
+    input <- c(
+      "a <- 1",
+      "aaa <- 2"
+    )
+    out <- align_text(input, find = "<-")
+    testthat::expect_equal(out, c("a   <- 1", "aaa <- 2"))
+  })
 })
 
 testthat::describe("align_pipe_text", {

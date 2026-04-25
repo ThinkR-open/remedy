@@ -127,6 +127,25 @@ align_pipe_text <- function(lines) {
   lines
 }
 
+## Internal: rewrite the highlighted region in-place via align_text().
+align_addin <- function(find, fixed = TRUE) {
+  adc <- rstudioapi::getActiveDocumentContext()
+  sel <- adc$selection[[1L]]$range
+  start_row <- sel$start[[1L]]
+  end_row   <- sel$end[[1L]]
+
+  lines   <- adc$contents[start_row:end_row]
+  aligned <- align_text(lines, find = find, fixed = fixed)
+
+  rng <- rstudioapi::document_range(
+    start = rstudioapi::document_position(start_row, 1L),
+    end   = rstudioapi::document_position(end_row,
+                                          nchar(lines[length(lines)]) + 1L)
+  )
+  rstudioapi::modifyRange(rng, paste(aligned, collapse = "\n"), id = adc$id)
+  invisible(NULL)
+}
+
 #' Align a highlighted region's assignment operators.
 #'
 #' @return Aligns the single assignment operators (\code{<-}) within a highlighted region.
@@ -142,11 +161,7 @@ align_pipe_text <- function(lines) {
 #'     )
 #' }
 align_arrow <- function() {
-  capture <- capture()
-  area    <- capture_area(capture)
-  loc     <- find_regex("<-", area)
-  insertList <- assemble_insert(loc)
-  insertr(insertList)
+  align_addin("<-")
 }
 
 #' Align a highlighted region's assignment operators.
@@ -164,11 +179,7 @@ align_arrow <- function() {
 #'     )
 #' }
 align_equal <- function() {
-  capture <- capture()
-  area    <- capture_area(capture)
-  loc     <- find_regex("=", area)
-  insertList <- assemble_insert(loc)
-  insertr(insertList)
+  align_addin("=")
 }
 
 #' Align a highlighted region's tildes (`~`)
@@ -187,11 +198,7 @@ align_equal <- function() {
 #'     )
 #' }
 align_tilde <- function() {
-  capture <- capture()
-  area    <- capture_area(capture)
-  loc     <- find_regex("~", area)
-  insertList <- assemble_insert(loc)
-  insertr(insertList)
+  align_addin("~")
 }
 
 #' Align `|` columns in a markdown table
