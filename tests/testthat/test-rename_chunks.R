@@ -86,6 +86,18 @@ testthat::describe("rename_chunks", {
     testthat::expect_equal(unique(widths), 3L)
   })
 
+  it("matches both lowercase {r} and uppercase {R} chunk headers", {
+    # knitr accepts both spellings; only matching lowercase used to leave
+    # `R` chunks unnamed forever (self-review).
+    input <- c(
+      "```{R}",
+      "plot(1)",
+      "```"
+    )
+    out <- rename_chunks(input, name = "remedy")
+    testthat::expect_equal(out[1], "```{r remedy01}")
+  })
+
   it("does not rename when name is empty (issue #73)", {
     input <- c(
       "```{r}",

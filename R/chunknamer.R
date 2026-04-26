@@ -58,8 +58,9 @@ rename_chunks <- function(lines, name = "remedy") {
     return(lines)
   }
 
-  # Header of an R chunk: ```{r}, ```{r ...}, ```{r, ...}
-  r_chunk_re <- "^```\\{r(\\s|,|\\})"
+  # Header of an R chunk: ```{r}, ```{r ...}, ```{r, ...}.
+  # knitr also accepts ```{R} (capital R), so match both cases.
+  r_chunk_re <- "^```\\{[rR](\\s|,|\\})"
 
   idx_r <- grep(r_chunk_re, lines)
   if (!length(idx_r)) return(lines)
@@ -68,7 +69,7 @@ rename_chunks <- function(lines, name = "remedy") {
   first_tokens <- vapply(
     strsplit(lines[idx_r], ","), `[`, character(1), 1
   )
-  current_names <- gsub("```\\{r|\\}|\\s+", "", first_tokens)
+  current_names <- gsub("```\\{[rR]|\\}|\\s+", "", first_tokens)
 
   # If the first token is an `x=y` option (no chunk name), treat as missing name
   has_option_in_first <- grepl("=", current_names)
@@ -93,7 +94,7 @@ rename_chunks <- function(lines, name = "remedy") {
     line_idx <- idx_r[no_name[i]]
     comma <- if (has_option_in_first[no_name[i]]) "," else ""
     lines[line_idx] <- sub(
-      "^```\\{r",
+      "^```\\{[rR]",
       sprintf("```{r %s%s", new_name, comma),
       lines[line_idx]
     )
