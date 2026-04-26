@@ -6,11 +6,7 @@
 \alias{remedy-package}
 \title{remedy: 'RStudio' Addins to Simplify 'Markdown' Writing}
 \description{
-An 'RStudio' addin providing shortcuts for writing in 'Markdown'. This package provides a series of 
-             functions that allow the user to be more efficient when using 'Markdown'. For example, you can select 
-             a word, and put it in bold or in italics, or change the alignment of elements inside you Rmd. The idea
-             is to map all the functionalities from 'remedy' on keyboard shortcuts, so that it provides an interface 
-             close to what you can find in any other text editor.
+An 'RStudio' addin providing shortcuts for writing in 'Markdown'. This package provides a series of functions that allow the user to be more efficient when using 'Markdown'. For example, you can select a word, and put it in bold or in italics, or change the alignment of elements inside you Rmd. The idea is to map all the functionalities from 'remedy' on keyboard shortcuts, so that it provides an interface close to what you can find in any other text editor.
 }
 \seealso{
 Useful links:
@@ -21,19 +17,19 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Colin Fay \email{contact@colinfay.me} (0000-0001-7343-1846)
+\strong{Maintainer}: Colin Fay \email{contact@colinfay.me} (\href{https://orcid.org/0000-0001-7343-1846}{ORCID})
 
 Authors:
 \itemize{
-  \item Jonathan Sidi \email{yonicd@gmail.com} (0000-0002-4222-1819)
+  \item Jonathan Sidi \email{yonicd@gmail.com} (\href{https://orcid.org/0000-0002-4222-1819}{ORCID})
   \item Luke Smith \email{luke@protocolvital.info} (author of seasmith/AlignAssign)
 }
 
 Other contributors:
 \itemize{
-  \item Jonathan Carroll \email{rpkg@jcarroll.com.au} (0000-0002-1404-5264) [contributor]
-  \item Andrzej Oleś \email{andrzej.oles@gmail.com} (0000-0003-0285-2787) [contributor]
-  \item Daniel Possenriede \email{possenriede@gmail.com} (0000-0002-6738-9845) [contributor]
+  \item Jonathan Carroll \email{rpkg@jcarroll.com.au} (\href{https://orcid.org/0000-0002-1404-5264}{ORCID}) [contributor]
+  \item Andrzej Oleś \email{andrzej.oles@gmail.com} (\href{https://orcid.org/0000-0003-0285-2787}{ORCID}) [contributor]
+  \item Daniel Possenriede \email{possenriede@gmail.com} (\href{https://orcid.org/0000-0002-6738-9845}{ORCID}) [contributor]
   \item ThinkR [copyright holder]
 }
 

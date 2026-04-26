@@ -7,11 +7,17 @@
 chunknamer()
 }
 \description{
-Addin that add in bulk a names to unnamed chunks in a 
+Addin that add in bulk a names to unnamed chunks in a
 Rmarkdown document in the source editor.
 }
 \details{
 By default the addin will use "remedy" as the stem of the chunk names. this an be changed using
 \code{\link{remedy_opts}}$set(name='ANOTHER NAME'). The names are then added in sequential order using
 an %02d naming scheme.
+
+Setting the option to an empty string (\code{remedy_opts$set(name = "")}) disables
+auto-naming entirely (the addin becomes a no-op).
+
+Only `r` chunks are renamed; chunks in other engines such as `stan`,
+`python`, `sql` or `bash` are left untouched.
 }

@@ -17,8 +17,8 @@ Align a highlighted region's assignment operators.
 \dontrun{
 remedy_example(
     c( "# Align equal signs",
-    "a = 12", 
-    "aaa = 13"), 
+    "a = 12",
+    "aaa = 13"),
     align_equal
     )
 }

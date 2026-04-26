@@ -58,27 +58,22 @@ new_defaults = function(value = list()) {
 #' @note \code{remedy_opts_current} is read-only in the sense that it does nothing if
 #'   you call \code{remedy_opts_current$set()}; you can only query the options via
 #'   \code{remedy_opts_current$get()}.
-#' @export
-#' @rdname remedyOpts
-#' @examples remedy_opts$get()
-remedy_opts <- new_defaults(list(
-  basic=FALSE,
-  name='remedy',
-  counter=TRUE,
-  chunk_opts=NULL,
-  kable_opts=NULL,
-  full_doc=FALSE,
-  token_purl='^#{2} -{4}(.*?)-{4,}$',
-  token_url = "^(?:(?:https?|ftp|file)://|www\\.|ftp\\.)[A-z0-9+&@#/%=~_|$?!:,.-]*[A-z0-9+&@#/%=~_|$]$", # URL regex
-  token_rel_link = "^.*[/|\\.][^\\.]+$", # Relative link regex
-  token_img_link = c('jpeg','jpg','png','gif'), # Image link
-  youtube_output = 'html',
-  youtube_width = '100%',
-  youtube_height = '400',
-  hotkeys = c(
+#' @name remedyOpts
+NULL
+
+default_hotkeys_impl <- function(os = Sys.info()[["sysname"]]) {
+  base <- c(
+    align_arrow = "Ctrl+Cmd+Alt+A",
+    align_equal = "Ctrl+Cmd+Alt+E",
+    align_tilde = "Ctrl+Cmd+Alt+T",
+    align_pipe  = "Ctrl+Cmd+Alt+P",
     backtick = "Ctrl+Cmd+`",
     bold = "Ctrl+Cmd+B",
-    chunk = "Ctrl+Alt+Cmd+C",
+    br = "Ctrl+Cmd+Shift+B",
+    # `chunk` was historically Ctrl+Alt+Cmd+C, which on non-macOS collapses
+    # to Ctrl+Alt+C and clashes with `htmlcomment`. Use a Shift-bearing
+    # combo instead so the non-Cmd rewrite still yields a unique chord.
+    chunk = "Ctrl+Cmd+Shift+I",
     chunksplit = "Ctrl+Shift+Alt+C",
     chunkname = "Ctrl+Shift+Alt+N",
     footnote = "Ctrl+Cmd+Shift+6",
@@ -100,7 +95,61 @@ remedy_opts <- new_defaults(list(
     xaringan = "Ctrl+Cmd+X",
     youtube = "Ctrl+Cmd+Y"
   )
+
+  if (!identical(os, "Darwin")) {
+    base <- gsub("Cmd", "Ctrl", base, fixed = TRUE)
+    # Collapse repeated "Ctrl+Ctrl" that can result from the substitution.
+    base <- gsub("Ctrl\\+Ctrl(\\+|$)", "Ctrl\\1", base)
+  }
+
+  dup <- base[duplicated(base)]
+  if (length(dup)) {
+    stop(
+      "default_hotkeys() produced colliding shortcuts on os = '", os, "': ",
+      paste(unique(dup), collapse = ", "),
+      ".\nUpdate the base map so the Cmd->Ctrl rewrite stays collision-free.",
+      call. = FALSE
+    )
+  }
+
+  base
+}
+
+#' @export
+#' @rdname remedyOpts
+#' @examples remedy_opts$get()
+remedy_opts <- new_defaults(list(
+  basic=FALSE,
+  name='remedy',
+  counter=TRUE,
+  chunk_opts=NULL,
+  kable_opts=NULL,
+  full_doc=FALSE,
+  token_purl='^#{2} -{4}(.*?)-{4,}$',
+  token_url = "^(?:(?:https?|ftp|file)://|www\\.|ftp\\.)[A-z0-9+&@#/%=~_|$?!:,.-]*[A-z0-9+&@#/%=~_|$]$", # URL regex
+  token_rel_link = "^.*[/|\\.][^\\.]+$", # Relative link regex
+  token_img_link = c('jpeg','jpg','png','gif'), # Image link
+  youtube_output = 'html',
+  youtube_width = '100%',
+  youtube_height = '400',
+  hotkeys = default_hotkeys_impl()
 ))
+
+#' Default remedy hotkeys
+#'
+#' Returns the default keyboard shortcut map used by [remedy_opts]. The base
+#' map is expressed with `Cmd` (macOS convention). On non-macOS platforms,
+#' `Cmd` is rewritten to `Ctrl` (see #70). Users can still override the full
+#' map with `remedy_opts$set(hotkeys = ...)`.
+#'
+#' @param os character(1), operating system name as returned by
+#'   `Sys.info()[["sysname"]]`. Defaults to the current platform.
+#'
+#' @return a named character vector of hotkeys.
+#' @export
+default_hotkeys <- function(os = Sys.info()[["sysname"]]) {
+  default_hotkeys_impl(os = os)
+}
 
 #' @rdname remedyOpts
 #' @export
